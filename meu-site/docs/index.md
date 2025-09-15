@@ -30,8 +30,8 @@ O projeto busca criar uma plataforma online que facilite a divulgação das aula
 
 ## 📚 Documentação
 
-- [Visão do Produto](assets/visao_produto.pdf) — Visão geral e objetivos
-- [Cenário Atual](cenario-atual.md) — Contexto e desafios
+- [Visão do Produto](./visao_produto.md) — Visão geral e objetivos
+- [Cenário Atual](./cenario-atual.md) — Contexto e desafios
 - [Solução Proposta](solucao-proposta.md) — Detalhes da solução
 - [Estratégias](estrategias.md) — Estratégias de desenvolvimento
 - [Requisitos](requisitos.md) - Requisitos

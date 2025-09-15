@@ -1,1 +1,59 @@
-site_name: My Docs
+site_name: Lady's
+site_description: Documentação do projeto Lady's Escola de Pole Dance
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: pink
+      accent: deep_purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: pink
+      accent: deep_purple
+      toggle:
+        icon: material/toggle-switch-outline
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+nav:
+  - Início: index.md
+  - Cenário Atual: cenario-atual.md
+  - Documentação do Projeto:
+      - Solução Proposta: solucao-proposta.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.tabbed
+  - admonition
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_css:
+  - css/custom.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+
