@@ -9,7 +9,7 @@ export default function NotFoundPage() {
                     <span className="text-5xl md:text-6xl">😕</span>
                     <span className="text-2xl md:text-4xl">Página não encontrada</span>
                 </div>
-                <Button className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto cursor-pointer">
                     <Link to="/">Voltar para inicio</Link>
                 </Button>
             </div>
