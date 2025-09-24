@@ -1,34 +1,54 @@
-const db = require('./db');
+const { Model } = require('sequelize');
 
-const Schedules = db.sequelize.define('Schedules', {
-    id: {
-        type: db.Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-    classId: {
-        type: db.Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'Classes',
-            key: 'id'
+module.exports = (sequelize, DataTypes) => {
+    class Schedules extends Model {
+
+        static associate(models) {
+            this.hasMany(models.Bookings, {
+                foreignKey: 'scheduleId',
+                as: 'bookings'
+            });
+            
+            this.belongsTo(models.Classes, {
+                foreignKey: 'classId',
+                as: 'class'
+            });
+        };
+    };
+
+    Schedules.init({
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        classId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Classes',
+                key: 'id'
+            }
+        },
+        dayOfWeek: {
+            type: DataTypes.ENUM('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'),
+            allowNull: false
+        },
+        startTime: {
+            type: DataTypes.TIME,
+            allowNull: false
+        },
+        endTime: {
+            type: DataTypes.TIME,
+            allowNull: false
         }
-    },
-    dayOfWeek: {
-        type: db.Sequelize.ENUM('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'),
-        allowNull: false
-    },
-    startTime: {
-        type: db.Sequelize.TIME,
-        allowNull: false
-    },
-    endTime: {
-        type: db.Sequelize.TIME,
-        allowNull: false
-    }
-});
+    }, {
+        sequelize,
+        modelName: 'Schedules'
+    });
+    return Schedules;    
+    
+};
 
 // Attention: only uncomment this when syncronizing the table to the database:
 //Schedules.sync({ force: true })
-
-module.exports = Schedules;

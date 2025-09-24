@@ -1,9 +1,32 @@
-const db = require('./db');
-const User = require('./Users');
-const Class = require('./Classes');
-const Schedule = require('./Schedules');
-const Booking = require('./Bookings');
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
+const basename = path.basename(__filename);
 
+const { sequelize } = require('../config/database');
+const db = {};
+
+fs
+    .readdirSync(__dirname)
+    .filter(file => {
+        return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+    })
+    .forEach(file => {
+        const model = sequelize['import'](path.join(__dirname, file));
+        db[model.name] = model;
+    });
+
+Object.keys(db).forEach(modelName => {
+    if (db[modelName].associate) {
+        db[modelName].associate(db);
+    }
+});
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+
+/*
 // Association class <-> schedule
 Class.hasMany(Schedule, {
     foreignKey: 'classId',
@@ -53,10 +76,6 @@ Booking.belongsTo(Schedule, {
     foreignKey: 'scheduleId',
     as: 'schedules'
 });
+*/
 
-// Syncronize entire database
-db.sequelize.sync({ alter: true }).then(() => {
-    console.log("Tabelas do banco de dados sincronizadas");
-}).catch(err => {
-    console.log("Não foi possível sincronizar tabelas: " + err);
-});
+

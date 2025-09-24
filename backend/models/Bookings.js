@@ -1,47 +1,67 @@
-const db = require('./db');
+const { Model } = require('sequelize');
 
-const Bookings = db.sequelize.define('Bookings', {
-    id: {
-        type: db.Sequelize.INTEGER,
+module.exports = (sequelize, DataTypes) => {
+    class Bookings extends Model {
+        static associate(models) {
+            this.belongsTo(models.Schedules, {
+                foreignKey: 'schedulesId',
+                as: 'schedules'
+            });
+            this.belongsTo(models.Users, {
+                foreignKey: 'userId',
+                as: 'user'
+            });
+            this.belongsTo(models.Classes, {
+                foreignKey: 'classId',
+                as: 'class'
+            });
+        };
+    };
+    Bookings.init({
+        id: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    },
-    userId: {
-        type: db.Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'Users',
-            key: 'id'
+        },
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Users',
+                key: 'id'
+            }
+        },
+        classId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Classes',
+                key: 'id'
+            }
+        },
+        scheduleId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'Schedules',
+                key: 'id'
+            }
+        },
+        bookingDate: {
+            type: DataTypes.DATEONLY,
+            allowNull: false
+        },
+        status: {
+            type: DataTypes.ENUM('scheduled', 'completed', 'canceled'),
+            allowNull: false,
+            defaultValue: 'scheduled'
         }
-    },
-    classId: {
-        type: db.Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'Classes',
-            key: 'id'
-        }
-    },
-    scheduleId: {
-        type: db.Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'Schedules',
-            key: 'id'
-        }
-    },
-    bookingDate: {
-        type: db.Sequelize.DATEONLY,
-        allowNull: false
-    },
-    status: {
-        type: db.Sequelize.ENUM('scheduled', 'completed', 'canceled'),
-        allowNull: false,
-        defaultValue: 'scheduled'
-    }
-});
+    }, {
+        sequelize,
+        modelName: 'Bookings'
+    });
+    return Bookings;
+}
 
 // Attention: only uncomment this when syncronizing the table to the database:
 //Bookings.sync({ force: true })
-
-module.exports = Bookings;
