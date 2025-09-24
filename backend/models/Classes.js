@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class Classes extends Model {
+    class Class extends Model {
         static associate(models) {
             this.hasMany(models.Schedule, {
                foreignKey: 'classId',
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
 
-    Classes.init({
+    Class.init({
         id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -54,9 +54,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'Classes'
+        modelName: 'Class',
+        tableName: 'Classes'
     });
-    return Classes;
+    return Class;
 }
 
 // Attention: only uncomment this when syncronizing the table to the database:

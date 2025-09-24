@@ -1,7 +1,7 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class Users extends Model {
+    class User extends Model {
         static associate(models) {
             this.hasMany(models.Classes, {
                 foreignKey: 'classId',
@@ -14,49 +14,49 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
 
-    Users.init({
+    User.init({
         id: {
-            type: db.Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         firstName: {
-            type: db.Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         lastName: {
-            type: db.Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         email: {
-            type: db.Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true
         },
         password: {
-            type: db.Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         phoneNumber: {
-            type: db.Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: true
         },
         role: {
-            type: db.Sequelize.ENUM('user', 'admin'),
+            type: DataTypes.ENUM('user', 'admin'),
             allowNull: false,
             defaultValue: 'user'
         },
         status: {
-            type: db.Sequelize.ENUM('active', 'inactive', 'pending'),
+            type: DataTypes.ENUM('active', 'inactive', 'pending'),
             allowNull: false,
             defaultValue: 'pending'
         },
         expires: {
-            type: db.Sequelize.DATETIME,
+            type: DataTypes.DATETIME,
             allowNull: true
         },
         classId: {
-            type: db.Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: true,
                 references: {
                     model: 'Classes',
@@ -65,9 +65,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'Users'
+        modelName: 'User',
+        tableName: 'Users'
     });
-    return Users;
+    return User;
 }
 
 // Attention: only uncomment this when syncronizing the table to the database:

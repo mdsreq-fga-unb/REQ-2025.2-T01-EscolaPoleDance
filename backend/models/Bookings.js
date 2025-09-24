@@ -1,7 +1,7 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class Bookings extends Model {
+    class Booking extends Model {
         static associate(models) {
             this.belongsTo(models.Schedules, {
                 foreignKey: 'schedulesId',
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             });
         };
     };
-    Bookings.init({
+    Booking.init({
         id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -58,9 +58,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'Bookings'
+        modelName: 'Booking',
+        tableName: 'Bookings'
     });
-    return Bookings;
+    return Booking;
 }
 
 // Attention: only uncomment this when syncronizing the table to the database:

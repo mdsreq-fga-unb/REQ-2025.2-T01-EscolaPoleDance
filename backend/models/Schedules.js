@@ -1,7 +1,7 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class Schedules extends Model {
+    class Schedule extends Model {
 
         static associate(models) {
             this.hasMany(models.Bookings, {
@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         };
     };
 
-    Schedules.init({
+    Schedule.init({
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -44,9 +44,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'Schedules'
+        modelName: 'Schedule',
+        tableName: 'Schedules'
     });
-    return Schedules;    
+    return Schedule;    
     
 };
 
