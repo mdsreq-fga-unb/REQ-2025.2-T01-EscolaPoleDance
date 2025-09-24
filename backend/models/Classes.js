@@ -3,16 +3,17 @@ const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class Class extends Model {
         static associate(models) {
+            // Classes <-> Schedules
             this.hasMany(models.Schedule, {
                foreignKey: 'classId',
                as: 'schedules'
             });
-
+            // Classes <-> Users
             this.belongsTo(models.User, {
                 foreignKey: 'classId',
                 as: 'user'
             });
-
+            // Classes <-> Bookings
             this.hasMany(models.Bookings, {
                 foreignKey: 'classId',
                 as: 'bookings'

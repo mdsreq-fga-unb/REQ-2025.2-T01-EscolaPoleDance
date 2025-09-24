@@ -4,11 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     class Schedule extends Model {
 
         static associate(models) {
+            // Schedules <-> Bookings
             this.hasMany(models.Bookings, {
                 foreignKey: 'scheduleId',
                 as: 'bookings'
             });
-            
+            // Schedules <-> Classes
             this.belongsTo(models.Classes, {
                 foreignKey: 'classId',
                 as: 'class'
