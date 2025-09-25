@@ -3,18 +3,13 @@ const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class Class extends Model {
         static associate(models) {
-            // Classes <-> Schedules
-            this.hasMany(models.Schedule, {
-               foreignKey: 'classId',
-               as: 'schedules'
-            });
             // Classes <-> Users
             this.belongsTo(models.User, {
                 foreignKey: 'classId',
                 as: 'user'
             });
             // Classes <-> Bookings
-            this.hasMany(models.Bookings, {
+            this.hasMany(models.Booking, {
                 foreignKey: 'classId',
                 as: 'bookings'
             });
@@ -26,14 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-        },
-        scheduleId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'Schedules',
-                key: 'id'
-            }
         },
         level: {
             type: DataTypes.ENUM('beginner', 'intermediate', 'advanced'),

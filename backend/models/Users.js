@@ -4,12 +4,12 @@ module.exports = (sequelize, DataTypes) => {
     class User extends Model {
         static associate(models) {
             // Users <-> Classes
-            this.hasMany(models.Classes, {
+            this.hasMany(models.Class, {
                 foreignKey: 'classId',
                 as: 'class'
             });
             // Users <-> Bookings
-            this.hasMany(models.Bookings, {
+            this.hasMany(models.Booking, {
                 foreignKey: 'userId',
                 as: 'bookings'
             });
@@ -33,7 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
+            unique: true,
+            validate: {
+                isEmail: true,  // Catch 'SequelizeValidationError' to handle invalid emails
+            }
         },
         password: {
             type: DataTypes.STRING,
@@ -54,16 +57,8 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: 'pending'
         },
         expires: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             allowNull: true
-        },
-        classId: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-                references: {
-                    model: 'Classes',
-                    key: 'id'
-                }
         }
     }, {
         sequelize,
