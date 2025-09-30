@@ -2,9 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const user_routes = require('./routes/user_routes');
-const schedule_routes = require('./routes/schedule_routes');
 const db = require('./models');
-const { sequelize } = require('./config/database');
+const { sequelize } = require('../config/database');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,7 +18,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/user', user_routes); // Initialize user routes group with /api/user prefix
-app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/id
 const startServer = async() => {
     // Test if conection to database is successfull
     try {
