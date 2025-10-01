@@ -43,3 +43,10 @@ Não "economize" commits, dessa forma é sempre possível voltar para um estado 
 - `style:` Alterações de formatação (ESLint, Prettier).
 - `refactor:` Refatoração de código que não corrige um bug nem adiciona um recurso.
 - `test:` Adicionando ou corrigindo testes.
+
+### 6. Boas práticas
+- **NUNCA** se deve commitar ou dar merge em qualquer coisa diretamente na branch `main`. Apenas membros autorizados da equipe devem realizar qualquer alteração nesta branch.
+- Sempre crie uma branch nova para cada issue que receber a partir da versão mais atualizada do código *(provavelmente a dev)*.
+- Após finalizar uma *issue*, **NUNCA** realize um "merge" na `dev` localmente. Sempre crie um pull request *(pode ser feito facilmente através do github na aba "pull requests")* enviando suas alterações de sua branch para a `dev`.
+- Ao criar um pull request, dê uma descrição sobre o que foi feito e adicione ao menos um "reviewer" adequado para revisar seu código e realizar o merge.
+- Sempre mantenha o status da sua issue atualizado no kanban!
