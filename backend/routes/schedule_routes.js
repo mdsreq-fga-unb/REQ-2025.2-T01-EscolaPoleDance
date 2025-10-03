@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-// GET /api/schedules - Listar todos os schedules
+// GET /api/schedules - List all schedules
 router.get('/', async (req, res) => {
     try {
         const schedules = await db.Schedule.findAll({
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// POST /api/schedules - Criar novo schedule
+// POST /api/schedules - Create new schedule
 router.post('/', async (req, res) => {
     try {
         // LOGS DE DEBUG
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
             });
         }
 
-        // Verificar se a classe existe
+        // Check if the class exists
         const classExists = await db.Class.findByPk(classId);
         if (!classExists) {
             // Buscar classes disponíveis para mostrar no erro
@@ -70,7 +70,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// GET /api/schedules/:id - Buscar schedule por ID
+// GET /api/schedules/:id - Get schedule by ID
 router.get('/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -91,7 +91,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// PUT /api/schedules/:id - Atualizar schedule
+// PUT /api/schedules/:id - Update schedule
 router.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -119,7 +119,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// DELETE /api/schedules/:id - Deletar schedule
+// DELETE /api/schedules/:id - Delete schedule
 router.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;

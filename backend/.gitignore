@@ -125,6 +125,10 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# Seed and test files
+seed_data.js
+test_*.js
+
 # yarn v3
 .pnp.*
 .yarn/*
