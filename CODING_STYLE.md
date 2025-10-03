@@ -18,13 +18,15 @@ Uma estrutura de pastas bem definida é essencial para organizar a aplicação e
     - `/screens`: As telas da aplicação. Cada tela é um componente que representa uma rota.
     - `/styles`: Arquivos de estilização globais (ex: `theme.ts` com cores, fontes, espaçamentos).
     - `/utils`: Funções utilitárias genéricas (ex: formatadores de data, validadores).
+    - `/routes`: Arquivos grupos de rotas ou endpoints.
+    - `/models`: Modelos ou "schemas" de dados estruturados do banco de dados.
 
 ### 3. Convenções de nomenclatura
 
 - **Variáveis e Funções:** `camelCase`
-- **Componentes React Native e Telas:** `PascalCase`
+- **Classes, Métodos e Componentes React:** `PascalCase`
 - **Constantes e Chaves de Armazenamento:** `UPPER_SNAKE_CASE`
-- **Pastas de Componentes/Telas:** `PascalCase`
+- **Pastas e Arquivos:** `snake_case`
 - **Estilos (StyleSheet):** `camelCase`
 
 ### 4. Nomenclatura de branches
