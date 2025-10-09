@@ -4,7 +4,7 @@ const router = express.Router();
 const db = require('../models');
 const bcrypt = require('bcrypt');
 
-router.get('/', (req, res) => {
+router.get('/login', (req, res) => {
     res.send("Pagina de login");
 })
 
@@ -128,11 +128,11 @@ router.put('/updateUser/:id', async (req, res) => {
 
 // GET /api/user - List every user in database
 
-router.get('/users/', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
 
         const allUsers = await db.User.findAll({
-            order: ['firstName', 'ASC'],
+            order: ['firstName'],
             attributes: { exclude: ['password'] }
         });
 

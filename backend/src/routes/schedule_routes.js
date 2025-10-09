@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST /api/schedules - Criar novo schedule
-router.post('/', async (req, res) => {
+router.post('/createSchedule', async (req, res) => {
     try {
         // LOGS DE DEBUG
         console.log('Headers recebidos:', req.headers);

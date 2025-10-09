@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 // POST /api/classes - Create new class
 
-router.post('createClass', async (req, res) => {
+router.post('/createClass', async (req, res) => {
     try {
 
          // Debug

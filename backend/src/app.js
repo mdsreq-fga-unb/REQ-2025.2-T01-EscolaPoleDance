@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send("Pagina inicial");
 })
 
-app.use('/api/user', user_routes); // Initialize user routes group with /api/user or /api/user/:id prefix
+app.use('/api/users', user_routes); // Initialize user routes group with /api/user or /api/user/:id prefix
 app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/:id
 app.use('/api/bookings', booking_routes);// Initialize bookings routes group with /api/bookings or /api/bookings/:id
 app.use('/api/classes', class_routes);// Initialize class routes group with /api/class or /api/class/:id
