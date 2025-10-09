@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const user_routes = require('./routes/user_routes');
 const schedule_routes = require('./routes/schedule_routes');
+const booking_routes = require('./routes/booking_routes');
 const db = require('./models');
 const { sequelize } = require('./config/database');
 
@@ -19,7 +20,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/user', user_routes); // Initialize user routes group with /api/user prefix
-app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/id
+app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/:id
+app.use('/api/bookings', booking_routes);// Initialize bookings routes group with /api/bookings or /api/bookings/:id
 const startServer = async() => {
     // Test if conection to database is successfull
     try {
