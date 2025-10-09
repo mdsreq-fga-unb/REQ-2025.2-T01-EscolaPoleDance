@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: development
+      DATABASE_NAME: escola_poledance
+      DATABASE_USERNAME: user
+      DATABASE_PASSWORD: userpass
+      DATABASE_HOST: db 
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db: 
+    image: mysql:8
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: escola_poledance
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "user", "-puserpass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:
