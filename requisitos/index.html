@@ -783,12 +783,12 @@
 <tr>
 <td>RF08</td>
 <td>Acessar conteúdo público</td>
-<td>O sistema deve permitir que visitantes anônimos acessem a landing page sem necessidade de autenticação.</td>
+<td>O sistema deve permitir que visitantes anônimos acessem a landing page sem necessidade de autenticação, para fins de divulgação e atração de clientes.</td>
 </tr>
 <tr>
 <td>RF09</td>
 <td>Cadastrar novo usuário</td>
-<td>O usuário deve conseguir se cadastrar se for um usuário novo, informando nome, e-mail e senha.</td>
+<td>O usuário deve conseguir se cadastrar se for um usuário novo, em um campo onde informa dados como nome, e-mail e senha.</td>
 </tr>
 <tr>
 <td>RF10</td>
@@ -798,62 +798,62 @@
 <tr>
 <td>RF11</td>
 <td>Comprar pacotes de aulas</td>
-<td>O usuário deve conseguir comprar pacotes de aulas disponíveis (ex.: pacote de 4 ou 12 aulas).</td>
+<td>O usuário deve conseguir comprar pacotes de aulas, exibindo opções disponíveis (ex.: pacote básico de 4 aulas, pacote de 12 aulas).</td>
 </tr>
 <tr>
 <td>RF12</td>
 <td>Agendar aulas específicas</td>
-<td>O usuário deve escolher e agendar aulas específicas, deduzindo do pacote comprado.</td>
+<td>O usuário deve conseguir escolher e agendar aulas específicas, deduzindo do pacote de aulas comprado pelo usuário.</td>
 </tr>
 <tr>
 <td>RF13</td>
 <td>Confirmar ausência na aula (Aluna)</td>
-<td>Aluna pode confirmar ausência até 12h antes da aula; status atualiza de "Confirmado" para "Não confirmado".</td>
+<td>A aluna deve conseguir confirmar ausência em uma aula agendada diretamente no painel do usuário (dashboard), com a opção disponível a qualquer momento antes do prazo de 12 horas antes do horário da aula. A confirmação deve atualizar o status da aluna de "Confirmado" para "Não confirmado".</td>
 </tr>
 <tr>
 <td>RF14</td>
 <td>Gerar link de confirmação de ausência</td>
-<td>Professora cria link único para confirmação de ausência; inclui countdown, regulamento e login obrigatório.</td>
+<td>A professora deve conseguir criar e compartilhar um link único para uma página dedicada de confirmação de ausência para uma aula específica, onde a aluna pode confirmar ausência até 12 horas antes do horário (conforme RF13 existente). A página deve incluir um countdown, botão de confirmação, texto sobre regulamento e aviso de login obrigatório se a aluna não estiver autenticada.</td>
 </tr>
 <tr>
 <td>RF15</td>
 <td>Editar status de presença (Professora)</td>
-<td>Professora edita status de presença: "Confirmado", "Não confirmado", "Ausente" ou "Presente".</td>
+<td>A professora deve conseguir editar manualmente o status de presença de qualquer aluna em uma aula específica, com opções de status: "Confirmado", "Não confirmado", "Ausente" ou "Presente". Essa edição deve ser acessível via painel administrativo da professora.</td>
 </tr>
 <tr>
 <td>RF16</td>
 <td>Registrar presença em aula</td>
-<td>Professora marca presença ao final da aula; checkboxes padrão "Presente".</td>
+<td>Ao final de cada aula, a professora deve conseguir acessar uma seção dedicada à aula no site, exibindo uma lista de alunas agendadas com checkboxes de presença. Por padrão, todos os checkboxes devem estar ativados (indicando "Presente"), e a professora pode desmarcar os das alunas ausentes, atualizando o status para "Ausente".</td>
 </tr>
 <tr>
 <td>RF17</td>
 <td>Realizar logout</td>
-<td>Usuário encerra sessão e é redirecionado para landing page.</td>
+<td>O usuário deverá conseguir realizar o logout, encerrando a sessão e redirecionando para a landing page.</td>
 </tr>
 <tr>
 <td>RF18</td>
 <td>Gerenciar pacotes de aulas</td>
-<td>Administradores criam, editam e deletam pacotes, incluindo preços e descrições.</td>
+<td>Administradores devem conseguir gerenciar pacotes de aulas (criar, editar, deletar), incluindo preços e descrições.</td>
 </tr>
 <tr>
 <td>RF19</td>
 <td>Gerenciar calendário de aulas</td>
-<td>Administradores adicionam, editam e cancelam aulas no calendário.</td>
+<td>Administradores devem conseguir gerenciar o calendário de aulas (adicionar, editar, cancelar aulas).</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="lista-de-requisitos-nao-funcionais">Lista de Requisitos Não Funcionais<a class="headerlink" href="#lista-de-requisitos-nao-funcionais" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>RNF01</strong> - Implementar criptografia para a privacidade dos dados do usuário  </li>
-<li><strong>RNF02</strong> - Assegurar conformidade com a LGPD  </li>
+<li><strong>RNF01</strong> - Implementar criptografia para a privacidade dos dados do usuário</li>
+<li><strong>RNF02</strong> - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</li>
 <li><strong>RNF03</strong> - Assegurar responsividade do site em diferentes dispositivos  </li>
-<li><strong>RNF04</strong> - Manter o sistema disponível 24/7 (exceto manutenções programadas)  </li>
-<li><strong>RNF05</strong> - Garantir compatibilidade com os principais navegadores modernos  </li>
+<li><strong>RNF04</strong> - Manter o sistema disponível 24/7 (com exceção de manutenções programadas) </li>
+<li><strong>RNF05</strong> - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari) </li>
 <li><strong>RNF06</strong> - Garantir interface intuitiva e fácil de navegar  </li>
-<li><strong>RNF07</strong> - Garantir carregamento rápido e navegação fluida  </li>
+<li><strong>RNF07</strong> - Garantir carregamento rápido e navegação fluida do frontend</li>
 <li><strong>RNF08</strong> - Documentar padrões de desenvolvimento internos  </li>
-<li><strong>RNF09</strong> - Otimizar SEO (On-Page e Off-Page)  </li>
+<li><strong>RNF09</strong> - Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page  </li>
 <li><strong>RNF10</strong> - Implementar medidas de segurança contra vulnerabilidades  </li>
 <li><strong>RNF11</strong> - Exibir menu de navegação  </li>
 <li><strong>RNF12</strong> - Exibir landing page  </li>
@@ -870,63 +870,63 @@
 <tbody>
 <tr>
 <td>RNF01</td>
-<td>Implementar criptografia</td>
-<td>TLS 1.2+ ou SSL; senhas com hashing bcrypt (custo mínimo 12).</td>
+<td>Implementar criptografia para a privacidade dos dados do usuário</td>
+<td>Implementar criptografia de transporte (comunicação cliente-servidor) TLS 1.2 (ou superior) e, para as senhas de usuários, utilizar o algoritmo de hashing bcrypt com um fator de custo mínimo de 12.</td>
 </tr>
 <tr>
 <td>RNF02</td>
-<td>Conformidade LGPD</td>
-<td>Consentimento, finalidade, segurança dos dados, direito de acesso/exclusão.</td>
+<td>Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</td>
+<td>O sistema deve garantir a conformidade com as exigências da LGPD, especialmente nos seguintes pontos: Consentimento (Art. 7º, I) no cadastro; Finalidade (Art. 6º, I); Segurança dos Dados (Art. 46); e Direito de Acesso e Exclusão (Art. 18, II e IV).</td>
 </tr>
 <tr>
 <td>RNF03</td>
-<td>Responsividade</td>
-<td>Largura 360px-767px (mobile) e 1024px+ (desktop).</td>
+<td>Assegurar responsividade do site em diferentes dispositivos</td>
+<td>O design e a interface do usuário devem assegurar a responsividade para dispositivos móveis (com largura de 360px a 767px, como smartphones de 5 a 6.7 polegadas) e desktop (larguras a partir de 1024px).</td>
 </tr>
 <tr>
 <td>RNF04</td>
-<td>Disponibilidade 24/7</td>
-<td>99,8% uptime; manutenção semestral até 4h fora do horário comercial.</td>
+<td>Manter o sistema disponível 24/7 (com exceção de manutenções programadas)</td>
+<td>Disponibilidade Mínima: 99,8% do tempo. Manutenção Programada: Período de manutenção semestral de até 4 horas, preferencialmente fora do horário comercial (ex: madrugada de domingo), para atualizações críticas de infraestrutura e informações ou estáticas da escola/planos.</td>
 </tr>
 <tr>
 <td>RNF05</td>
-<td>Compatibilidade navegadores</td>
-<td>Últimas 2 versões de Chrome, Firefox, Edge e Safari.</td>
+<td>Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari)</td>
+<td>O site deve funcionar plenamente nas duas versões mais recentes dos principais navegadores modernos (Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari).</td>
 </tr>
 <tr>
 <td>RNF06</td>
-<td>Interface intuitiva</td>
-<td>Fácil navegação para todos os níveis de usuários.</td>
+<td>Garantir interface intuitiva e fácil de navegar</td>
+<td>O sistema deve garantir uma interface intuitiva e fácil de navegar, utilizando como cor primária o roxo (#9333ea) e seguindo a paleta de cores “purple” do site shadcn, baseando-se na identidade visual da escola. A fonte padrão adotada é a montserrat com tamanho mínimo 14.</td>
 </tr>
 <tr>
 <td>RNF07</td>
-<td>Carregamento rápido</td>
-<td>Tempo inicial &lt; 3s em 3G; TTFB &lt; 400ms para 90% das requisições.</td>
+<td>Garantir carregamento rápido e navegação fluida do frontend</td>
+<td>Garantir um tempo de carregamento inicial inferior a 3 segundos em conexões 3G e um tempo de resposta do servidor (TTFB - Time to First Byte) inferior a 400ms para 90% das requisições.</td>
 </tr>
 <tr>
 <td>RNF08</td>
-<td>Documentação interna</td>
-<td>Padrão de código, testes e infraestrutura documentado.</td>
+<td>Documentar padrões de desenvolvimento internos</td>
+<td>A equipe deve documentar e seguir um padrão interno para as práticas de desenvolvimento (código, testes, infraestrutura).</td>
 </tr>
 <tr>
 <td>RNF09</td>
-<td>SEO</td>
-<td>Meta tags, cabeçalhos, alt em imagens; Google Business Profile otimizado.</td>
+<td>Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page</td>
+<td>O sistema deve ser otimizado para motores de busca SEO, implementando SEO On-Page utilizando meta tags, cabeçalhos e atributos alt em imagens, com foco em palavras-chave relacionadas à escola e modalidade. Implementar também o SEO Off-Page através da criação e otimização de um Google Business Profile.</td>
 </tr>
 <tr>
 <td>RNF10</td>
-<td>Segurança</td>
-<td>Validação e sanitização de inputs; prevenção SQL Injection e mitigação DNS Tunneling.</td>
+<td>Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling</td>
+<td>O sistema deve implementar validação e sanitização de todas as entradas de usuário no backend usando parametrização de consultas para prevenir SQL Injection e configurar o sistema para mitigar DNS Tunneling através da criptografia de requisições DNS fornecida pelo TLS, além de aplicar políticas de segurança como CORS (Cross-Origin Resource Sharing) para filtrar os domínios externos dos quais o sistema receberá requisições.</td>
 </tr>
 <tr>
 <td>RNF11</td>
-<td>Menu de navegação</td>
-<td>Links: Landing Page, Sobre, Pole Dance, Turmas, Valores, Regulamento, FAQ, Login/Cadastro.</td>
+<td>Exibir menu de navegação</td>
+<td>O sistema deve fornecer um menu de navegação principal que inclua links para todas as páginas: Landing Page (inicial), Sobre, Pole Dance, Turmas e Horários, Valores, Regulamento, FAQ, além de Login/Cadastro.</td>
 </tr>
 <tr>
 <td>RNF12</td>
-<td>Landing page</td>
-<td>Informações sobre a escola, serviços, depoimentos, CTAs para cadastro/login.</td>
+<td>Exibir landing page</td>
+<td>O sistema deve exibir uma landing page inicial que apresente informações sobre a escola de pole dance, incluindo descrição dos serviços, depoimentos de alunos e chamadas para ação (CTAs) para cadastro ou login.</td>
 </tr>
 </tbody>
 </table>
