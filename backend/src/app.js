@@ -2,8 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const user_routes = require('./routes/user_routes');
+const schedule_routes = require('./routes/schedule_routes');
+const booking_routes = require('./routes/booking_routes');
+const class_routes = require('./routes/class_routes');
 const db = require('./models');
-const { sequelize } = require('../config/database');
+const { sequelize } = require('./config/database');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,7 +20,11 @@ app.get('/', (req, res) => {
     res.send("Pagina inicial");
 })
 
-app.use('/api/user', user_routes); // Initialize user routes group with /api/user prefix
+app.use('/api/user', user_routes); // Initialize user routes group with /api/user or /api/user/:id prefix
+app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/:id
+app.use('/api/bookings', booking_routes);// Initialize bookings routes group with /api/bookings or /api/bookings/:id
+app.use('/api/classes', class_routes);// Initialize class routes group with /api/class or /api/class/:id
+
 const startServer = async() => {
     // Test if conection to database is successfull
     try {
@@ -43,6 +50,3 @@ const startServer = async() => {
 };
 
 startServer();
-
-// TODO: test new database structure
-// TODO: review database tables
