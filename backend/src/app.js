@@ -6,7 +6,7 @@ const schedule_routes = require('./routes/schedule_routes');
 const booking_routes = require('./routes/booking_routes');
 const class_routes = require('./routes/class_routes');
 const db = require('./models');
-const { sequelize } = require('./config/database');
+const { sequelize } = require('../config/database');
 
 const app = express();
 const port = process.env.PORT || 3000;

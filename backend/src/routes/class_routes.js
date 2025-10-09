@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models1');
+const db = require('../models');
 
 router.get('/', (req, res) => {
     res.send("Lista de turmas");
