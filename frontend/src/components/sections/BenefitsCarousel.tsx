@@ -51,7 +51,7 @@ export default function BenefitsCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
 
-  // Continuous auto-scroll functionality - only on mobile/tablet / Funcionalidade de rolagem automática contínua - apenas em mobile/tablet
+  // Continuous auto-scroll functionality - only on mobile/tablet
   useEffect(() => {
     const isMobile = window.innerWidth < 1024; // lg breakpoint
     if (isMobile) {
@@ -72,7 +72,7 @@ export default function BenefitsCarousel() {
     };
   }, []);
 
-  // Touch/Mouse handlers / Manipuladores de toque/mouse
+  // Touch/Mouse handlers
   const handleStart = (clientX: number) => {
     setTouchStart(clientX);
     setDragOffset(0);
@@ -92,7 +92,7 @@ export default function BenefitsCarousel() {
     
     setIsDragging(false);
     
-    // Apply the drag offset to scroll position / Aplicar o offset de arraste à posição de rolagem
+    // Apply the drag offset to scroll position 
     setScrollPosition((prevPosition) => prevPosition + dragOffset);
     setDragOffset(0);
   };
@@ -126,7 +126,7 @@ export default function BenefitsCarousel() {
     handleEnd();
   };
 
-  // Handle user interaction / Manipular interação do usuário
+  // Handle user interaction
   const handleUserInteraction = () => {
     const isMobile = window.innerWidth < 1024;
     if (isMobile) {
@@ -135,10 +135,10 @@ export default function BenefitsCarousel() {
         cancelAnimationFrame(animationRef.current);
       }
       
-      // Resume auto-scroll after 3 seconds of no interaction / Retomar rolagem automática após 3 segundos sem interação
+      // Resume auto-scroll after 3 seconds of no interaction
       setTimeout(() => {
         setIsUserInteracting(false);
-        // Restart continuous scroll / Reiniciar rolagem contínua
+        // Restart continuous scroll
         const scroll = () => {
           setScrollPosition((prevPosition) => {
             const newPosition = prevPosition + 0.3;
@@ -153,12 +153,12 @@ export default function BenefitsCarousel() {
     }
   };
 
-  // Duplicate benefits many times for truly infinite scroll / Duplicar benefícios muitas vezes para rolagem verdadeiramente infinita
+  // Duplicate benefits many times for truly infinite scroll
   const infiniteBenefits = [...benefits, ...benefits, ...benefits, ...benefits, ...benefits, ...benefits];
 
   return (
     <div className="w-full">
-      {/* Desktop Layout - Grid / Layout Desktop - Grade */}
+      {/* Desktop Layout - Grid */}
       <div className="hidden lg:block">
         <div className="grid grid-cols-3 gap-6 max-w-[1108px] mx-auto">
           {benefits.map((benefit, index) => (
@@ -173,7 +173,7 @@ export default function BenefitsCarousel() {
         </div>
       </div>
 
-      {/* Mobile/Tablet Layout - Infinite Carousel / Layout Mobile/Tablet - Carrossel Infinito */}
+      {/* Mobile/Tablet Layout - Infinite Carousel */}
       <div className="lg:hidden w-full h-[340px] sm:h-[400px] md:h-[440px] relative overflow-hidden">
         <div 
           ref={carouselRef}
