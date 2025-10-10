@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
-import logo from "../../assets/img/icons/logo.png";
+import logo from "../../assets/img/icons/logo.svg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
 
       <div className="flex items-center gap-1">
         <img 
-          src={logo} alt="Logo Escola de Pole Dance" className="w-12 h-12 md:w-16 md:h-16"
+          src={logo} alt="Logo Escola de Pole Dance" className="w-12 h-12 md:w-20 md:h-12"
         />
         <div className="flex flex-col">
           <span className="text-lg md:text-xl font-light text-white leading-tight">ESCOLA DE</span>
