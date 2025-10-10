@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import logo from "../../assets/img/icons/logo.svg";
 
@@ -32,35 +33,39 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-4">
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        <a href="#about" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           Sobre
         </a>
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        <a href="#benefits" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           Pole Dance
         </a>
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        <Link to="/404" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           Turmas e Horários
-        </a>
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        </Link>
+        <Link to="/404" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           Valores
-        </a>
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        </Link>
+        <Link to="/404" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           Regulamentos
-        </a>
-        <a href="#" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
+        </Link>
+        <a href="#faq" className="text-white text-sm md:text-base font-medium hover:text-purple-500 transition-colors">
           FAQ
         </a>
         
         {/* Desktop Buttons */}
         <div className="flex items-center gap-2 ml-4">
-          <Button 
-            variant="outline" size="default" className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800">
-            Entrar
-          </Button>
-          <Button 
-            size="default" className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white">
-            Cadastrar
-          </Button>
+          <Link to="/404">
+            <Button 
+              variant="outline" size="default" className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800">
+              Entrar
+            </Button>
+          </Link>
+          <Link to="/404">
+            <Button 
+              size="default" className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white">
+              Cadastrar
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -68,37 +73,39 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed top-20 left-0 right-0 bg-purple-950 border-b border-purple-800 lg:hidden z-50 shadow-lg">
           <div className="flex flex-col p-6 space-y-4">
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="#about" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Sobre
             </a>
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="#benefits" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Pole Dance
             </a>
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Turmas e Horários
-            </a>
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Valores
-            </a>
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Regulamentos
-            </a>
-            <a href="#" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <a href="#faq" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </a>
             
             {/* Mobile Buttons */}
             <div className="flex flex-col gap-3 pt-4 border-t border-purple-800">
-              <Button 
-                variant="outline" size="default" className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800"
-                onClick={() => setIsMenuOpen(false)}>
-                Entrar
-              </Button>
-              <Button 
-                size="default" className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white"
-                onClick={() => setIsMenuOpen(false)}>
-                Cadastrar
-              </Button>
+              <Link to="/404" onClick={() => setIsMenuOpen(false)}>
+                <Button 
+                  variant="outline" size="default" className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800 w-full">
+                  Entrar
+                </Button>
+              </Link>
+              <Link to="/404" onClick={() => setIsMenuOpen(false)}>
+                <Button 
+                  size="default" className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white w-full">
+                  Cadastrar
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

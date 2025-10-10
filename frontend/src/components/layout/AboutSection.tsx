@@ -2,7 +2,7 @@ import joemalAbdon from "../../assets/img/about/joemalAbdon.jpg";
 
 export default function AboutSection() {
   return (
-    <div className="bg-gradient-to-b from-purple-50 via-purple-50 via-purple-150 to-purple-200 flex flex-col lg:flex-row px-16 pl-[80px] pr-[90px] pt-[60px] pb-[75px]" style={{backgroundImage: 'linear-gradient(to bottom, #faf5ff 0%, #faf5ff 55%, #e9d5ff 100%)'}}>
+    <section id="about" className="bg-gradient-to-b from-purple-50 via-purple-50 via-purple-150 to-purple-200 flex flex-col lg:flex-row px-16 pl-[80px] pr-[90px] pt-[60px] pb-[75px]" style={{backgroundImage: 'linear-gradient(to bottom, #faf5ff 0%, #faf5ff 55%, #e9d5ff 100%)'}}>
       <div className="lg:hidden mb-6 text-start">
         <h2 className="text-purple-900 text-[2.75rem] font-bold font-['Montserrat'] leading-[50px]">
           Prazer,
@@ -43,6 +43,6 @@ export default function AboutSection() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

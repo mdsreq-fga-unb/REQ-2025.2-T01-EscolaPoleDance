@@ -12,5 +12,9 @@ export const router = createBrowserRouter([
   {
     path: '/home',
     element: <HomePage />
+  },
+  {
+    path: '/404',
+    element: <NotFoundPage />
   }
 ])
