@@ -1,144 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models');
+const scheduleController = require('../controllers/schedule_controllers');
 
-// GET /api/schedules - Listar todos os schedules
-router.get('/', async (req, res) => {
-    try {
-        const schedules = await db.Schedule.findAll({
-            order: [['dayOfWeek', 'ASC'], ['startTime', 'ASC']]
-        });
+// SCHEDULE CONTROLLERS ----------------------------------
 
-        return res.status(200).json(schedules);
-    } catch (error) {
-        console.error('Erro ao buscar schedules:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-});
+// POST /api/schedules/createSchedule - Create new schedule
+router.post('/createSchedule', scheduleController.createSchedule);
 
-// POST /api/schedules - Criar novo schedule
-router.post('/createSchedule', async (req, res) => {
-    try {
-        // LOGS DE DEBUG
-        console.log('Headers recebidos:', req.headers);
-        console.log('Body recebido:', req.body);
-        console.log('Content-Type:', req.get('content-type'));
-        
-        const { classId, dayOfWeek, startTime, endTime } = req.body;
-        
-        console.log('Dados extraídos:', { classId, dayOfWeek, startTime, endTime });
+// GET /api/schedules/ - List all schedules
+router.get('/', scheduleController.getAllSchedules);
 
-        // Validação básica
-        if (!classId || !dayOfWeek || !startTime || !endTime) {
-            return res.status(400).json({ 
-                error: 'Todos os campos são obrigatórios: classId, dayOfWeek, startTime, endTime' 
-            });
-        }
+// GET /api/schedules/:id - Find schedule by ID
+router.get('/:id', scheduleController.getScheduleById);
 
-        // Verificar se a classe existe
-        const classExists = await db.Class.findByPk(classId);
-        if (!classExists) {
-            // Buscar classes disponíveis para mostrar no erro
-            const availableClasses = await db.Class.findAll({
-                attributes: ['id', 'name'],
-                limit: 5
-            });
-            
-            return res.status(404).json({ 
-                error: `Classe com ID ${classId} não encontrada`,
-                availableClasses: availableClasses.length > 0 ? availableClasses : 'Nenhuma classe cadastrada'
-            });
-        }
+// PUT /api/schedules/:id/update - Update existing schedule info
+router.put('/updateSchedule/:id', scheduleController.updateSchedule);
 
-        const newSchedule = await db.Schedule.create({
-            classId,
-            dayOfWeek,
-            startTime,
-            endTime
-        });
+// DELETE /api/schedules/:id/delete - Delete schedule
+router.delete('/:id/delete', scheduleController.deleteSchedule);
 
-        return res.status(201).json(newSchedule);
-    } catch (error) {
-        console.error('Erro ao criar schedule:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-});
-
-// GET /api/schedules/:id - Buscar schedule por ID
-router.get('/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-        
-        const schedule = await db.Schedule.findByPk(id);
-
-        if (!schedule) {
-            return res.status(404).json({ error: 'Schedule não encontrado' });
-        }
-
-        return res.status(200).json(schedule);
-    } catch (error) {
-        console.error('Erro ao buscar schedule:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-});
-
-// PUT /api/schedules/:id - Atualizar schedule
-router.put('/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { classId, dayOfWeek, startTime, endTime } = req.body;
-
-        const schedule = await db.Schedule.findByPk(id);
-        if (!schedule) {
-            return res.status(404).json({ error: 'Schedule não encontrado' });
-        }
-
-        await schedule.update({
-            classId: classId || schedule.classId,
-            dayOfWeek: dayOfWeek || schedule.dayOfWeek,
-            startTime: startTime || schedule.startTime,
-            endTime: endTime || schedule.endTime
-        });
-
-        return res.status(200).json(schedule);
-    } catch (error) {
-        console.error('Erro ao atualizar schedule:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-});
-
-// DELETE /api/schedules/:id - Deletar schedule
-router.delete('/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-
-        const schedule = await db.Schedule.findByPk(id);
-        if (!schedule) {
-            return res.status(404).json({ error: 'Schedule não encontrado' });
-        }
-
-        await schedule.destroy();
-
-        return res.status(204).send();
-    } catch (error) {
-        console.error('Erro ao deletar schedule:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-});
+// -------------------------------------------------------
 
 module.exports = router;
