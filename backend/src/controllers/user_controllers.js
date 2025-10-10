@@ -1,10 +1,9 @@
 require('dotenv').config();
 const db = require('../models');
 const bcrypt = require('bcrypt');
-
-// USER CONTROLLERS -------------------------------
  
-// POST /api/user - Create new user 
+// POST /api/users/createUser - Create new user 
+
 exports.createUser = async (req, res) => {
     try {
 
@@ -62,7 +61,48 @@ exports.createUser = async (req, res) => {
 
 };
 
-// PUT /api/user - Update existing user
+// GET /api/users/ - List every user in database
+
+exports.getAllUsers = async (req, res) => {
+    try {
+
+        const allUsers = await db.User.findAll({
+            order: ['firstName'],
+            attributes: { exclude: ['password'] }
+        });
+
+        res.status(200).json(allUsers);
+        
+    } catch (error) {
+        console.error("Erro ao listar usuários: " + error);
+        res.status(500).json({ error: 'Ocorreu um erro interno ao listar usuários cadastrados.'});
+    }
+    
+    
+};
+
+// GET /api/users/:id - Get a specific user by id
+
+exports.getUserById = async (req, res) => {
+    try {
+
+        const { id } = req.params;
+        const selectedUser = await db.User.findByPk(id); 
+
+        if (!selectedUser) {
+            res.status(404).json({ error: `Não foi possível encontrar o usuário com id: '${id}'` });
+        }
+
+        res.status(200).json(selectedUser);        
+        
+    } catch (error) {
+        console.error("Erro ao buscar usuário: " + error);
+        res.status(500).json({ error: "Ocorreu um erro interno ao buscar o usuário." });
+    }  
+    
+};
+
+// PUT /api/users/:id/update - Update existing user
 
 exports.updateUser = async (req, res) => {
     try {
@@ -120,48 +160,7 @@ exports.updateUser = async (req, res) => {
     
 };
 
-// GET /api/user - List every user in database
-
-exports.getAllUsers = async (req, res) => {
-    try {
-
-        const allUsers = await db.User.findAll({
-            order: ['firstName'],
-            attributes: { exclude: ['password'] }
-        });
-
-        res.status(200).json(allUsers);
-        
-    } catch (error) {
-        console.error("Erro ao listar usuários: " + error);
-        res.status(500).json({ error: 'Ocorreu um erro interno ao listar usuários cadastrados.'});
-    }
-    
-    
-};
-
-// GET /api/user - Get a specific user by id
-
-exports.getUserById = async (req, res) => {
-    try {
-
-        const { id } = req.params;
-        const selectedUser = await db.User.findByPk(id); 
-
-        if (!selectedUser) {
-            res.status(404).json({ error: `Não foi possível encontrar o usuário com id: '${id}'` });
-        }
-
-        res.status(200).json(selectedUser);        
-        
-    } catch (error) {
-        console.error("Erro ao buscar usuário: " + error);
-        res.status(500).json({ error: "Ocorreu um erro interno ao buscar o usuário." });
-    }  
-    
-};
-
-// DELETE /api/user - Delete a user from database
+// DELETE /api/users/:id/delete - Delete a user from database
 
 exports.deleteUser = async (req, res) => {
     try {

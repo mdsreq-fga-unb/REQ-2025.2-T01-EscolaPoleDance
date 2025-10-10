@@ -8,19 +8,19 @@ router.get('/login', (req, res) => {
 
 // USER CONTROLLERS -------------------------------
  
-// POST /api/user - Create new user 
+// POST /api/users/createUser - Create new user 
 router.post('/createUser', userController.createUser);
 
-// PUT /api/user - Update existing user
-router.put('/updateUser/:id', userController.updateUser);
-
-// GET /api/user - List every user in database
+// GET /api/users/ - List every user in database
 router.get('/', userController.getAllUsers);
 
-// GET /api/user - Get a specific user by id
+// GET /api/users/:id - Get a specific user by id
 router.get('/:id', userController.getUserById);
 
-// DELETE /api/user - Delete a user from database
+// PUT /api/users/:id/update - Update existing user
+router.put('/updateUser/:id', userController.updateUser);
+
+// DELETE /api/users/:id/delete - Delete a user from database
 router.delete('/:id/delete', userController.deleteUser);
 
 // --------------------------------------------------

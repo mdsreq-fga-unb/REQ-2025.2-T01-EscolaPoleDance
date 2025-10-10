@@ -1,78 +1,7 @@
 const db = require('../models');
 
-// GET /api/bookings - List all bookings
-exports.getAllBookings = async (req, res) => {
-    try {
-        const bookings = await db.Booking.findAll({
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
-                },
-                {
-                    model: db.Class,
-                    as: 'class',
-                    attributes: ['id', 'level', 'maxStudents', 'enrolledStudents', 'status']
-                },
-                {
-                    model: db.Schedule,
-                    as: 'schedules',
-                    attributes: ['id', 'dayOfWeek', 'startTime', 'endTime']
-                }
-            ],
-            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
-        });
-        return res.status(200).json(bookings);
-    } catch (error) {
-        console.error('Error fetching bookings:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
+// POST /api/bookings/createBooking - Create new booking
 
-// GET /api/bookings/:id - Get booking by ID
-exports.getBookingById = async (req, res) => {
-    try {
-        const { id } = req.params;
-        
-        const booking = await db.Booking.findByPk(id, {
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
-                },
-                {
-                    model: db.Class,
-                    as: 'class',
-                    attributes: ['id', 'level', 'maxStudents', 'enrolledStudents', 'status']
-                },
-                {
-                    model: db.Schedule,
-                    as: 'schedules',
-                    attributes: ['id', 'dayOfWeek', 'startTime', 'endTime']
-                }
-            ]
-        });
-
-        if (!booking) {
-            return res.status(404).json({ error: 'Booking not found' });
-        }
-
-        return res.status(200).json(booking);
-    } catch (error) {
-        console.error('Error fetching booking:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
-
-// POST /api/bookings - Create new booking
 exports.createBooking = async (req, res) => {
     try {
         const { userId, classId, scheduleId, bookingDate, status } = req.body;
@@ -218,7 +147,212 @@ exports.createBooking = async (req, res) => {
     }
 };
 
-// PUT /api/bookings/:id - Update booking
+// GET /api/bookings - List all bookings
+
+exports.getAllBookings = async (req, res) => {
+    try {
+        const bookings = await db.Booking.findAll({
+            include: [
+                {
+                    model: db.User,
+                    as: 'user',
+                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
+                },    
+                {
+                    model: db.Class,
+                    as: 'class',
+                    attributes: ['id', 'level', 'maxStudents', 'enrolledStudents', 'status']
+                },    
+                {
+                    model: db.Schedule,
+                    as: 'schedules',
+                    attributes: ['id', 'dayOfWeek', 'startTime', 'endTime']
+                }    
+            ],    
+            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
+        });    
+        return res.status(200).json(bookings);
+    } catch (error) {
+        console.error('Error fetching bookings:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });    
+    }    
+};    
+
+// GET /api/bookings/:id - Get booking by ID
+
+exports.getBookingById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        
+        const booking = await db.Booking.findByPk(id, {
+            include: [
+                {
+                    model: db.User,
+                    as: 'user',
+                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
+                },    
+                {
+                    model: db.Class,
+                    as: 'class',
+                    attributes: ['id', 'level', 'maxStudents', 'enrolledStudents', 'status']
+                },    
+                {
+                    model: db.Schedule,
+                    as: 'schedules',
+                    attributes: ['id', 'dayOfWeek', 'startTime', 'endTime']
+                }    
+            ]    
+        });    
+
+        if (!booking) {
+            return res.status(404).json({ error: 'Booking not found' });
+        }    
+
+        return res.status(200).json(booking);
+    } catch (error) {
+        console.error('Error fetching booking:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });    
+    }    
+};    
+
+// GET /api/bookings/user/:userId - Get all bookings for a specific user
+exports.getBookingByUserId = async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        const bookings = await db.Booking.findAll({
+            where: { userId },
+            include: [
+                {
+                    model: db.Class,
+                    as: 'class'
+                },
+                {
+                    model: db.Schedule,
+                    as: 'schedules'
+                }
+            ],
+            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
+        });
+
+        return res.status(200).json(bookings);
+    } catch (error) {
+        console.error('Error fetching user bookings:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });
+    }
+};
+
+// GET /api/bookings/schedule/:scheduleId - Get all bookings for a specific schedule
+
+exports.getBookingByScheduleId = async (req, res) => {
+    try {
+        const { scheduleId } = req.params;
+
+        const bookings = await db.Booking.findAll({
+            where: { scheduleId },
+            include: [
+                {
+                    model: db.User,
+                    as: 'user',
+                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
+                },
+                {
+                    model: db.Class,
+                    as: 'class'
+                }
+            ],
+            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
+        });
+
+        return res.status(200).json(bookings);
+    } catch (error) {
+        console.error('Error fetching schedule bookings:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });
+    }
+};
+
+// GET /api/bookings/class/:classId - Get all bookings for a specific class
+
+exports.getBookingByClassId = async (req, res) => {
+    try {
+        const { classId } = req.params;
+
+        const bookings = await db.Booking.findAll({
+            where: { classId },
+            include: [
+                {
+                    model: db.User,
+                    as: 'user',
+                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
+                },
+                {
+                    model: db.Schedule,
+                    as: 'schedules'
+                }
+            ],
+            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
+        });
+
+        return res.status(200).json(bookings);
+    } catch (error) {
+        console.error('Error fetching class bookings:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });
+    }
+};
+
+// GET /api/bookings/date/:date - Get all bookings for a specific date
+
+exports.getBookingByDate = async (req, res) => {
+    try {
+        const { date } = req.params;
+
+        const bookings = await db.Booking.findAll({
+            where: { bookingDate: date },
+            include: [
+                {
+                    model: db.User,
+                    as: 'user',
+                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
+                },
+                {
+                    model: db.Class,
+                    as: 'class'
+                },
+                {
+                    model: db.Schedule,
+                    as: 'schedules'
+                }
+            ],
+            order: [['createdAt', 'DESC']]
+        });
+
+        return res.status(200).json(bookings);
+    } catch (error) {
+        console.error('Error fetching bookings by date:', error);
+        return res.status(500).json({ 
+            error: 'Internal server error',
+            details: error.message 
+        });
+    }
+};
+
+// PUT /api/bookings/:id/update - Update booking
+
 exports.updateBooking = async (req, res) => {
     try {
         const { id } = req.params;
@@ -339,6 +473,7 @@ exports.updateBooking = async (req, res) => {
 };
 
 // PATCH /api/bookings/:id/cancel - Cancel a booking
+
 exports.cancelBooking = async (req, res) => {
     try {
         const { id } = req.params;
@@ -400,6 +535,7 @@ exports.cancelBooking = async (req, res) => {
 };
 
 // PATCH /api/bookings/:id/complete - Mark booking as completed
+
 exports.completeBooking = async (req, res) => {
     try {
         const { id } = req.params;
@@ -447,7 +583,8 @@ exports.completeBooking = async (req, res) => {
     }
 };
 
-// DELETE /api/bookings/:id - Delete booking (hard delete)
+// DELETE /api/bookings/:id/delete - Delete booking (hard delete)
+
 exports.deleteBooking = async (req, res) => {
     try {
         const { id } = req.params;
@@ -476,133 +613,6 @@ exports.deleteBooking = async (req, res) => {
         return res.status(204).send();
     } catch (error) {
         console.error('Error deleting booking:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
-
-// GET /api/bookings/user/:userId - Get all bookings for a specific user
-exports.getBookingByUserId = async (req, res) => {
-    try {
-        const { userId } = req.params;
-
-        const bookings = await db.Booking.findAll({
-            where: { userId },
-            include: [
-                {
-                    model: db.Class,
-                    as: 'class'
-                },
-                {
-                    model: db.Schedule,
-                    as: 'schedules'
-                }
-            ],
-            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
-        });
-
-        return res.status(200).json(bookings);
-    } catch (error) {
-        console.error('Error fetching user bookings:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
-
-// GET /api/bookings/schedule/:scheduleId - Get all bookings for a specific schedule
-exports.getBookingByScheduleId = async (req, res) => {
-    try {
-        const { scheduleId } = req.params;
-
-        const bookings = await db.Booking.findAll({
-            where: { scheduleId },
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
-                },
-                {
-                    model: db.Class,
-                    as: 'class'
-                }
-            ],
-            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
-        });
-
-        return res.status(200).json(bookings);
-    } catch (error) {
-        console.error('Error fetching schedule bookings:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
-
-// GET /api/bookings/class/:classId - Get all bookings for a specific class
-exports.getBookingByClassId = async (req, res) => {
-    try {
-        const { classId } = req.params;
-
-        const bookings = await db.Booking.findAll({
-            where: { classId },
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
-                },
-                {
-                    model: db.Schedule,
-                    as: 'schedules'
-                }
-            ],
-            order: [['bookingDate', 'DESC'], ['createdAt', 'DESC']]
-        });
-
-        return res.status(200).json(bookings);
-    } catch (error) {
-        console.error('Error fetching class bookings:', error);
-        return res.status(500).json({ 
-            error: 'Internal server error',
-            details: error.message 
-        });
-    }
-};
-
-// GET /api/bookings/date/:date - Get all bookings for a specific date
-exports.getBookingByDate = async (req, res) => {
-    try {
-        const { date } = req.params;
-
-        const bookings = await db.Booking.findAll({
-            where: { bookingDate: date },
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    attributes: ['id', 'firstName', 'lastName', 'email', 'phoneNumber']
-                },
-                {
-                    model: db.Class,
-                    as: 'class'
-                },
-                {
-                    model: db.Schedule,
-                    as: 'schedules'
-                }
-            ],
-            order: [['createdAt', 'DESC']]
-        });
-
-        return res.status(200).json(bookings);
-    } catch (error) {
-        console.error('Error fetching bookings by date:', error);
         return res.status(500).json({ 
             error: 'Internal server error',
             details: error.message 

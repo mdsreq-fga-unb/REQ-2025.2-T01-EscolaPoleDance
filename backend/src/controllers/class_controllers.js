@@ -1,8 +1,6 @@
 const db = require('../models');
 
-// CLASS CONTROLLERS ---------------------------
-
-// POST /api/classes - Create new class
+// POST /api/classes/createClass - Create new class
 
 exports.createClass = async (req, res) => {
     try {
@@ -42,8 +40,45 @@ exports.createClass = async (req, res) => {
     
 };
 
+// GET /api/classes/ - List every class on the database
 
-// PUT /api/classes - Update existing class
+exports.getAllClasses = async (req, res) => {
+    try {
+        const allClasses = await db.Class.findAll({
+            order: ['level']
+        })
+
+        res.status(200).json(allClasses);       
+        
+    } catch (error) {
+        console.error("Erro ao listar turmas: " + error);
+        res.status(500).json({ error: "Ocorreu um erro interno ao listar turmas cadastradas." });
+    }
+    
+};
+
+// GET /api/classes/:id - Find a specified class by id
+
+exports.getClassById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const selectedClass = await db.Class.findByPk(id);
+
+        if (!selectedClass) {
+            res.status(404).json({ error: `Não foi possível encontrar a turma com id: '${id}'` });
+        }
+
+        res.status(200).json(selectedClass);
+        
+    } catch (error) {
+        console.error("Erro ao buscar turma: " + error);
+        res.status(500).json({ error: 'Ocorreu um erro interno ao buscar a turma.' });
+    }
+    
+};
+
+// PUT /api/classes/id:/update - Update existing class
 
 exports.updateClass = async (req, res) => {
     try {
@@ -89,45 +124,7 @@ exports.updateClass = async (req, res) => {
      
 };
 
-// GET /api/classes - List every class on the database
-
-exports.getAllClasses = async (req, res) => {
-    try {
-        const allClasses = await db.Class.findAll({
-            order: ['level']
-        })
-
-        res.status(200).json(allClasses);       
-        
-    } catch (error) {
-        console.error("Erro ao listar turmas: " + error);
-        res.status(500).json({ error: "Ocorreu um erro interno ao listar turmas cadastradas." });
-    }
-    
-};
-
-// GET /api/classes - Find a specified class by id
-
-exports.getClassById = async (req, res) => {
-    try {
-        const { id } = req.params;
-
-        const selectedClass = await db.Class.findByPk(id);
-
-        if (!selectedClass) {
-            res.status(404).json({ error: `Não foi possível encontrar a turma com id: '${id}'` });
-        }
-
-        res.status(200).json(selectedClass);
-        
-    } catch (error) {
-        console.error("Erro ao buscar turma: " + error);
-        res.status(500).json({ error: 'Ocorreu um erro interno ao buscar a turma.' });
-    }
-    
-};
-
-// DELETE /api/classes - Delete a specified class from database
+// DELETE /api/classes/:id/delete - Delete a specified class from database
 
 exports.deleteClass = async (req, res) => {
     try {

@@ -1,26 +1,10 @@
 const db = require('../models');
 
-// GET /api/schedules - Listar todos os schedules
-exports.getAllSchedules = async (req, res) => {
-    try {
-        const schedules = await db.Schedule.findAll({
-            order: [['dayOfWeek', 'ASC'], ['startTime', 'ASC']]
-        });
+// POST /api/schedules/createSchedule - Create new schedule
 
-        return res.status(200).json(schedules);
-    } catch (error) {
-        console.error('Erro ao buscar schedules:', error);
-        return res.status(500).json({ 
-            error: 'Erro interno do servidor',
-            details: error.message 
-        });
-    }
-};
-
-// POST /api/schedules - Criar novo schedule
 exports.createSchedule = async (req, res) => {
     try {
-        // LOGS DE DEBUG
+        // DEBUG LOGS
         console.log('Headers recebidos:', req.headers);
         console.log('Body recebido:', req.body);
         console.log('Content-Type:', req.get('content-type'));
@@ -29,17 +13,17 @@ exports.createSchedule = async (req, res) => {
         
         console.log('Dados extraídos:', { classId, dayOfWeek, startTime, endTime });
 
-        // Validação básica
+        // Basic Validation
         if (!classId || !dayOfWeek || !startTime || !endTime) {
             return res.status(400).json({ 
                 error: 'Todos os campos são obrigatórios: classId, dayOfWeek, startTime, endTime' 
             });
         }
 
-        // Verificar se a classe existe
+        // Verify if class exists
         const classExists = await db.Class.findByPk(classId);
         if (!classExists) {
-            // Buscar classes disponíveis para mostrar no erro
+            // Search available classes to show on error
             const availableClasses = await db.Class.findAll({
                 attributes: ['id', 'name'],
                 limit: 5
@@ -68,7 +52,26 @@ exports.createSchedule = async (req, res) => {
     }
 };
 
-// GET /api/schedules/:id - Buscar schedule por ID
+// GET /api/schedules/ - List all schedules
+
+exports.getAllSchedules = async (req, res) => {
+    try {
+        const schedules = await db.Schedule.findAll({
+            order: [['dayOfWeek', 'ASC'], ['startTime', 'ASC']]
+        });
+
+        return res.status(200).json(schedules);
+    } catch (error) {
+        console.error('Erro ao buscar schedules:', error);
+        return res.status(500).json({ 
+            error: 'Erro interno do servidor',
+            details: error.message 
+        });
+    }
+};
+
+// GET /api/schedules/:id - Find schedule by id
+
 exports.getScheduleById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -89,7 +92,8 @@ exports.getScheduleById = async (req, res) => {
     }
 };
 
-// PUT /api/schedules/:id - Atualizar schedule
+// PUT /api/schedules/:id/update - Update Schedule info
+
 exports.updateSchedule = async (req, res) => {
     try {
         const { id } = req.params;
@@ -117,7 +121,8 @@ exports.updateSchedule = async (req, res) => {
     }
 };
 
-// DELETE /api/schedules/:id - Deletar schedule
+// DELETE /api/schedules/:id/delete - Delete schedule
+
 exports.deleteSchedule = async (req, res) => {
     try {
         const { id } = req.params;
