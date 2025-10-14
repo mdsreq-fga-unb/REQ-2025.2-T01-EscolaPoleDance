@@ -497,7 +497,7 @@
         <li class="md-nav__item">
   <a href="#fase-1-planejamento-de-requisitos" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 1 – Planejamento de Requisitos
+      Fase 1: Planejamento de Requisitos
     </span>
   </a>
   
@@ -506,16 +506,16 @@
         <li class="md-nav__item">
   <a href="#fase-2-workshop-da-modelagem" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 2 – Workshop da Modelagem
+      Fase 2: Workshop da Modelagem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-3-construcao" class="md-nav__link">
+  <a href="#fase-3-construcao-iterativa" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 3 – Construção
+      Fase 3: Construção Iterativa
     </span>
   </a>
   
@@ -524,7 +524,7 @@
         <li class="md-nav__item">
   <a href="#fase-4-cutover-implantacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Fase 4 – Cutover (Implantação)
+      Fase 4: Cutover (Implantação)
     </span>
   </a>
   
@@ -726,151 +726,31 @@
 <h1 id="cronograma-e-entregas-rad">Cronograma e Entregas (RAD)<a class="headerlink" href="#cronograma-e-entregas-rad" title="Permanent link">&para;</a></h1>
 <p>A partir da estratégia de desenvolvimento de software estabelecida, apresenta-se a seguinte proposta de cronograma, com suas fases conforme o processo <strong>RAD (Rapid Application Development)</strong> e os resultados esperados. As fases foram organizadas em ciclos semanais, categorizados de forma a atender ao faseamento do RAD.</p>
 <hr />
-<h2 id="fase-1-planejamento-de-requisitos">Fase 1 – Planejamento de Requisitos<a class="headerlink" href="#fase-1-planejamento-de-requisitos" title="Permanent link">&para;</a></h2>
-<p>Nesta fase inicial, são levantados e detalhados os requisitos do sistema, incluindo o perfil das usuárias e as necessidades específicas da cliente.<br />
-Também ocorre a definição do documento de visão, protótipos iniciais e planejamento de tecnologias a serem empregadas.</p>
-<table>
-<thead>
-<tr>
-<th>Subetapa</th>
-<th>Início</th>
-<th>Fim</th>
-<th>Objetivo Principal</th>
-<th>Entregas Esperadas</th>
-<th>Validação do Cliente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1</strong></td>
-<td>19/08/2025</td>
-<td>30/08/2025</td>
-<td>Alinhamento, detalhamento dos requisitos com a cliente, definição do perfil das alunas.</td>
-<td>Requisitos detalhados e perfil das alunas definidos.</td>
-<td>Cliente valida os requisitos e o perfil das alunas.</td>
-</tr>
-<tr>
-<td><strong>2</strong></td>
-<td>01/09/2025</td>
-<td>15/09/2025</td>
-<td>Elaboração do documento <strong>"Visão do Produto e Projeto"</strong>, criação dos mockups/wireframes iniciais, planejamento da arquitetura e tecnologias (Node.js, React, MySQL).</td>
-<td>Documento de Visão finalizado, contendo cenário, solução proposta, tecnologias e planejamento inicial + mockups/wireframes iniciais.</td>
-<td>Cliente valida o documento de visão, mockups e planejamento inicial.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="fase-1-planejamento-de-requisitos">Fase 1: Planejamento de Requisitos<a class="headerlink" href="#fase-1-planejamento-de-requisitos" title="Permanent link">&para;</a></h2>
+<p>Nesta fase inicial, são levantados e detalhados os requisitos do sistema, incluindo o perfil das usuárias e as necessidades específicas da cliente. Também ocorreu a definição do documento de visão, protótipos iniciais e planejamento de tecnologias a serem empregadas.</p>
+<p><img alt="Cronograma Fase 1" src="../assets/cronogramaFase1.jpeg" /></p>
 <hr />
-<h2 id="fase-2-workshop-da-modelagem">Fase 2 – Workshop da Modelagem<a class="headerlink" href="#fase-2-workshop-da-modelagem" title="Permanent link">&para;</a></h2>
-<p>Esta fase constitui o núcleo do processo RAD.<br />
-Ocorre intensa colaboração entre cliente e equipe de desenvolvimento, com a criação de protótipos interativos, validações frequentes e ajustes rápidos.<br />
-O objetivo é assegurar que o sistema atenda às expectativas antes da construção definitiva.</p>
-<table>
-<thead>
-<tr>
-<th>Subetapa</th>
-<th>Início</th>
-<th>Fim</th>
-<th>Objetivo Principal</th>
-<th>Entregas Esperadas</th>
-<th>Validação do Cliente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>3</strong></td>
-<td>16/09/2025</td>
-<td>29/09/2025</td>
-<td><strong>Backend:</strong> Estruturação do servidor Node.js, configuração do banco de dados (MySQL/Sequelize), criação das APIs para gestão de turmas e alunas.<br><strong>Frontend:</strong> Desenvolvimento da estrutura do projeto React, criação do painel administrativo (login, listagem e criação de turmas).</td>
-<td>APIs de gestão de turmas e alunas + estrutura React com telas iniciais do painel administrativo.</td>
-<td>Cliente valida as telas do painel administrativo e a funcionalidade de criação de turmas.</td>
-</tr>
-<tr>
-<td><strong>4</strong></td>
-<td>30/09/2025</td>
-<td>13/10/2025</td>
-<td><strong>Frontend:</strong> Desenvolvimento das páginas públicas (Home, lista de turmas) e formulário de inscrição.<br><strong>Integração:</strong> Conexão do frontend com as APIs do backend.<br><strong>QA:</strong> Testes iniciais do fluxo de cadastro de turmas e inscrição de alunas.</td>
-<td><strong>Protótipo Funcional (MVP):</strong><br>1. Professora consegue criar e gerenciar turmas.<br>2. Aluna consegue visualizar as turmas e se inscrever.</td>
-<td>Cliente valida o MVP e os fluxos principais.</td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td>14/10/2025</td>
-<td>20/10/2025</td>
-<td>Mapeamento dos casos de uso detalhados (ex.: fluxo de pagamento, recuperação de senha).</td>
-<td>Casos de uso detalhados documentados.</td>
-<td>Cliente valida os casos de uso detalhados.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="fase-2-workshop-da-modelagem">Fase 2: Workshop da Modelagem<a class="headerlink" href="#fase-2-workshop-da-modelagem" title="Permanent link">&para;</a></h2>
+<p>Esta fase constitui o núcleo do processo RAD. Ocorre intensa colaboração entre cliente e equipe de desenvolvimento, com a criação de protótipos interativos, validações frequentes e ajustes rápidos. O objetivo é assegurar que o sistema atenda às expectativas antes da construção definitiva.</p>
+<p><img alt="Cronograma Fase 2" src="../assets/cronogramaFase2.jpeg" /></p>
 <hr />
-<h2 id="fase-3-construcao">Fase 3 – Construção<a class="headerlink" href="#fase-3-construcao" title="Permanent link">&para;</a></h2>
-<p>Com base nos protótipos validados, esta fase envolve o desenvolvimento completo do sistema.<br />
-Inclui a implementação de funcionalidades críticas (como pagamentos), testes aprofundados e refinamento do produto até estar pronto para implantação.</p>
-<table>
-<thead>
-<tr>
-<th>Subetapa</th>
-<th>Início</th>
-<th>Fim</th>
-<th>Objetivo Principal</th>
-<th>Entregas Esperadas</th>
-<th>Validação do Cliente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>6</strong></td>
-<td>21/10/2025</td>
-<td>27/10/2025</td>
-<td>Desenvolvimento: Implementação da integração com sistema de pagamento externo e área logada da aluna.<br>Adição do conteúdo informativo e textual no site.</td>
-<td>Integração com sistema de pagamento externo + área logada da aluna + conteúdo no site.</td>
-<td>Cliente valida a integração de pagamento, a área logada da aluna e o conteúdo do site.</td>
-</tr>
-<tr>
-<td><strong>7</strong></td>
-<td>28/10/2025</td>
-<td>10/11/2025</td>
-<td><strong>QA:</strong> Ciclo completo de testes com base nos casos de uso, testes de responsividade e usabilidade.<br>Correção de bugs e refinamento da interface.<br>Preparação para deploy.</td>
-<td>Aplicação completa e implantada (online), todas as funcionalidades refinadas e testadas.<br>Documentação finalizada.</td>
-<td>Cliente aprova a aplicação final e a documentação.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="fase-3-construcao-iterativa">Fase 3: Construção Iterativa<a class="headerlink" href="#fase-3-construcao-iterativa" title="Permanent link">&para;</a></h2>
+<p>Com base nos protótipos validados, esta fase envolve o desenvolvimento completo do sistema. Inclui a implementação de funcionalidades críticas (como pagamentos), testes aprofundados e refinamento do produto até estar pronto para implantação.</p>
+<p><img alt="Cronograma Fase 3" src="../assets/cronogramaFase3.jpeg" /></p>
 <hr />
-<h2 id="fase-4-cutover-implantacao">Fase 4 – Cutover (Implantação)<a class="headerlink" href="#fase-4-cutover-implantacao" title="Permanent link">&para;</a></h2>
-<p>Esta é a fase de transição, em que o sistema passa do ambiente de desenvolvimento para o uso real.<br />
-Inclui a apresentação final ao cliente, treinamento, ajustes finais e a entrega oficial do projeto.</p>
-<table>
-<thead>
-<tr>
-<th>Subetapa</th>
-<th>Início</th>
-<th>Fim</th>
-<th>Objetivo Principal</th>
-<th>Entregas Esperadas</th>
-<th>Validação do Cliente</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>8</strong></td>
-<td>11/11/2025</td>
-<td>01/12/2025</td>
-<td>Apresentação final do produto ao cliente.</td>
-<td>Demonstração da aplicação final + entrega da documentação.</td>
-<td>Aprovação final do cliente.</td>
-</tr>
-<tr>
-<td><strong>9</strong></td>
-<td>02/12/2025</td>
-<td>09/12/2025</td>
-<td>Ajustes finais e encerramento do projeto.</td>
-<td>Relatório de encerramento do projeto.</td>
-<td>Confirmação de encerramento do projeto.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="fase-4-cutover-implantacao">Fase 4: Cutover (Implantação)<a class="headerlink" href="#fase-4-cutover-implantacao" title="Permanent link">&para;</a></h2>
+<p>Esta é a fase de transição, em que o sistema passa do ambiente de desenvolvimento para o uso real. Inclui a apresentação final ao cliente, treinamento, ajustes finais e a entrega oficial do projeto.</p>
+<p><img alt="Cronograma Fase 4" src="../assets/cronogramaFase4.jpeg" /></p>
 <hr />
+<h1 id="detalhamento-das-fases-e-foco-das-entregas">Detalhamento das Fases e Foco das Entregas<a class="headerlink" href="#detalhamento-das-fases-e-foco-das-entregas" title="Permanent link">&para;</a></h1>
+<h2 id="fase-1-planejamento-de-requisitos_1">Fase 1: Planejamento de Requisitos<a class="headerlink" href="#fase-1-planejamento-de-requisitos_1" title="Permanent link">&para;</a></h2>
+<p>Nesta fase inicial, são levantados e detalhados os requisitos do sistema, incluindo o perfil das usuárias e as necessidades específicas da cliente. Também ocorreu a definição do documento de visão, protótipos iniciais e planejamento de tecnologias a serem empregadas.</p>
+<h2 id="fase-2-workshop-da-modelagem_1">Fase 2: Workshop da Modelagem<a class="headerlink" href="#fase-2-workshop-da-modelagem_1" title="Permanent link">&para;</a></h2>
+<p>Esta fase constitui o núcleo do processo RAD. Ocorre intensa colaboração entre cliente e equipe de desenvolvimento, com a criação de protótipos interativos, validações frequentes e ajustes rápidos. O objetivo é assegurar que o sistema atenda às expectativas antes da construção definitiva.</p>
+<h2 id="fase-3-construcao-iterativa_1">Fase 3: Construção Iterativa<a class="headerlink" href="#fase-3-construcao-iterativa_1" title="Permanent link">&para;</a></h2>
+<p>Com base nos protótipos validados, esta fase envolve o desenvolvimento completo do sistema. Inclui a implementação de funcionalidades críticas (como pagamentos), testes aprofundados e refinamento do produto até estar pronto para implantação.</p>
+<h2 id="fase-4-cutover-implantacao_1">Fase 4: Cutover (Implantação)<a class="headerlink" href="#fase-4-cutover-implantacao_1" title="Permanent link">&para;</a></h2>
+<p>Esta é a fase de transição, em que o sistema passa do ambiente de desenvolvimento para o uso real. Inclui a apresentação final ao cliente, treinamento, ajustes finais e a entrega oficial do projeto.</p>
 
 
 
