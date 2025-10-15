@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const scheduleController = require('../controllers/schedule_controllers');
+const { isLoggedIn, isAdmin } = require('../middleware/auth_middleware');
 
 // SCHEDULE CONTROLLERS ----------------------------------
 
 // POST /api/schedules/createSchedule - Create new schedule
-router.post('/createSchedule', scheduleController.createSchedule);
+router.post('/createSchedule', isLoggedIn, isAdmin, scheduleController.createSchedule);
 
 // GET /api/schedules/ - List all schedules
 router.get('/', scheduleController.getAllSchedules);
@@ -14,10 +15,10 @@ router.get('/', scheduleController.getAllSchedules);
 router.get('/:id', scheduleController.getScheduleById);
 
 // PUT /api/schedules/:id/update - Update existing schedule info
-router.put('/updateSchedule/:id', scheduleController.updateSchedule);
+router.put('/updateSchedule/:id', isLoggedIn, scheduleController.updateSchedule);
 
 // DELETE /api/schedules/:id/delete - Delete schedule
-router.delete('/:id/delete', scheduleController.deleteSchedule);
+router.delete('/:id/delete', isLoggedIn, isAdmin, scheduleController.deleteSchedule);
 
 // -------------------------------------------------------
 

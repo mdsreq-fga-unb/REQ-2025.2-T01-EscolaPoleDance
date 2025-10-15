@@ -4,6 +4,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const userController = require('../controllers/user_controllers');
 const db = require('../models');
+const { isLoggedIn, isAdmin } = require('../middleware/auth_middleware');
 
 // GET /api/users/login - User login
 router.get('/login', async (req, res) => {
@@ -68,16 +69,16 @@ router.get('/login', async (req, res) => {
 router.post('/createUser', userController.createUser);
 
 // GET /api/users/ - List every user in database
-router.get('/', userController.getAllUsers);
+router.get('/', isLoggedIn, userController.getAllUsers);
 
 // GET /api/users/:id - Get a specific user by id
-router.get('/:id', userController.getUserById);
+router.get('/:id', isLoggedIn, userController.getUserById);
 
 // PUT /api/users/:id/update - Update existing user
-router.put('/updateUser/:id', userController.updateUser);
+router.put('/updateUser/:id', isLoggedIn, userController.updateUser);
 
 // DELETE /api/users/:id/delete - Delete a user from database
-router.delete('/:id/delete', userController.deleteUser);
+router.delete('/:id/delete', isLoggedIn, isAdmin, userController.deleteUser);
 
 // --------------------------------------------------
 
