@@ -14,7 +14,7 @@ export default function TestimonialCarousel() {
       )}
       itemWidth={340}
       itemHeight={434}
-      scrollSpeed={0.3}
+      scrollSpeed={0.5}
     />
   );
 }
