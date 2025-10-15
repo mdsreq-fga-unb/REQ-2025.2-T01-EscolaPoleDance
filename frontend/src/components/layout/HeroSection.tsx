@@ -16,7 +16,7 @@ export default function HeroSection() {
       </div>
       
       <div className="relative z-10 text-left md:text-left flex flex-col items-start md:items-start gap-8 
-                      p-8 md:p-16 h-full justify-center">
+                      p-8 md:p-[90px] h-full justify-center">
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
                        leading-tight sm:leading-tight md:leading-tight lg:leading-tight

@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-20 px-6 sm:px-12 md:px-24 py-2.5 bg-purple-950 border-b border-purple-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden relative">
+    <nav className="w-full h-20 px-6 sm:px-12 md:px-[90px] py-2.5 bg-purple-950 border-b border-purple-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden relative">
       {/* Mobile Menu Button - Lado Esquerdo */}
       <button
         onClick={toggleMenu}
@@ -21,9 +21,9 @@ const Navbar = () => {
         <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
       </button>
 
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-0">
         <img 
-          src={logo} alt="Logo Escola de Pole Dance" className="w-12 h-12 md:w-20 md:h-12"
+          src={logo} alt="Logo Escola de Pole Dance" className="w-20 h-12 md:h-12"
         />
         <div className="flex flex-col">
           <span className="text-lg md:text-xl font-light text-white leading-tight">ESCOLA DE</span>
