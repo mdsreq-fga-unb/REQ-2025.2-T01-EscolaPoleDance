@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const admin_routes = require('./routes/admin_routes');
 const user_routes = require('./routes/user_routes');
 const schedule_routes = require('./routes/schedule_routes');
 const booking_routes = require('./routes/booking_routes');
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
     res.send("Pagina inicial");
 })
 
+app.use('/api/admin', admin_routes); // Initialize admin routes group with /api/admin prefix
 app.use('/api/users', user_routes); // Initialize user routes group with /api/user or /api/user/:id prefix
 app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/:id
 app.use('/api/bookings', booking_routes);// Initialize bookings routes group with /api/bookings or /api/bookings/:id
