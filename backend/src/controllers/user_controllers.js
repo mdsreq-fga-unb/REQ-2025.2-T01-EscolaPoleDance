@@ -66,10 +66,20 @@ exports.createUser = async (req, res) => {
 exports.getAllUsers = async (req, res) => {
     try {
 
-        const allUsers = await db.User.findAll({
+        const queryOptions = {
             order: ['firstName'],
             attributes: { exclude: ['password'] }
-        });
+        }
+
+        // Validade if user is admin to show complete user information     // TODO: add similar validation to other routes that may return sensitive information
+        if (req.user && req.user.role === 'admin') {
+            console.log("Requisição de admin: retornando dados completos de usuário");
+        } else {
+            console.log("Requisição comum: retornando dados limitados");
+            queryOptions.attributes = ['id', 'firstName', 'lastName'];
+        }
+
+        const allUsers = await db.User.findAll(queryOptions);
 
         res.status(200).json(allUsers);
         
