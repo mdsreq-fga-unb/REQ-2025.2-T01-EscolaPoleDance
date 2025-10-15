@@ -2,7 +2,7 @@ import joemalAbdon from "../../assets/img/about/joemalAbdon.jpg";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-gradient-to-b from-purple-50 via-purple-50 via-purple-150 to-purple-200 flex flex-col lg:flex-row px-16 pl-[80px] pr-[90px] pt-[60px] pb-[75px]" style={{backgroundImage: 'linear-gradient(to bottom, #faf5ff 0%, #faf5ff 55%, #e9d5ff 100%)'}}>
+    <section id="about" className="bg-gradient-to-b from-purple-50 via-purple-100 via-purple-150 to-purple-200 flex flex-col lg:flex-row px-4 sm:px-8 md:px-16 lg:px-[90px] xl:px-[90px] py-12 sm:py-16 md:py-20" style={{backgroundImage: 'linear-gradient(to bottom, #faf5ff 0%, #faf5ff 55%, #e9d5ff 100%)'}}>
       <div className="lg:hidden mb-6 text-start">
         <h2 className="text-purple-900 text-[2.75rem] font-bold font-['Montserrat'] leading-[50px]">
           Prazer,
@@ -14,9 +14,9 @@ export default function AboutSection() {
       <img 
         src={joemalAbdon} 
         alt="Joelma Abdon" 
-        className="w-[500px] h-[650px] lg:w-[500px] lg:h-[650px] sm:w-[400px] sm:h-[520px] w-[350px] h-[455px] rounded-3xl border border-purple-100 mx-auto lg:mx-0"
+        className="w-[280px] h-[364px] sm:w-[320px] sm:h-[416px] md:w-[400px] md:h-[520px] lg:w-[450px] lg:h-[585px] xl:w-[500px] xl:h-[650px] rounded-3xl border border-purple-100 mx-auto lg:mx-0"
       />
-      <div className="lg:ml-8 mt-6 lg:mt-0">
+      <div className="lg:ml-8 mt-6 lg:mt-0 max-w-2xl">
         <div className="hidden lg:block">
           <h2 className="text-purple-900 text-[2.75rem] font-bold font-['Montserrat'] leading-[50px]">
             Prazer,
