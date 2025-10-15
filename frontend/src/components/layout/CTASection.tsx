@@ -1,36 +1,55 @@
 import React from 'react';
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const CTASection: React.FC = () => {
+  // Configurações do WhatsApp
+  const whatsappConfig = {
+    number: "5561999999999", // Substitua pelo número real
+    message: "Olá! Gostaria de saber mais sobre as aulas de pole dance da Lady's Escola."
+  };
+
+  // Função para gerar URL do WhatsApp
+  const generateWhatsAppUrl = () => {
+    const baseUrl = `https://wa.me/${whatsappConfig.number}`;
+    const message = encodeURIComponent(whatsappConfig.message);
+    return `${baseUrl}?text=${message}`;
+  };
+
+  // Função para abrir WhatsApp
+  const handleWhatsAppClick = () => {
+    window.open(generateWhatsAppUrl(), '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-purple-950 min-h-screen flex flex-col justify-center items-center">
+    <div className="bg-gradient-to-r from-purple-900 to-purple-950 h-80 flex flex-col justify-center items-center px-6 lg:px-[90px] py-10">
       {/* Title */}
-      <h2 className="text-center text-purple-50 text-5xl font-bold font-['Montserrat'] leading-[55px] mb-8">
-        Dê o primeiro passo para uma nova versão de si mesma
+      <h2 className="text-center text-purple-50 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Montserrat'] leading-tight mb-4">
+        Dê o primeiro passo para uma nova versão de si mesma.
       </h2>
 
       {/* Button Group */}
-      <div className="flex justify-center items-center gap-4">
-        {/* Primary Button */}
-        <button className="px-6 py-2.5 bg-purple-50 rounded-lg">
-          <span className="text-purple-950 text-sm font-medium font-['Geist']">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
+        
+        <Link to="/404">
+          <Button
+            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white">
             Marque uma aula experimental
-          </span>
-        </button>
-
-        {/* Secondary Button */}
-        <button className="px-6 py-2.5 bg-transparent rounded-lg outline outline-1 outline-purple-50">
-          <span className="text-purple-50 text-sm font-medium font-['Geist']">
+          </Button>
+        </Link>
+        <Link to="/404">
+          <Button
+            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800">
             Faça sua matrícula
-          </span>
-        </button>
-
-        {/* WhatsApp Button */}
-        <button className="px-4 py-2 bg-green-500 rounded-lg inline-flex items-center gap-2">
-          <div className="w-4 h-4 bg-white rounded-full"></div>
-          <span className="text-white text-sm font-medium font-['Geist']">
-            Entrar em contato pelo WhatsApp
-          </span>
-        </button>
+          </Button>
+        </Link>
+        <Button
+          onClick={handleWhatsAppClick}
+          size="lg" className="w-full lg:w-auto lg:min-w-[200px] bg-green-500 text-white hover:bg-green-600 hover:text-white">
+          <FaWhatsapp className="mr-0.5" />
+          Entrar em contato pelo WhatsApp
+        </Button>
       </div>
     </div>
   );
