@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-purple-950 py-6">
+    <footer className="bg-fuchsia-pink-950 py-6">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="space-y-2">
           <p className="text-white text-sm font-semibold font-['Montserrat'] leading-7">
@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
               Desenvolvido por estudantes da Universidade de Brasília (UnB) - Campus Gama
             </span>
             <span> | </span>
-            <span className="underline cursor-pointer hover:text-purple-200 transition-colors">
+            <span className="underline cursor-pointer hover:text-fuchsia-pink-200 transition-colors">
               Política de Privacidade
             </span>
             <span> | </span>
-            <span className="underline cursor-pointer hover:text-purple-200 transition-colors">
+            <span className="underline cursor-pointer hover:text-fuchsia-pink-200 transition-colors">
               Termos de Uso
             </span>
           </p>

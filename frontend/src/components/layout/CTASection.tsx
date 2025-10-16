@@ -23,9 +23,9 @@ const CTASection: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-purple-950 h-80 flex flex-col justify-center items-center px-6 lg:px-[90px] py-10">
+    <div className="bg-gradient-to-r from-fuchsia-pink-900 to-fuchsia-pink-950 h-80 flex flex-col justify-center items-center px-6 lg:px-[90px] py-10">
       {/* Title */}
-      <h2 className="text-center text-purple-50 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Montserrat'] leading-tight mb-4">
+      <h2 className="text-center text-fuchsia-pink-50 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Montserrat'] leading-tight mb-4">
         Dê o primeiro passo para uma nova versão de si mesma.
       </h2>
 
@@ -34,13 +34,13 @@ const CTASection: React.FC = () => {
         
         <Link to="/404">
           <Button
-            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white">
+            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] bg-fuchsia-pink-50 text-fuchsia-pink-950 hover:bg-fuchsia-pink-600 hover:text-white">
             Marque uma aula experimental
           </Button>
         </Link>
         <Link to="/404">
           <Button
-            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800">
+            variant="outline" size="lg" className="w-full lg:w-auto lg:min-w-[200px] border-fuchsia-pink-50 text-fuchsia-pink-50 bg-transparent hover:bg-fuchsia-pink-800">
             Faça sua matrícula
           </Button>
         </Link>

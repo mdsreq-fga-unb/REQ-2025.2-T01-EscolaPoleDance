@@ -4,13 +4,13 @@ import { Button } from '../ui/button';
 
 const LocationSection: React.FC = () => {
   return (
-    <div className="bg-purple-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[90px] pt-8 lg:pt-12 pb-8 lg:pb-12">
+    <div className="bg-fuchsia-pink-100 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[90px] pt-8 lg:pt-12 pb-8 lg:pb-12">
       {/* Header */}
       <div className="mb-6 lg:mb-8 text-start mx-auto">
-        <h2 className="text-purple-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold font-['Montserrat'] leading-tight">
+        <h2 className="text-fuchsia-pink-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold font-['Montserrat'] leading-tight">
           Visite nossa escola
         </h2>
-        <p className="text-purple-900 text-sm sm:text-base font-medium font-['Montserrat'] leading-tight mt-4">
+        <p className="text-fuchsia-pink-900 text-sm sm:text-base font-medium font-['Montserrat'] leading-tight mt-4">
           Descubra um espaço dedicado ao empoderamento, força e expressão artística.<br />
           Entre em contato para agendar sua aula experimental.
         </p>
@@ -33,7 +33,7 @@ const LocationSection: React.FC = () => {
           ></iframe>
           <div className="absolute bottom-4 left-4">
             <Button 
-              className="w-48 xl:w-64 px-3 xl:px-4 py-2 xl:py-3 bg-purple-900 hover:bg-purple-800 text-white text-xs xl:text-sm font-medium font-['Montserrat'] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.25)]"
+              className="w-48 xl:w-64 px-3 xl:px-4 py-2 xl:py-3 bg-fuchsia-pink-900 hover:bg-fuchsia-pink-800 text-white text-xs xl:text-sm font-medium font-['Montserrat'] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.25)]"
               asChild>
               <a 
                 href="https://www.google.com/maps/place/Lady's+Escola+de+Pole+Dance/@-16.0002271,-48.0543797,17z/data=!3m1!4b1!4m6!3m5!1s0x935a2a9a143241c1:0x3f03e2d7890a4f0f!8m2!3d-16.0002271!4d-48.0522048!16s%2Fg%2F11c0q8q9q9"
@@ -59,9 +59,9 @@ const LocationSection: React.FC = () => {
 
           <InfoCard title="Contato">
             <div className="space-y-1">
-              <p>Tel: <span className="underline text-purple-500">(61) 99999-9999</span></p>
-              <p>Email: <span className="underline text-purple-500">contato@escolapoledance.com</span></p>
-              <p>Instagram: <span className="underline text-purple-500">@escolapoledance</span></p>
+              <p>Tel: <span className="underline text-fuchsia-pink-500">(61) 99999-9999</span></p>
+              <p>Email: <span className="underline text-fuchsia-pink-500">contato@escolapoledance.com</span></p>
+              <p>Instagram: <span className="underline text-fuchsia-pink-500">@escolapoledance</span></p>
             </div>
           </InfoCard>
         </div>

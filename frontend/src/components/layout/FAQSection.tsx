@@ -40,26 +40,26 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-purple-100 px-6 lg:px-[90px] py-16">
+    <div className="bg-fuchsia-pink-100 px-6 lg:px-[90px] py-16">
       <div className="mb-12">
-        <h2 className="text-purple-900 text-5xl font-semibold font-['Montserrat'] leading-[55px]">
+        <h2 className="text-fuchsia-pink-900 text-5xl font-semibold font-['Montserrat'] leading-[55px]">
           Dúvidas comuns
         </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 lg:items-start">
         {faqItems.map((item, index) => (
-          <div key={index} className="bg-purple-50 rounded-xl border border-zinc-300 shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)] h-fits flex flex-col hover:bg-purple-100 transition-colors">
+          <div key={index} className="bg-fuchsia-pink-50 rounded-xl border border-zinc-300 shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)] h-fits flex flex-col hover:bg-fuchsia-pink-100 transition-colors">
             <button
               onClick={() => toggleAccordion(index)}
               className="w-full flex items-center justify-between p-4 text-left"
             >
-              <p className="text-purple-950 text-base font-medium font-['Montserrat'] leading-6 flex-1">
+              <p className="text-fuchsia-pink-950 text-base font-medium font-['Montserrat'] leading-6 flex-1">
                 {item.question}
               </p>
               <div className="ml-4 flex-shrink-0">
                 <svg
-                  className={`w-4 h-4 text-purple-950 transition-transform duration-200 ${
+                  className={`w-4 h-4 text-fuchsia-pink-950 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
             
             {openIndex === index && (
               <div className="px-4 pb-4">
-                <p className="text-purple-950 text-sm font-normal font-['Montserrat'] leading-5">
+                <p className="text-fuchsia-pink-950 text-sm font-normal font-['Montserrat'] leading-5">
                   {item.answer}
                 </p>
               </div>

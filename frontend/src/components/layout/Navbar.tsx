@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-20 px-4 sm:px-8 md:px-12 lg:px-[90px] xl:px-20 py-2.5 bg-purple-950 border-b border-purple-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden relative">
+    <nav className="fixed top-0 left-0 right-0 w-full h-20 px-4 sm:px-8 md:px-12 lg:px-[90px] xl:px-20 py-2.5 bg-fuchsia-pink-950 border-b border-fuchsia-pink-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden z-50">
       {/* Mobile Menu Button - Lado Esquerdo */}
       <button
         onClick={toggleMenu}
@@ -27,28 +27,28 @@ const Navbar = () => {
         />
         <div className="flex flex-col">
           <span className="text-sm md:text-lg lg:text-xl font-light text-white leading-tight">ESCOLA DE</span>
-          <span className="text-sm md:text-lg lg:text-xl font-semibold text-purple-500 leading-tight">POLE DANCE</span>
+          <span className="text-sm md:text-lg lg:text-xl font-semibold text-fuchsia-pink-500 leading-tight">POLE DANCE</span>
         </div>
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-2 xl:gap-4">
-        <a href="#about" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <a href="#about" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Sobre
         </a>
-        <a href="#benefits" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <a href="#benefits" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Pole Dance
         </a>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Turmas e Horários
         </Link>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Valores
         </Link>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Regulamentos
         </Link>
-        <a href="#faq" className="text-white text-xs xl:text-sm font-medium hover:text-purple-500 transition-colors">
+        <a href="#faq" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           FAQ
         </a>
 
@@ -58,14 +58,14 @@ const Navbar = () => {
             <Button
               variant="outline"
               size="sm"
-              className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800 text-xs xl:text-sm">
+              className="border-fuchsia-pink-50 text-fuchsia-pink-50 bg-transparent hover:bg-fuchsia-pink-800 text-xs xl:text-sm">
               Entrar
             </Button>
           </Link>
           <Link to="/404">
             <Button
               size="sm"
-              className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white text-xs xl:text-sm">
+              className="bg-fuchsia-pink-50 text-fuchsia-pink-950 hover:bg-fuchsia-pink-600 hover:text-white text-xs xl:text-sm">
               Cadastrar
             </Button>
           </Link>
@@ -74,38 +74,38 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed top-20 left-0 right-0 bg-purple-950 border-b border-purple-800 lg:hidden z-50 shadow-lg">
+        <div className="fixed top-20 left-0 right-0 bg-fuchsia-pink-950 border-b border-fuchsia-pink-800 lg:hidden z-50 shadow-lg">
           <div className="flex flex-col p-6 space-y-4">
-            <a href="#about" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="#about" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Sobre
             </a>
-            <a href="#benefits" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="#benefits" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Pole Dance
             </a>
-            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Turmas e Horários
             </Link>
-            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Valores
             </Link>
-            <Link to="/" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Regulamentos
             </Link>
-            <a href="#faq" className="text-white text-base font-medium hover:text-purple-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
+            <a href="#faq" className="text-white text-base font-medium hover:text-fuchsia-pink-500 transition-colors" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </a>
 
             {/* Mobile Buttons */}
-            <div className="flex flex-col gap-3 pt-4 border-t border-purple-800">
+            <div className="flex flex-col gap-3 pt-4 border-t border-fuchsia-pink-800">
               <Link to="/404" onClick={() => setIsMenuOpen(false)}>
                 <Button
-                  variant="outline" size="default" className="border-purple-50 text-purple-50 bg-transparent hover:bg-purple-800 w-full">
+                  variant="outline" size="default" className="border-fuchsia-pink-50 text-fuchsia-pink-50 bg-transparent hover:bg-fuchsia-pink-800 w-full">
                   Entrar
                 </Button>
               </Link>
               <Link to="/404" onClick={() => setIsMenuOpen(false)}>
                 <Button
-                  size="default" className="bg-purple-50 text-purple-950 hover:bg-purple-600 hover:text-white w-full">
+                  size="default" className="bg-fuchsia-pink-50 text-fuchsia-pink-950 hover:bg-fuchsia-pink-600 hover:text-white w-full">
                   Cadastrar
                 </Button>
               </Link>

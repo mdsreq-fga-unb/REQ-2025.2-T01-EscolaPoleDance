@@ -17,7 +17,7 @@ export default function BenefitsCarousel() {
       )}
       itemWidth={320}
       itemHeight={220}
-      scrollSpeed={0.3}
+      scrollSpeed={0.5}
     />
   );
 }
