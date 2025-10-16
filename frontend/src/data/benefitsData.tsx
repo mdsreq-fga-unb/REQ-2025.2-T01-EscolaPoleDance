@@ -1,40 +1,34 @@
-import { 
-  StrengthIcon, 
-  FlexibilityIcon, 
-  ConfidenceIcon, 
-  FunIcon, 
-  ExpressionIcon, 
-  CommunityIcon 
-} from "../components/sections/BenefitIcons";
+import { BicepsFlexed, Flame, Handshake, LineSquiggle, Smile, Sparkles } from "lucide-react";
+
 
 export const benefitsData = [
   {
-    icon: <StrengthIcon />,
+    icon: <BicepsFlexed className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Força",
     description: "Desenvolva músculos e resistência enquanto se diverte em cada aula."
   },
   {
-    icon: <FlexibilityIcon />,
+    icon: <LineSquiggle className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Flexibilidade",
     description: "Melhore sua mobilidade e descubra novas formas de movimentar o corpo."
   },
   {
-    icon: <ConfidenceIcon />,
+    icon: <Flame className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Confiança",
     description: "Sinta-se mais segura e orgulhosa a cada conquista na barra."
   },
   {
-    icon: <FunIcon />,
+    icon: <Smile className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Diversão",
     description: "Exercite-se de forma leve, criativa e sempre acompanhada de boa música."
   },
   {
-    icon: <ExpressionIcon />,
+    icon: <Sparkles className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Expressão",
     description: "Explore sua sensualidade e arte corporal, do seu jeito."
   },
   {
-    icon: <CommunityIcon />,
+    icon: <Handshake className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Comunidade",
     description: "Faça parte de um grupo acolhedor que apoia e celebra suas vitórias."
   }
