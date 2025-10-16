@@ -41,17 +41,18 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-fuchsia-pink-50: oklch(97.35% 0.021 312.3);
-  --color-fuchsia-pink-100: oklch(95.22% 0.039 312.18);
-  --color-fuchsia-pink-200: oklch(88.94% 0.078 312.23);
-  --color-fuchsia-pink-300: oklch(81.01% 0.123 311.96);
-  --color-fuchsia-pink-400: oklch(71.95% 0.171 311.53);
-  --color-fuchsia-pink-500: oklch(60.18% 0.222 310.8);
-  --color-fuchsia-pink-600: oklch(55.45% 0.207 310.87);
-  --color-fuchsia-pink-700: oklch(48.56% 0.179 310.99);
-  --color-fuchsia-pink-800: oklch(42.54% 0.15 311.12);
-  --color-fuchsia-pink-900: oklch(38.3% 0.123 311.2);
-  --color-fuchsia-pink-950: oklch(28.23% 0.091 311.45);
+  --color-fuchsia-pink-50: var(--fuchsia-pink-50);
+  --color-fuchsia-pink-100: var(--fuchsia-pink-100);
+  --color-fuchsia-pink-200: var(--fuchsia-pink-200);
+  --color-fuchsia-pink-300: var(--fuchsia-pink-300);
+  --color-fuchsia-pink-400: var(--fuchsia-pink-400);
+  --color-fuchsia-pink-500: var(--fuchsia-pink-500);
+  --color-fuchsia-pink-600: var(--fuchsia-pink-600);
+  --color-fuchsia-pink-700: var(--fuchsia-pink-700);
+  --color-fuchsia-pink-800: var(--fuchsia-pink-800);
+  --color-fuchsia-pink-900: var(--fuchsia-pink-900);
+  --color-fuchsia-pink-950: var(--fuchsia-pink-950);
+
 }
 
 :root {
@@ -87,6 +88,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --fuchsia-pink-50: oklch(97.35% 0.021 312.3);
+  --fuchsia-pink-100: oklch(95.22% 0.039 312.18);
+  --fuchsia-pink-200: oklch(88.94% 0.078 312.23);
+  --fuchsia-pink-300: oklch(81.01% 0.123 311.96);
+  --fuchsia-pink-400: oklch(71.95% 0.171 311.53);
+  --fuchsia-pink-500: oklch(60.18% 0.222 310.8);
+  --fuchsia-pink-600: oklch(55.45% 0.207 310.87);
+  --fuchsia-pink-700: oklch(48.56% 0.179 310.99);
+  --fuchsia-pink-800: oklch(42.54% 0.15 311.12);
+  --fuchsia-pink-900: oklch(38.3% 0.123 311.2);
+  --fuchsia-pink-950: oklch(28.23% 0.091 311.45);
 }
 
 .dark {
