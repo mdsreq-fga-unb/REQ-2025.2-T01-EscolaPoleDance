@@ -33,11 +33,11 @@ const FAQSection: React.FC = () => {
     },
     {
       question: "Posso fazer aula experimental?",
-      answer: "Sim! Oferecemos aula experimental gratuita para você conhecer nossa metodologia e se sentir à vontade antes de se matricular."
+      answer: "Sim! Oferecemos aula experimental paga para você conhecer nossa metodologia e se sentir à vontade antes de se matricular. Comece tudo marcando sua aula experimental no horário que se encaixa melhor para você!"
     },
     {
       question: "Existe limite de idade para praticar pole dance?",
-      answer: "Não há limite de idade! Atendemos mulheres de todas as idades, desde adolescentes até senhoras. Cada faixa etária tem suas particularidades e benefícios. O importante é ter vontade de aprender e se divertir. Venha conhecer nossa metodologia adaptada para cada perfil!"
+      answer: "Não há limite de idade! Todas as mulheres são bem-vindas, desde que estejam liberadas para praticar atividade física. Cada faixa etária tem suas particularidades e benefícios. O importante é ter vontade de aprender e se divertir. Venha conhecer nossa metodologia adaptada para cada perfil!"
     }
   ];
 

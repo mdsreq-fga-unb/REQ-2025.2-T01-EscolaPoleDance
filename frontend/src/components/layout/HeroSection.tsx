@@ -4,14 +4,14 @@ import { Button } from "../ui/button";
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full mt-20 min-h-[calc(100vh-5rem)] bg-gradient-to-r from-fuchsia-pink-800 to-fuchsia-pink-950 font-[Montserrat] text-fuchsia-pink-50 
+      className="relative w-full mt-20 min-h-[calc(100vh-5rem)] bg-gradient-to-r from-fuchsia-pink-700 via-fuchsia-pink-900 to-fuchsia-pink-950 font-[Montserrat] text-fuchsia-pink-50 
                  flex flex-col md:flex-row justify-between items-center overflow-hidden"
     >
       <div className="absolute inset-0 md:left-1/2 md:top-0 md:w-1/2 h-full">
         <img
           src={heroImage}
           alt="Ginasta de Pole Dance"
-          className="w-full h-full object-cover mix-blend-luminosity"
+          className="w-full h-full object-cover mix-blend-luminosity bg-gradient-to-r from-fuchsia-pink-950 to-transparent opacity-55"
         />
       </div>
 

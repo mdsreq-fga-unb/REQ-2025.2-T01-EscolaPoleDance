@@ -25,7 +25,7 @@ export const benefitsData = [
   {
     icon: <Sparkles className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
     title: "Expressão",
-    description: "Explore sua sensualidade e arte corporal, do seu jeito."
+    description: "Descubra-se na arte de se expressar através da dança."
   },
   {
     icon: <Handshake className="w-8 h-8 lg:w-10 lg:h-10 object-contain text-fuchsia-pink-900" />,
