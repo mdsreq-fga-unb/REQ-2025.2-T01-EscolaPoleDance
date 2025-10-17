@@ -130,7 +130,7 @@ export function GenericCarousel({
   return (
     <div className={`w-full ${className}`}>
       <div className="hidden lg:block">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-4 xl:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-6 xl:gap-10 max-w-7xl mx-auto">
           {items.map((item, index) => (
             <div key={index} className="w-full">
               {renderItem(item, index)}

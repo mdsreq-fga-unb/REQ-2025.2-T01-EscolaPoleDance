@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full h-20 px-4 sm:px-8 md:px-12 lg:px-[90px] xl:px-20 py-2.5 bg-fuchsia-pink-950 border-b border-fuchsia-pink-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden z-50">
+    <nav className="fixed top-0 left-0 right-0 w-full h-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[90px] py-2.5 bg-fuchsia-pink-950 border-b border-fuchsia-pink-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden z-50">
       {/* Mobile Menu Button - Lado Esquerdo */}
       <button
         onClick={toggleMenu}
