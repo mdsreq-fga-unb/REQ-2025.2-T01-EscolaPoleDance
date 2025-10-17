@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 interface FAQItem {
   question: string;
@@ -35,12 +41,8 @@ const FAQSection: React.FC = () => {
     }
   ];
 
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <div className="bg-fuchsia-pink-100 px-6 lg:px-[90px] py-16">
+    <section id="faq" className="bg-fuchsia-pink-100 px-6 lg:px-[90px] py-16">
       <div className="mb-12">
         <h2 className="text-fuchsia-pink-900 text-5xl font-semibold font-['Montserrat'] leading-[55px]">
           Dúvidas comuns
@@ -49,39 +51,18 @@ const FAQSection: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 lg:items-start">
         {faqItems.map((item, index) => (
-          <div key={index} className="bg-fuchsia-pink-50 rounded-xl border border-zinc-300 shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)] h-fits flex flex-col hover:bg-fuchsia-pink-100 transition-colors">
-            <button
-              onClick={() => toggleAccordion(index)}
-              className="w-full flex items-center justify-between p-4 text-left"
-            >
-              <p className="text-fuchsia-pink-950 text-base font-medium font-['Montserrat'] leading-6 flex-1">
-                {item.question}
-              </p>
-              <div className="ml-4 flex-shrink-0">
-                <svg
-                  className={`w-4 h-4 text-fuchsia-pink-950 transition-transform duration-200 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </button>
-            
-            {openIndex === index && (
-              <div className="px-4 pb-4">
-                <p className="text-fuchsia-pink-950 text-sm font-normal font-['Montserrat'] leading-5">
+            <Accordion key={index} type="single" collapsible className="w-full flex items-center justify-start pl-2 text-fuchsia-pink-900">
+              <AccordionItem value={`item-${index}`}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>
                   {item.answer}
-                </p>
-              </div>
-            )}
-          </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
         ))}
       </div>
-    </div>
+    </section>
+
   );
 };
 
