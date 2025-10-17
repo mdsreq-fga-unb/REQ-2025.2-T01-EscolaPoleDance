@@ -7,6 +7,7 @@ import CTASection from '@/components/layout/CTASection';
 import FAQSection from '@/components/layout/FAQSection';
 import Footer from '@/components/layout/Footer';
 import LocationSection from '@/components/layout/LocationSection';
+import BotaoWhatsApp from '@/components/ui/BotaoWhatsApp';
 
 export default function LandingPage() {
 
@@ -20,6 +21,7 @@ export default function LandingPage() {
       <LocationSection />
       <CTASection />
       <FAQSection />
+      <BotaoWhatsApp />
       <Footer />
     </>
   )
