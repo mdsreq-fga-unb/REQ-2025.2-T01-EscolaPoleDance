@@ -1,6 +1,4 @@
-# Corigge - Visão do Produto e Projeto
-
-## 📄 [Visualizar PDF da Visão do Produto](assets/Visao_Produto.pdf)
+# Lady's Escola de Pole Dance
 
 ## 🧠 Sobre o Projeto
 
@@ -30,13 +28,16 @@ O projeto busca criar uma plataforma online que facilite a divulgação das aula
 
 ## 📚 Documentação
 
-- [Visão do Produto](./visao_produto.md) — Visão geral e objetivos
-- [Cenário Atual](./cenario-atual.md) — Contexto e desafios
+- [Visão do Produto](visao_produto.md) — Visão geral e Objetivos
+- [Cenário Atual](cenario-atual.md) — Contexto e desafios
 - [Solução Proposta](solucao-proposta.md) — Detalhes da solução
 - [Estratégias](estrategias.md) — Estratégias de desenvolvimento
-- [Requisitos](requisitos.md) - Requisitos
-- [Cronograma](cronograma.md) — Planejamento e entregas
-- [Lições Aprendidas](licoes-aprendidas.md) — Aprendizados do projeto
+- [Engenharia de Requisitos](er.md) - Atividades e Técnicas de ER
+- [Requisitos](requisitos.md) - Requisitos e DoR e DoD
+- [Backlog](backlog.md) - Backlog do Produto
+- [Cronograma](cronograma.md) — Planejamento e Entregas
+- [Interação](interacao.md) - Interação entre equipe e cliente
+- [Lições Aprendidas](licoes-aprendidas.md) — Aprendizados do Projeto
 - [Gravações](gravacoes.md) — Registros de reuniões e apresentações
 
 ## Equipe 👥

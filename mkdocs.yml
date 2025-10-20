@@ -32,6 +32,15 @@ nav:
   - Cenário Atual: cenario-atual.md
   - Documentação do Projeto:
       - Solução Proposta: solucao-proposta.md
+      - Backlog: backlog.md
+      - Cronograma: cronograma.md
+      - Estratégias: estrategias.md
+      - Engenharia de Requisitos: er.md
+      - Gravações: gravacoes.md
+      - Interação: interacao.md
+      - Lições Aprendidas: licoes-aprendidas.md
+      - Requisitos: requisitos.md
+      - Visão de Produto: visao_produto.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -56,4 +65,3 @@ extra_css:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
-

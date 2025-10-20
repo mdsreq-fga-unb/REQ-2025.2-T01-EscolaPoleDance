@@ -1,0 +1,1249 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto Lady's Escola de Pole Dance">
+      
+      
+      
+      
+        <link rel="prev" href="../licoes-aprendidas/">
+      
+      
+        <link rel="next" href="../visao_produto/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Requisitos - Lady's</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep_purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requisitos-de-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Lady&#39;s" class="md-header__button md-logo" aria-label="Lady's" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lady's
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Requisitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep_purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="deep_purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cenario-atual/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cenário Atual
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../solucao-proposta/" class="md-tabs__link">
+          
+  
+  
+  Documentação do Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lady&#39;s" class="md-nav__button md-logo" aria-label="Lady's" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lady's
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cenario-atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cenário Atual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentação do Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentação do Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solucao-proposta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backlog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronograma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estratégias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../er/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gravacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gravações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes-aprendidas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lições Aprendidas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de Requisitos Funcionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista de Requisitos Funcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-dos-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhamento dos Requisitos Funcionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de Requisitos Não Funcionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista de Requisitos Não Funcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-dos-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detalhamento dos Requisitos Não Funcionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="requisitos-de-software">Requisitos de Software<a class="headerlink" href="#requisitos-de-software" title="Permanent link">&para;</a></h1>
+<h2 id="lista-de-requisitos-funcionais">Lista de Requisitos Funcionais<a class="headerlink" href="#lista-de-requisitos-funcionais" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>RF01</strong> - Acessar conteúdo público  </li>
+<li><strong>RF02</strong> - Acessar links para redes sociais da escola  </li>
+<li><strong>RF03</strong> - Consultar horários e planos disponíveis  </li>
+<li><strong>RF04</strong> - Disponibilizar espaço para tirar dúvidas sobre a modalidade  </li>
+<li><strong>RF05</strong> - Cadastrar novo usuário  </li>
+<li><strong>RF06</strong> - Realizar login  </li>
+<li><strong>RF07</strong> - Realizar logout  </li>
+<li><strong>RF08</strong> - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago  </li>
+<li><strong>RF09</strong> - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago  </li>
+<li><strong>RF10</strong> - Agendar aulas  </li>
+<li><strong>RF11</strong> - Exibir pacotes de aulas disponíveis conforme plano definido  </li>
+<li><strong>RF12</strong> - Consultar cronograma de aulas agendadas  </li>
+<li><strong>RF13</strong> - Confirmar ausência da aula antecipadamente  </li>
+<li><strong>RF14</strong> - Gerar link de confirmação de ausência  </li>
+<li><strong>RF15</strong> - Acessar painel administrativo  </li>
+<li><strong>RF16</strong> - Editar status de presença  </li>
+<li><strong>RF17</strong> - Registrar presença após aula  </li>
+<li><strong>RF18</strong> - Gerenciar pacotes de aulas  </li>
+<li><strong>RF19</strong> - Gerenciar calendário de aulas  </li>
+<li><strong>RF20</strong> - Agendar aula experimental  </li>
+<li><strong>RF21</strong> - Registrar resultado da avaliação</li>
+<li><strong>RF22</strong> - Definir plano da aluna </li>
+</ul>
+<h3 id="detalhamento-dos-requisitos-funcionais">Detalhamento dos Requisitos Funcionais<a class="headerlink" href="#detalhamento-dos-requisitos-funcionais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome do Requisito</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF01</td>
+<td>Acessar conteúdo público</td>
+<td>O sistema deve permitir que visitantes anônimos acessem a landing page sem necessidade de autenticação, para fins de divulgação e atração de clientes.</td>
+</tr>
+<tr>
+<td>RF02</td>
+<td>Acessar links para redes sociais da escola</td>
+<td>Fornecer links diretos e acessíveis para as redes sociais da escola e da instrutora.</td>
+</tr>
+<tr>
+<td>RF03</td>
+<td>Consultar horários e planos disponíveis</td>
+<td>Permitir à Aluna e Visitante consultar a grade completa de horários e os planos de aula disponíveis.</td>
+</tr>
+<tr>
+<td>RF04</td>
+<td>Disponibilizar espaço para tirar dúvidas sobre a modalidade</td>
+<td>Disponibilizar um canal ou seção para tirar dúvidas frequentes sobre a modalidade, logística e funcionamento da escola (FAQ).</td>
+</tr>
+<tr>
+<td>RF05</td>
+<td>Cadastrar novo usuário</td>
+<td>O usuário deve conseguir se cadastrar se for um usuário novo, em um campo onde informa dados como nome, e-mail e senha.</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>Realizar login</td>
+<td>O usuário deve conseguir realizar o login se cadastrado, utilizando e-mail e senha.</td>
+</tr>
+<tr>
+<td>RF07</td>
+<td>Realizar logout</td>
+<td>O usuário deverá conseguir realizar o logout, encerrando a sessão e redirecionando para a landing page.</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago</td>
+<td>O usuário deve conseguir comprar pacotes de aulas, exibindo opções disponíveis (ex.: pacote básico de 2 aulas semanais).</td>
+</tr>
+<tr>
+<td>RF09</td>
+<td>Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago</td>
+<td>O usuário deve conseguir pagar por uma aula experimental.</td>
+</tr>
+<tr>
+<td>RF10</td>
+<td>Agendar aulas</td>
+<td>Permitir à Aluna agendar e cancelar aulas com base na disponibilidade do cronograma e no nível da turma.</td>
+</tr>
+<tr>
+<td>RF11</td>
+<td>Exibir pacotes de aulas disponíveis conforme plano definido</td>
+<td>Exibir apenas os pacotes compatíveis com o plano atribuído à aluna após a avaliação.</td>
+</tr>
+<tr>
+<td>RF12</td>
+<td>Consultar cronograma de aulas agendadas</td>
+<td>Permitir à Aluna consultar o cronograma individual de todas as aulas agendadas (histórico e futuras).</td>
+</tr>
+<tr>
+<td>RF13</td>
+<td>Confirmar ausência da aula antecipadamente (Aluna)</td>
+<td>A aluna deve conseguir confirmar ausência em uma aula agendada diretamente no painel do usuário (dashboard), com a opção disponível a qualquer momento antes do prazo de 12 horas antes do horário da aula. A confirmação deve atualizar o status da aluna de "Confirmado" para "Não confirmado".</td>
+</tr>
+<tr>
+<td>RF14</td>
+<td>Gerar link de confirmação de ausência</td>
+<td>A professora deve conseguir criar e compartilhar um link único para uma página dedicada de confirmação de ausência para uma aula específica, onde a aluna pode confirmar ausência até 12 horas antes do horário (conforme RF13 existente). A página deve incluir um countdown, botão de confirmação, texto sobre regulamento e aviso de login obrigatório se a aluna não estiver autenticada.</td>
+</tr>
+<tr>
+<td>RF15</td>
+<td>Acessar painel administrativo</td>
+<td>Permitir à Professora/Administradora acessar e gerenciar o painel administrativo para controle do negócio.</td>
+</tr>
+<tr>
+<td>RF16</td>
+<td>Editar status de presença (Professora)</td>
+<td>A professora deve conseguir editar manualmente o status de presença de qualquer aluna em uma aula específica, com opções de status: "Confirmado", "Não confirmado", "Ausente" ou "Presente". Essa edição deve ser acessível via painel administrativo da professora.</td>
+</tr>
+<tr>
+<td>RF17</td>
+<td>Registrar presença após aula</td>
+<td>Ao final de cada aula, a professora deve conseguir acessar uma seção dedicada à aula no site, exibindo uma lista de alunas agendadas com checkboxes de presença. Por padrão, todos os checkboxes devem estar ativados (indicando "Presente"), e a professora pode desmarcar os das alunas ausentes, atualizando o status para "Ausente".</td>
+</tr>
+<tr>
+<td>RF18</td>
+<td>Gerenciar pacotes de aulas</td>
+<td>Administradores devem conseguir gerenciar pacotes de aulas (criar, editar, deletar), incluindo preços e descrições.</td>
+</tr>
+<tr>
+<td>RF19</td>
+<td>Gerenciar calendário de aulas</td>
+<td>Administradores devem conseguir gerenciar o calendário de aulas (adicionar, editar, cancelar aulas).</td>
+</tr>
+<tr>
+<td>RF20</td>
+<td>Agendar aula experimental</td>
+<td>Permitir que novas alunas agendem uma aula experimental.</td>
+</tr>
+<tr>
+<td>RF21</td>
+<td>Registrar resultado da avaliação</td>
+<td>Permitir que a professora registre o resultado da avaliação da aula experimental da nova aluna.</td>
+</tr>
+<tr>
+<td>RF22</td>
+<td>Definir plano da aluna</td>
+<td>Permitir que a professora defina o plano (A ou B) da nova aluna com base no resultado da avaliação.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lista-de-requisitos-nao-funcionais">Lista de Requisitos Não Funcionais<a class="headerlink" href="#lista-de-requisitos-nao-funcionais" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>RNF01</strong> - Implementar criptografia para a privacidade dos dados do usuário</li>
+<li><strong>RNF02</strong> - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</li>
+<li><strong>RNF03</strong> - Assegurar responsividade do site em diferentes dispositivos  </li>
+<li><strong>RNF04</strong> - Manter o sistema disponível 24/7 (com exceção de manutenções programadas) </li>
+<li><strong>RNF05</strong> - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari) </li>
+<li><strong>RNF06</strong> - Garantir interface intuitiva e fácil de navegar  </li>
+<li><strong>RNF07</strong> - Garantir carregamento rápido e navegação fluida do frontend</li>
+<li><strong>RNF08</strong> - Documentar padrões de desenvolvimento internos  </li>
+<li><strong>RNF09</strong> - Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page  </li>
+<li><strong>RNF10</strong> - Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling</li>
+<li><strong>RNF11</strong> - Exibir menu de navegação</li>
+<li><strong>RNF12</strong> - Exibir landing page</li>
+</ul>
+<h3 id="detalhamento-dos-requisitos-nao-funcionais">Detalhamento dos Requisitos Não Funcionais<a class="headerlink" href="#detalhamento-dos-requisitos-nao-funcionais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome do Requisito</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF01</td>
+<td>Implementar criptografia para a privacidade dos dados do usuário</td>
+<td>Implementar criptografia de transporte (comunicação cliente-servidor) TLS 1.2 (ou superior) e, para as senhas de usuários, utilizar o algoritmo de hashing bcrypt com um fator de custo mínimo de 12.</td>
+</tr>
+<tr>
+<td>RNF02</td>
+<td>Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</td>
+<td>O sistema deve garantir a conformidade com as exigências da LGPD, especialmente nos seguintes pontos: Consentimento (Art. 7º, I) no cadastro; Finalidade (Art. 6º, I); Segurança dos Dados (Art. 46); e Direito de Acesso e Exclusão (Art. 18, II e IV).</td>
+</tr>
+<tr>
+<td>RNF03</td>
+<td>Assegurar responsividade do site em diferentes dispositivos</td>
+<td>O design e a interface do usuário devem assegurar a responsividade para dispositivos móveis (com largura de 360px a 767px, como smartphones de 5 a 6.7 polegadas) e desktop (larguras a partir de 1024px).</td>
+</tr>
+<tr>
+<td>RNF04</td>
+<td>Manter o sistema disponível 24/7 (com exceção de manutenções programadas)</td>
+<td>Disponibilidade Mínima: 99,8% do tempo. Manutenção Programada: Período de manutenção semestral de até 4 horas, preferencialmente fora do horário comercial (ex: madrugada de domingo), para atualizações críticas de infraestrutura e informações ou estáticas da escola/planos.</td>
+</tr>
+<tr>
+<td>RNF05</td>
+<td>Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari)</td>
+<td>O site deve funcionar plenamente nas duas versões mais recentes dos principais navegadores modernos (Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari).</td>
+</tr>
+<tr>
+<td>RNF06</td>
+<td>Garantir interface intuitiva e fácil de navegar</td>
+<td>O sistema deve garantir uma interface intuitiva e fácil de navegar, utilizando como cor primária o roxo (#9333ea) e seguindo a paleta de cores “purple” do site shadcn, baseando-se na identidade visual da escola. A fonte padrão adotada é a montserrat com tamanho mínimo 14.</td>
+</tr>
+<tr>
+<td>RNF07</td>
+<td>Garantir carregamento rápido e navegação fluida do frontend</td>
+<td>Garantir um tempo de carregamento inicial inferior a 3 segundos em conexões 3G e um tempo de resposta do servidor (TTFB - Time to First Byte) inferior a 400ms para 90% das requisições.</td>
+</tr>
+<tr>
+<td>RNF08</td>
+<td>Documentar padrões de desenvolvimento internos</td>
+<td>A equipe deve documentar e seguir um padrão interno para as práticas de desenvolvimento (código, testes, infraestrutura).</td>
+</tr>
+<tr>
+<td>RNF09</td>
+<td>Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page</td>
+<td>O sistema deve ser otimizado para motores de busca SEO, implementando SEO On-Page utilizando meta tags, cabeçalhos e atributos alt em imagens, com foco em palavras-chave relacionadas à escola e modalidade. Implementar também o SEO Off-Page através da criação e otimização de um Google Business Profile.</td>
+</tr>
+<tr>
+<td>RNF10</td>
+<td>Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling</td>
+<td>O sistema deve implementar validação e sanitização de todas as entradas de usuário no backend usando parametrização de consultas para prevenir SQL Injection e configurar o sistema para mitigar DNS Tunneling através da criptografia de requisições DNS fornecida pelo TLS, além de aplicar políticas de segurança como CORS (Cross-Origin Resource Sharing) para filtrar os domínios externos dos quais o sistema receberá requisições.</td>
+</tr>
+<tr>
+<td>RNF11</td>
+<td>Exibir menu de navegação</td>
+<td>O sistema deve fornecer um menu de navegação principal que inclua links para todas as páginas: Landing Page (inicial), Sobre, Pole Dance, Turmas e Horários, Valores, Regulamento, FAQ, além de Login/Cadastro.</td>
+</tr>
+<tr>
+<td>RNF12</td>
+<td>Exibir landing page</td>
+<td>O sistema deve exibir uma landing page inicial que apresente informações sobre a escola de pole dance, incluindo descrição dos serviços, depoimentos de alunos e chamadas para ação (CTAs) para cadastro ou login.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="listagem-dos-requisitos-nao-funcionais-de-acordo-com-o-padrao-urps-e-com-as-categorias-de-sommerville">Listagem dos Requisitos Não Funcionais de acordo com o padrão URPS+ e com as categorias de Sommerville<a class="headerlink" href="#listagem-dos-requisitos-nao-funcionais-de-acordo-com-o-padrao-urps-e-com-as-categorias-de-sommerville" title="Permanent link">&para;</a></h1>
+<h2 id="requisitos-de-produto">Requisitos de Produto<a class="headerlink" href="#requisitos-de-produto" title="Permanent link">&para;</a></h2>
+<p>Requisitos relacionados a categorização e contenção do comportamento do software. Divididos entre: requisitos de usabilidade, requisitos de eficiência (de desempenho e de espaço), requisitos de confiança e requisitos de proteção.</p>
+<h3 id="usabilidade-usability">Usabilidade (Usability)<a class="headerlink" href="#usabilidade-usability" title="Permanent link">&para;</a></h3>
+<p>Requisitos relacionados à facilidade de uso, aprendizado e design da interface.<br />
+- <strong>RNF03</strong>: Assegurar responsividade do site em diferentes dispositivos.<br />
+- <strong>RNF06</strong>: Garantir interface intuitiva e fácil de navegar.<br />
+- <strong>RNF11</strong>: Exibir menu de navegação<br />
+- <strong>RNF12</strong>: Exibir landing page  </p>
+<h3 id="eficiencia-sommerville-e-performance-urps">Eficiência (Sommerville) e Performance URPS+<a class="headerlink" href="#eficiencia-sommerville-e-performance-urps" title="Permanent link">&para;</a></h3>
+<p>Requisitos relacionados à velocidade, eficiência e tempo de resposta do sistema.
+- <strong>RNF07</strong>: Garantir carregamento rápido e navegação fluida do frontend - (Entre os requisitos de eficiência este também é um requisito de <strong>Desempenho (Sommerville)</strong>          <br />
+- <strong>RNF09</strong>: Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page - (Entre os requisitos de eficiência este também é um requisito de <strong>Desempenho (Sommerville)</strong></p>
+<h3 id="confiabilidade-reliability">Confiabilidade (Reliability)<a class="headerlink" href="#confiabilidade-reliability" title="Permanent link">&para;</a></h3>
+<p>Requisitos relacionados à capacidade do sistema de operar sem falhas e se recuperar de erros.<br />
+- <strong>RNF04</strong>: Manter o sistema disponível 24/7 (com exceção de manutenções programadas).<br />
+- <strong>RNF05</strong>: Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari).  </p>
+<h3 id="protecao-sommerville-e-seguranca-security-urps">Proteção (Sommerville) e Segurança (Security) URPS+<a class="headerlink" href="#protecao-sommerville-e-seguranca-security-urps" title="Permanent link">&para;</a></h3>
+<p>Requisitos relacionados à proteção do sistema contra acessos não autorizados e ataques. 
+- <strong>RNF01</strong>: Implementar criptografia para a privacidade dos dados do usuário.<br />
+- <strong>RNF10</strong>: Implementar medidas de segurança contra abuso de vulnerabilidades como SQL
+Injection ou DNS Tunneling.</p>
+<h2 id="requisitos-organizacionais">Requisitos Organizacionais<a class="headerlink" href="#requisitos-organizacionais" title="Permanent link">&para;</a></h2>
+<p>Requisitos relacionados às regras e procedimentos da política dos desenvolvedores e do cliente no sistema, estes são os requisitos chamados de “gerais”. Divididos entre: requisitos operacionais, requisitos de <strong>desenvolvimento</strong>, requisitos ambientais.</p>
+<ul>
+<li><strong>Desenvolvimento</strong> (Sommerville): Requisitos relacionados à escolha da linguagem de programação, ao ambiente de desenvolvimento e aos padrões que devem ser adotados no processo de desenvolvimento.</li>
+<li><strong>RNF08</strong> - Documentar padrões de desenvolvimento internos</li>
+</ul>
+<h2 id="requisitos-externos">Requisitos Externos<a class="headerlink" href="#requisitos-externos" title="Permanent link">&para;</a></h2>
+<p>Requisitos relacionados “a fatores externos ao sistema e ao seu processo de desenvolvimento”. Divididos entre: requisitos reguladores, requisitos legais, requisitos éticos.</p>
+<ul>
+<li><strong>Legal</strong>: Requisitos que precisam ser seguidos para operarem de acordo com a lei.</li>
+<li><strong>RNF02</strong> - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</li>
+</ul>
+<hr />
+<h1 id="dor-e-dod">DoR e DoD<a class="headerlink" href="#dor-e-dod" title="Permanent link">&para;</a></h1>
+<h2 id="definition-of-ready-dor">Definition of Ready (DoR)<a class="headerlink" href="#definition-of-ready-dor" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>DoR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF01</td>
+<td>Regras de negócio de agendamento definidas (prazos, níveis, capacidade).</td>
+</tr>
+<tr>
+<td>RF02</td>
+<td>Chaves de API de Produção e Teste do Mercado Pago disponíveis.</td>
+</tr>
+<tr>
+<td>RF03</td>
+<td>Estrutura básica de permissão de usuário (Professora) definida.</td>
+</tr>
+<tr>
+<td>RF04</td>
+<td>Dados iniciais (horários, preços, descrições) inseridos no BD.</td>
+</tr>
+<tr>
+<td>RF05</td>
+<td>Modelos de dados de agendamento, aluna e aula interconectados no backend.</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>Conteúdo textual final da FAQ/Dúvidas fornecido e revisado.</td>
+</tr>
+<tr>
+<td>RF07</td>
+<td>URLs finais e ícones corretos das redes sociais fornecidos.</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>Conteúdo final das páginas "Sobre", "Regulamento", "Valores" revisado.</td>
+</tr>
+<tr>
+<td>RF09</td>
+<td>Regras de validação (ex: tamanho mínimo da senha) definidas.</td>
+</tr>
+<tr>
+<td>RF10</td>
+<td>Rota de autenticação (backend) implementada.</td>
+</tr>
+<tr>
+<td>RF11</td>
+<td>Pacotes de aulas cadastrados no BD via painel admin (RF18).</td>
+</tr>
+<tr>
+<td>RF12</td>
+<td>RF01 e RF11 estão Done.</td>
+</tr>
+<tr>
+<td>RF13</td>
+<td>Regra de timeout (12h) definida no backend.</td>
+</tr>
+<tr>
+<td>RF14</td>
+<td>Design do link único e página de confirmação no Figma.</td>
+</tr>
+<tr>
+<td>RF15</td>
+<td>Interface de edição de status no painel (RF03) desenhada.</td>
+</tr>
+<tr>
+<td>RF16</td>
+<td>Lista de alunas agendadas para a aula acessível no painel (RF03).</td>
+</tr>
+<tr>
+<td>RF17</td>
+<td>Sessão de usuário definida no backend.</td>
+</tr>
+<tr>
+<td>RF18</td>
+<td>Design das telas de CRUD de pacotes no painel (RF03).</td>
+</tr>
+<tr>
+<td>RF19</td>
+<td>Design das telas de CRUD de aulas no painel (RF03).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="definition-of-done-dod">Definition of Done (DoD)<a class="headerlink" href="#definition-of-done-dod" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF01</td>
+<td>Agendamento registrado no BD; vaga deduzida; aluna recebe confirmação.</td>
+</tr>
+<tr>
+<td>RF02</td>
+<td>Redirecionamento e callback de pagamento bem-sucedidos; saldo atualizado.</td>
+</tr>
+<tr>
+<td>RF03</td>
+<td>Login Admin/Professora funciona; painel exibe primeira tela com sucesso.</td>
+</tr>
+<tr>
+<td>RF04</td>
+<td>Consulta carrega dados corretamente; planos vinculados aos IDs de compra (RF11).</td>
+</tr>
+<tr>
+<td>RF05</td>
+<td>Cronograma exibe apenas aulas da aluna autenticada, passadas e futuras.</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>FAQ navegável, exibe todas perguntas/respostas e otimizada para celular.</td>
+</tr>
+<tr>
+<td>RF07</td>
+<td>Links funcionam e visíveis no header/footer.</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>Páginas acessíveis sem login; Menu de Navegação (RNF11) inclui links.</td>
+</tr>
+<tr>
+<td>RF09</td>
+<td>Usuário criado com sucesso; senha armazenada com criptografia forte (RNF01).</td>
+</tr>
+<tr>
+<td>RF10</td>
+<td>Login bem-sucedido gera sessão segura; falha retorna mensagem genérica.</td>
+</tr>
+<tr>
+<td>RF11</td>
+<td>Compras levam corretamente ao Mercado Pago (RF02).</td>
+</tr>
+<tr>
+<td>RF12</td>
+<td>Agendamento verifica saldo de aulas; só permite se saldo positivo e RF01 cumprido.</td>
+</tr>
+<tr>
+<td>RF13</td>
+<td>Aluna consegue alterar status dentro do prazo; bloqueio após 12h.</td>
+</tr>
+<tr>
+<td>RF14</td>
+<td>Professora gera link no painel; link funciona fora do painel admin.</td>
+</tr>
+<tr>
+<td>RF15</td>
+<td>Professora altera status; mudança refletida no histórico da aluna.</td>
+</tr>
+<tr>
+<td>RF16</td>
+<td>Professora marca presença/ausência em massa; histórico atualizado.</td>
+</tr>
+<tr>
+<td>RF17</td>
+<td>Token de sessão invalidado após clique; impede reautenticação sem login.</td>
+</tr>
+<tr>
+<td>RF18</td>
+<td>Administrador cria/edita/exclui pacotes; alterações refletidas no RF04.</td>
+</tr>
+<tr>
+<td>RF19</td>
+<td>Administrador manipula calendário; mudanças refletem no RF04 e RF17.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

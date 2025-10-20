@@ -2,9 +2,9 @@
 
 ## Introdução ao Negócio e Contexto
 
-A Lady's Escola de Pole Dance é um estúdio especializado em aulas de Pole Dance, fundado e gerido por uma única professora que também atua como personal trainer. A empresa tem como público-alvo principalmente mulheres jovens e adultas interessadas em melhorar a saúde física, a autoconfiança e o bem-estar por meio do Pole Dance.
+A **Lady's Escola de Pole Dance** é um estúdio especializado em aulas de Pole Dance, fundado e gerido por uma única professora que também atua como personal trainer. A empresa tem como público-alvo principalmente mulheres jovens e adultas interessadas em melhorar a saúde física, a autoconfiança e o bem-estar por meio do Pole Dance.
 
-Mesmo que esteja no grupo de esportes minoritários no quesito acesso e conhecimento ao público comum, a Lady's Escola de Pole Dance se destaca pela abordagem personalizada, pelo acompanhamento próximo da professora e pela criação de um ambiente acolhedor para as alunas. 
+Mesmo que esteja no grupo de esportes minoritários no quesito acesso e conhecimento ao público comum, a Lady's Escola de Pole Dance se destaca pela abordagem personalizada, pelo acompanhamento próximo da professora e pela criação de um ambiente acolhedor para as alunas.
 
 Atualmente, o estúdio funciona de forma presencial, com turmas separadas por níveis, mas ainda não possui um sistema digital para controle de capacidade das turmas, matrícula online, ou que sirva como um meio informativo sobre a prática do Pole Dance e trabalho da professora (cliente) em questão.
 
@@ -17,9 +17,9 @@ O projeto surge como uma oportunidade para modernizar e apoiar a gestão do neg�
 *Figura 1 – Diagrama de Ishikawa das causas da dificuldade de expansão da Lady's Escola de Pole Dance.  
 Fonte: O autor (2025).*
 
-A cliente encontra dificuldade em atrair alunas próximas que conheçam a modalidade além do estereótipo comum associado ao Pole Dance. 
+A cliente encontra dificuldade em atrair alunas próximas que conheçam a modalidade além do estereótipo comum associado ao Pole Dance.  
 
-Como o estúdio é administrado somente por ela, todo o controle de contatos, agenda, remarcação de aulas e atualização de pacotes e planos, que passam por reajustes periódicos, depende exclusivamente de seu tempo. 
+Como o estúdio é administrado somente por ela, todo o controle de contatos, agenda, remarcação de aulas e atualização de pacotes e planos, que passam por reajustes periódicos, depende exclusivamente de seu tempo.  
 
 Assim, percebe-se a oportunidade de otimizar o processo organizacional, aumentando a produtividade e facilitando a adaptação ao meio online, visto que parte de seu marketing e gestão como contato com as alunas matriculadas, além de clientes em potencial, já é feito por plataformas avulsas como: WhatsApp, Instagram e Facebook, que, apesar de auxiliarem, ainda se mostraram insuficientes.
 
@@ -40,3 +40,9 @@ Os principais desafios são:
 Em conjunto, esses desafios mostram que o projeto não é uma mera implementação de software, mas uma transformação fundamental no modelo de negócio. Ele envolve processos, a capacitação da gestora, a usabilidade do software e a construção de uma base sólida para o crescimento escalável do negócio.
 
 ## Segmentação de Clientes
+
+- **Praticantes Experientes (17-60 anos):**  
+  Este segmento já possui experiência com pole dance, seja por estarem retornando à prática ou por buscarem uma escola que ofereça um nível técnico mais elevado. São clientes mais exigentes, que pesquisam a qualificação dos instrutores e a infraestrutura do estúdio, buscando aprimoramento técnico e aulas de nível avançado.
+
+- **Praticantes Inexperientes (17-60 anos):**  
+  O público alvo são, principalmente, mulheres entre 17 e 60 anos, no Distrito Federal. Dentre os possíveis perfis de usuários, estão: novas entusiastas com o pole dance que desejam iniciar seu aprendizado; alunas experientes desejando retomar a prática; entusiastas fitness buscando um novo esporte ou modalidade de dança ginástica; alunas de outras escolas buscando um aprendizado mais completo ou avançado.
