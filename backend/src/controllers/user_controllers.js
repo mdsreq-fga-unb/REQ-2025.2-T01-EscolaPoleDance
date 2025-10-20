@@ -12,7 +12,7 @@ exports.createUser = async (req, res) => {
         console.log('Body recebido:', req.body);
         console.log('Content-Type:', req.get('content-type'));     
 
-        const { firstName, lastName, email, password, phoneNumber, role } = req.body
+        const { firstName, lastName, email, password, phoneNumber, role, level } = req.body
         
         // Validate received data
         if (!firstName || !lastName || !email || !password) {
@@ -33,6 +33,7 @@ exports.createUser = async (req, res) => {
             password: hashedPassword,  // Stores only the hashed password
             phoneNumber: phoneNumber,
             role: role,
+            level: level
         });
     
         // Response with sucessfully created user
@@ -42,6 +43,7 @@ exports.createUser = async (req, res) => {
             lastName: newUser.lastName,
             email: newUser.email,
             role: newUser.role,
+            level: newUser.level,
             createdAt: newUser.createdAt
         });
         
@@ -113,7 +115,7 @@ exports.updateUser = async (req, res) => {
         console.log('Content-Type:', req.get('content-type')); 
         
         const { id } = req.params;
-        const { firstName, lastName, email, password, phoneNumber, role, status, expires } = req.body;
+        const { firstName, lastName, email, password, phoneNumber, role, level, status, expires } = req.body;
         
         const selectedUser = await db.User.findByPk(id);
         
@@ -135,6 +137,7 @@ exports.updateUser = async (req, res) => {
         if (email) updateData.email = email;
         if (phoneNumber) updateData.phoneNumber = phoneNumber;
         if (role) updateData.role = role;
+        if (level) updateData.level = level;
         if (status) updateData.status = status;
         if (expires) updateData.expires = expires;
 
@@ -148,6 +151,7 @@ exports.updateUser = async (req, res) => {
             email: selectedUser.email,
             phoneNumber: selectedUser.phoneNumber,
             role: selectedUser.role,
+            level: selectedUser.level,
             status: selectedUser.status,
             expires: selectedUser.expires,
             createdAt: selectedUser.createdAt

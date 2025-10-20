@@ -51,6 +51,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: 'user'
         },
+        level: {
+            type: DataTypes.ENUM('beginner', 'intermediate', 'advanced'),
+            allowNull: true,
+            defaultValue: 'beginner'
+        },
         status: {
             type: DataTypes.ENUM('active', 'inactive', 'pending'),
             allowNull: false,
