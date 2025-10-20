@@ -6,31 +6,30 @@ As Histórias de Usuário apresentadas abaixo foram diretamente derivadas da lis
 
 # Histórias de Usuário
 
-| Código | Descrição | Objetivo Específico |
-|--------|------------|----------------------|
-| **US01** | Como um **visitante**, eu quero **acessar o conteúdo público do site** (sobre a escola, metodologia, informações do pole dance, galeria de fotos), **para que eu possa conhecer a escola e o pole dance antes de me matricular.** | OE1 / OE5 |
-| **US02** | Como um **visitante**, eu quero **encontrar e clicar nos links para as redes sociais da escola**, para que eu possa **seguir o conteúdo e ver mais sobre o dia a dia da escola e notícias recentes.** | OE1 |
-| **US03** | Como um **visitante** ou **aluna**, eu quero **consultar os horários de aulas e os planos de pacotes disponíveis**, para que eu possa **escolher a opção que melhor se adequa ao meu horário e orçamento.** | OE2 |
-| **US04** | Como um **visitante**, eu quero **ter um espaço de contato** (como um formulário ou FAQ), para que eu possa **tirar minhas dúvidas sobre a modalidade ou a escola e decidir se quero começar.** | OE1 / OE5 |
-| **US05** | Como um **visitante,** eu quero **me cadastrar no website fornecendo minhas informações,** para que eu possa **realizar compras/agendamentos e acessar a área de aluna.** | OE2 |
-| **US06** | Como uma **aluna**, eu quero **inserir minhas informações credenciais para fazer login,** para que eu possa **acessar meu painel e funcionalidades restritas.** | OE2 |
-| **US07** | Como uma **aluna,** eu quero **sair da minha conta após usar o website,** para que eu possa **proteger minhas informações e garantir a segurança do meu acesso.** | OE2 |
-| **US08** | Como uma **aluna,** eu quero **selecionar um pacote de aulas e pagar online usando o Mercado Pago,** para que eu possa **garantir minha vaga nas aulas e ter o pacote creditado na minha conta.** | OE3 |
-| **US09** | Como um **visitante,** eu quero **pagar pela minha aula experimental usando o Mercado Pago,** para que eu possa **confirmar minha participação e experimentar a modalidade.** | OE3 |
-| **US10** | Como uma **aluna,** eu quero **selecionar uma data e horário e agendar minhas aulas disponíveis,** para que eu possa **reservar minha vaga e planejar minha frequência.** | OE2 |
-| **US11** | Como uma **aluna,** eu quero **visualizar um resumo dos pacotes de aulas que a escola oferece,** para que eu possa **entender minhas opções e escolher qual comprar ou renovar.** | OE1 |
-| **US12** | Como uma **aluna,** eu quero **acessar uma lista ou calendário com todas as minhas aulas agendadas,** para que eu possa **saber quais são meus próximos compromissos e me organizar.** | OE2 |
-| **US13** | Como uma **aluna,** eu quero **informar que não poderei comparecer a uma aula agendada antes do prazo de cancelamento,** para que eu possa **potencialmente ter meu crédito de volta ou evitar penalidades.** | OE2 |
-| **US14** | Como uma **aluna,** eu quero **receber um link ou mensagem de confirmação ao informar minha ausência,** para que eu **possa garantir que o cancelamento foi processado corretamente.** | OE2 |
-| **US15** | Como um **administrador,** eu quero **fazer login e acessar o painel administrativo,** para que eu possa **gerenciar as operações e dados da escola.** | OE4 |
-| **US16** | Como um **administrador,** eu quero **poder editar o status de presença de uma aluna em uma aula (Presente/Ausente),** para que eu possa **corrigir erros ou atualizar registros de forma manual.** | OE4 |
-| **US17** | Como um **administrador,** eu quero **marcar a presença das alunas em uma aula finalizada,** para que **o histórico da aluna seja atualizado.** | OE4 |
-| **US18** | Como um **administrador,** eu quero **criar, editar e desativar os pacotes de aulas oferecidos,** para que eu possa **manter o catálogo de produtos sempre atualizado.** | OE4 |
-| **US19** | Como um **administrador,** eu quero **adicionar, modificar ou cancelar aulas no calendário da escola,** para que eu possa **controlar a grade de horários disponíveis para agendamento.** | OE4 |
-| **US20** | Como um **administrador,** eu quero **ter um módulo específico para agendar aulas experimentais de novos interessados,** para que eu possa **organizar essas aulas separadamente do cronograma regular.** | OE4 |
-| **US21** | Como um **administrador,** eu quero **registrar o nível de habilidade de uma nova aluna após a avaliação e definir seu plano de aulas inicial,** para que ela possa **começar a agendar aulas no nível correto.** | OE4 |
-| **US22** | Como um **administrador,** quero **definir o plano (A ou B) da nova aluna com base no resultado da avaliação da aula experimental,** para que o sistema **registre corretamente o plano adequado ao nível da aluna.** | OE4 |
-
+| História | Descrição | Objetivos Específicos | Requisito |
+|-----------|------------|------------------------|------------|
+| **US01** | Como um visitante, eu quero acessar o conteúdo público do site (sobre a escola, metodologia, informações do pole dance, galeria de fotos), para que eu possa conhecer a escola e o pole dance antes de me matricular. | OE1 / OE5 | RF01 – Acessar conteúdo público |
+| **US02** | Como um visitante, eu quero encontrar e clicar nos links para as redes sociais da escola, para que eu possa seguir o conteúdo e ver mais sobre o dia a dia da escola e notícias recentes. | OE1 | RF02 – Acessar links para redes sociais da escola |
+| **US03** | Como um visitante ou aluna, eu quero consultar os horários de aulas e os planos de pacotes disponíveis, para que eu possa escolher a opção que melhor se adequa ao meu horário e orçamento. | OE2 | RF03 – Consultar horários e planos disponíveis |
+| **US04** | Como um visitante, eu quero ter um espaço de contato (como um formulário ou FAQ), para que eu possa tirar minhas dúvidas sobre a modalidade ou a escola e decidir se quero começar. | OE1 / OE5 | RF04 – Disponibilizar espaço para tirar dúvidas sobre a modalidade |
+| **US05** | Como um visitante, eu quero me cadastrar no website fornecendo minhas informações, para que eu possa realizar compras/agendamentos e acessar a área de aluna. | OE2 | RF05 – Cadastrar novo usuário |
+| **US06** | Como uma aluna, eu quero inserir minhas informações credenciais para fazer login, para que eu possa acessar meu painel e funcionalidades restritas. | OE2 | RF06 – Realizar login |
+| **US07** | Como uma aluna, eu quero sair da minha conta após usar o website, para que eu possa proteger minhas informações e garantir a segurança do meu acesso. | OE2 | RF07 – Realizar logout |
+| **US08** | Como uma aluna, eu quero selecionar um pacote de aulas e pagar online usando o Mercado Pago, para que eu possa garantir minha vaga nas aulas e ter o pacote creditado na minha conta. | OE3 | RF08 – Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago |
+| **US09** | Como um visitante, eu quero pagar pela minha aula experimental usando o Mercado Pago, para que eu possa confirmar minha participação e experimentar a modalidade. | OE3 | RF09 – Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago |
+| **US10** | Como uma aluna, eu quero selecionar uma data e horário e agendar minhas aulas disponíveis, para que eu possa reservar minha vaga e planejar minha frequência. | OE2 | RF10 – Agendar aulas |
+| **US11** | Como uma aluna, eu quero visualizar um resumo dos pacotes de aulas que a escola oferece, para que eu possa entender minhas opções e escolher qual comprar ou renovar. | OE1 | RF11 – Exibir pacotes de aulas disponíveis conforme plano definido |
+| **US12** | Como uma aluna, eu quero acessar uma lista ou calendário com todas as minhas aulas agendadas, para que eu possa saber quais são meus próximos compromissos e me organizar. | OE2 | RF12 – Consultar cronograma de aulas agendadas |
+| **US13** | Como uma aluna, eu quero informar que não poderei comparecer a uma aula agendada antes do prazo de cancelamento, para que eu possa potencialmente ter meu crédito de volta ou evitar penalidades. | OE2 | RF13 – Confirmar ausência da aula antecipadamente (Aluna) |
+| **US14** | Como uma aluna, eu quero receber um link ou mensagem de confirmação ao informar minha ausência, para que eu possa garantir que o cancelamento foi processado corretamente. | OE2 | RF14 – Gerar link de confirmação de ausência |
+| **US15** | Como um administrador, eu quero fazer login e acessar o painel administrativo, para que eu possa gerenciar as operações e dados da escola. | OE4 | RF15 – Acessar painel administrativo |
+| **US16** | Como um administrador, eu quero poder editar o status de presença de uma aluna em uma aula (Presente/Ausente), para que eu possa corrigir erros ou atualizar registros de forma manual. | OE4 | RF16 – Editar status de presença (Professora) |
+| **US17** | Como um administrador, eu quero marcar a presença das alunas em uma aula finalizada, para que o histórico da aluna seja atualizado. | OE4 | RF17 – Registrar presença após aula |
+| **US18** | Como um administrador, eu quero criar, editar e desativar os pacotes de aulas oferecidos, para que eu possa manter o catálogo de produtos sempre atualizado. | OE4 | RF18 – Gerenciar pacotes de aulas |
+| **US19** | Como um administrador, eu quero adicionar, modificar ou cancelar aulas no calendário da escola, para que eu possa controlar a grade de horários disponíveis para agendamento. | OE4 | RF19 – Gerenciar calendário de aulas |
+| **US20** | Como um administrador, eu quero ter um módulo específico para agendar aulas experimentais de novos interessados, para que eu possa organizar essas aulas separadamente do cronograma regular. | OE4 | RF20 – Agendar aula experimental |
+| **US21** | Como um administrador, eu quero registrar o nível de habilidade de uma nova aluna após a avaliação e definir seu plano de aulas inicial, para que ela possa começar a agendar aulas no nível correto. | OE4 | RF21 – Registrar resultado da avaliação |
+| **US22** | Como um administrador, quero definir o plano (A ou B) da nova aluna com base no resultado da avaliação da aula experimental, para que o sistema registre corretamente o plano adequado ao nível da aluna. | OE4 | RF22 – Definir plano da aluna |
 
 ---
 

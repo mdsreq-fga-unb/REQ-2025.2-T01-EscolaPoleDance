@@ -1,33 +1,6 @@
 # Requisitos de Software
 
-## Lista de Requisitos Funcionais
-
-- **RF01** - Acessar conteúdo público  
-- **RF02** - Acessar links para redes sociais da escola  
-- **RF03** - Consultar horários e planos disponíveis  
-- **RF04** - Disponibilizar espaço para tirar dúvidas sobre a modalidade  
-- **RF05** - Cadastrar novo usuário  
-- **RF06** - Realizar login  
-- **RF07** - Realizar logout  
-- **RF08** - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago  
-- **RF09** - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago  
-- **RF10** - Agendar aulas  
-- **RF11** - Exibir pacotes de aulas disponíveis conforme plano definido  
-- **RF12** - Consultar cronograma de aulas agendadas  
-- **RF13** - Confirmar ausência da aula antecipadamente  
-- **RF14** - Gerar link de confirmação de ausência  
-- **RF15** - Acessar painel administrativo  
-- **RF16** - Editar status de presença  
-- **RF17** - Registrar presença após aula  
-- **RF18** - Gerenciar pacotes de aulas  
-- **RF19** - Gerenciar calendário de aulas  
-- **RF20** - Agendar aula experimental  
-- **RF21** - Registrar resultado da avaliação
-- **RF22** - Definir plano da aluna 
-
-### Detalhamento dos Requisitos Funcionais
-
-| ID   | Nome do Requisito | Descrição |
+| ID   | Nome do Requisito | Descrição do requisito |
 |------|-----------------|-----------|
 | RF01 | Acessar conteúdo público | O sistema deve permitir que visitantes anônimos acessem a landing page sem necessidade de autenticação, para fins de divulgação e atração de clientes. |
 | RF02 | Acessar links para redes sociais da escola | Fornecer links diretos e acessíveis para as redes sociais da escola e da instrutora. | 
@@ -54,25 +27,7 @@
 
 ---
 
-## Lista de Requisitos Não Funcionais
-
-- **RNF01** - Implementar criptografia para a privacidade dos dados do usuário
-- **RNF02** - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)
-- **RNF03** - Assegurar responsividade do site em diferentes dispositivos  
-- **RNF04** - Manter o sistema disponível 24/7 (com exceção de manutenções programadas) 
-- **RNF05** - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari) 
-- **RNF06** - Garantir interface intuitiva e fácil de navegar  
-- **RNF07** - Garantir carregamento rápido e navegação fluida do frontend
-- **RNF08** - Documentar padrões de desenvolvimento internos  
-- **RNF09** - Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page  
-- **RNF10** - Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling
-- **RNF11** - Exibir menu de navegação
-- **RNF12** - Exibir landing page
-
-
-### Detalhamento dos Requisitos Não Funcionais
-
-| ID   | Nome do Requisito | Descrição |
+| ID   | Nome do Requisito | Descrição do requisito|
 |------|-----------------|-----------|
 | RNF01 | Implementar criptografia para a privacidade dos dados do usuário | Implementar criptografia de transporte (comunicação cliente-servidor) TLS 1.2 (ou superior) e, para as senhas de usuários, utilizar o algoritmo de hashing bcrypt com um fator de custo mínimo de 12. |
 | RNF02 | Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD) | O sistema deve garantir a conformidade com as exigências da LGPD, especialmente nos seguintes pontos: Consentimento (Art. 7º, I) no cadastro; Finalidade (Art. 6º, I); Segurança dos Dados (Art. 46); e Direito de Acesso e Exclusão (Art. 18, II e IV). |
@@ -87,98 +42,88 @@
 | RNF11 | Exibir menu de navegação | O sistema deve fornecer um menu de navegação principal que inclua links para todas as páginas: Landing Page (inicial), Sobre, Pole Dance, Turmas e Horários, Valores, Regulamento, FAQ, além de Login/Cadastro. |
 | RNF12 | Exibir landing page | O sistema deve exibir uma landing page inicial que apresente informações sobre a escola de pole dance, incluindo descrição dos serviços, depoimentos de alunos e chamadas para ação (CTAs) para cadastro ou login. |
 
-# Listagem dos Requisitos Não Funcionais de acordo com o padrão URPS+ e com as categorias de Sommerville
-
-## Requisitos de Produto 
-Requisitos relacionados a categorização e contenção do comportamento do software. Divididos entre: requisitos de usabilidade, requisitos de eficiência (de desempenho e de espaço), requisitos de confiança e requisitos de proteção.
-
-### Usabilidade (Usability)
-Requisitos relacionados à facilidade de uso, aprendizado e design da interface.  
-- **RNF03**: Assegurar responsividade do site em diferentes dispositivos.  
-- **RNF06**: Garantir interface intuitiva e fácil de navegar.  
-- **RNF11**: Exibir menu de navegação  
-- **RNF12**: Exibir landing page  
-
-### Eficiência (Sommerville) e Performance URPS+
-Requisitos relacionados à velocidade, eficiência e tempo de resposta do sistema.
-- **RNF07**: Garantir carregamento rápido e navegação fluida do frontend - (Entre os requisitos de eficiência este também é um requisito de **Desempenho (Sommerville)**			
-- **RNF09**: Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page - (Entre os requisitos de eficiência este também é um requisito de **Desempenho (Sommerville)**
-
-
-### Confiabilidade (Reliability)
-Requisitos relacionados à capacidade do sistema de operar sem falhas e se recuperar de erros.  
-- **RNF04**: Manter o sistema disponível 24/7 (com exceção de manutenções programadas).  
-- **RNF05**: Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari).  
-
-
-### Proteção (Sommerville) e Segurança (Security) URPS+
-Requisitos relacionados à proteção do sistema contra acessos não autorizados e ataques. 
-- **RNF01**: Implementar criptografia para a privacidade dos dados do usuário.  
-- **RNF10**: Implementar medidas de segurança contra abuso de vulnerabilidades como SQL
-Injection ou DNS Tunneling.
-
-## Requisitos Organizacionais
-Requisitos relacionados às regras e procedimentos da política dos desenvolvedores e do cliente no sistema, estes são os requisitos chamados de “gerais”. Divididos entre: requisitos operacionais, requisitos de **desenvolvimento**, requisitos ambientais.
-
-- **Desenvolvimento** (Sommerville): Requisitos relacionados à escolha da linguagem de programação, ao ambiente de desenvolvimento e aos padrões que devem ser adotados no processo de desenvolvimento.
-- **RNF08** - Documentar padrões de desenvolvimento internos
-
-## Requisitos Externos 
-Requisitos relacionados “a fatores externos ao sistema e ao seu processo de desenvolvimento”. Divididos entre: requisitos reguladores, requisitos legais, requisitos éticos.
-
-- **Legal**: Requisitos que precisam ser seguidos para operarem de acordo com a lei.
-- **RNF02** - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)
-
- 
-
 ---
 
 # DoR e DoD
 
 ## Definition of Ready (DoR)
 
-| ID | DoR |
-|----|-----|
-| RF01 | Regras de negócio de agendamento definidas (prazos, níveis, capacidade). |
-| RF02 | Chaves de API de Produção e Teste do Mercado Pago disponíveis. |
-| RF03 | Estrutura básica de permissão de usuário (Professora) definida. |
-| RF04 | Dados iniciais (horários, preços, descrições) inseridos no BD. |
-| RF05 | Modelos de dados de agendamento, aluna e aula interconectados no backend. |
-| RF06 | Conteúdo textual final da FAQ/Dúvidas fornecido e revisado. |
-| RF07 | URLs finais e ícones corretos das redes sociais fornecidos. |
-| RF08 | Conteúdo final das páginas "Sobre", "Regulamento", "Valores" revisado. |
-| RF09 | Regras de validação (ex: tamanho mínimo da senha) definidas. |
-| RF10 | Rota de autenticação (backend) implementada. |
-| RF11 | Pacotes de aulas cadastrados no BD via painel admin (RF18). |
-| RF12 | RF01 e RF11 estão Done. |
-| RF13 | Regra de timeout (12h) definida no backend. |
-| RF14 | Design do link único e página de confirmação no Figma. |
-| RF15 | Interface de edição de status no painel (RF03) desenhada. |
-| RF16 | Lista de alunas agendadas para a aula acessível no painel (RF03). |
-| RF17 | Sessão de usuário definida no backend. |
-| RF18 | Design das telas de CRUD de pacotes no painel (RF03). |
-| RF19 | Design das telas de CRUD de aulas no painel (RF03). |
+| Requisito | Possui User Story? | Possui critérios de aceitação claramente definidos? | Todas as dependências do requisito foram identificadas? |
+|------------|--------------------|----------------------------------------------------|----------------------------------------------------------|
+| RF01 - Acessar conteúdo público | ✅ | ✅ | ✅ |
+| RF02 - Acessar links para redes sociais da escola | ✅ | ✅ | ✅ |
+| RF03 - Consultar horários e planos disponíveis | ✅ | ✅ | ✅ |
+| RF04 - Disponibilizar espaço para tirar dúvidas sobre a modalidade | ✅ | ✅ | ✅ |
+| RF05 - Cadastrar novo usuário | ✅ | ✅ | ✅ |
+| RF06 - Realizar login | ✅ | ✅ | ✅ |
+| RF07 - Realizar logout | ✅ | ✅ | ✅ |
+| RF08 - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago | ✅ | ✅ | ✅ |
+| RF09 - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago | ✅ | ✅ | ✅ |
+| RF10 - Agendar aulas | ✅ | ✅ | ✅ |
+| RF11 - Exibir pacotes de aulas disponíveis conforme plano definido | ✅ | ✅ | ✅ |
+| RF12 - Consultar cronograma de aulas agendadas | ✅ | ✅ | ✅ |
+| RF13 - Confirmar ausência da aula antecipadamente (Aluna) | ✅ | ✅ | ✅ |
+| RF14 - Gerar link de confirmação de ausência | ✅ | ✅ | ✅ |
+| RF15 - Acessar painel administrativo | ✅ | ✅ | ✅ |
+| RF16 - Editar status de presença (Professora) | ✅ | ✅ | ✅ |
+| RF17 - Registrar presença após aula | ✅ | ✅ | ✅ |
+| RF18 - Gerenciar pacotes de aulas | ✅ | ✅ | ✅ |
+| RF19 - Gerenciar calendário de aulas | ✅ | ✅ | ✅ |
+| RF20 - Agendar aula experimental | ✅ | ✅ | ✅ |
+| RF21 - Registrar resultado da avaliação | ✅ | ✅ | ✅ |
+| RF22 - Definir plano da aluna | ✅ | ✅ | ✅ |
+
+---
+
+### Critérios de aceitação e dependências
+
+- **RF01:** Conteúdo final das páginas "Sobre", "Regulamento", "Valores" está revisado.  
+- **RF02:** URLs finais e ícones corretos das redes sociais fornecidos.  
+- **RF03:** Dados iniciais (horários, preços, descrições) inseridos no BD para exibição.  
+- **RF04:** Conteúdo textual final da FAQ/Dúvidas fornecido e revisado.  
+- **RF05:** Regras de validação (ex: tamanho mínimo da senha) definidas.  
+- **RF06:** Rota de autenticação (backend) implementada.  
+- **RF07:** Sessão de usuário definida no backend.  
+- **RF08:** Pacotes de aulas estão cadastrados no BD via painel admin (RF18) e chaves de API de Produção e Teste do Mercado Pago disponíveis.  
+- **RF09:** Chaves de API de Produção e Teste do Mercado Pago disponíveis.  
+- **RF10:** Regras de negócio de agendamento definidas (prazos, níveis, capacidade).  
+- **RF11:** RF10 (Agendar Aulas) e RF08 (Comprar Pacotes) estão Done.  
+- **RF12:** Modelos de dados de agendamento, aluna e aula interconectados no backend.  
+- **RF13:** Regra de timeout (12 horas) definida no backend.  
+- **RF14:** Design do link único e da página de confirmação no Figma.  
+- **RF15:** Estrutura básica de permissão de usuário (Professora) definida.  
+- **RF16:** Interface de edição de status no painel (RF15) desenhada.  
+- **RF17:** Lista de alunas agendadas para a aula está acessível no painel (RF15).  
+- **RF18:** Design das telas de CRUD (Criar, Ler, Atualizar, Deletar) de pacotes no painel (RF15).  
+- **RF19:** Design das telas de CRUD de aulas (adicionar/cancelar) no painel (RF15).  
+- **RF20:** Formulário de agendamento disponível e acessível na página pública e confirmação do agendamento registrada no banco de dados.  
+- **RF21:** Professora pode acessar o formulário de registro do resultado da aula experimental no painel administrativo e resultado da avaliação salvo corretamente no banco de dados.  
+- **RF22:** Professora consegue visualizar o resultado da avaliação da aula experimental no painel, plano selecionado é salvo no banco de dados e vinculado à aluna e o sistema atualiza automaticamente as permissões e acesso da aluna conforme o plano definido. 
 
 ## Definition of Done (DoD)
 
-| ID | DoD |
-|----|-----|
-| RF01 | Agendamento registrado no BD; vaga deduzida; aluna recebe confirmação. |
-| RF02 | Redirecionamento e callback de pagamento bem-sucedidos; saldo atualizado. |
-| RF03 | Login Admin/Professora funciona; painel exibe primeira tela com sucesso. |
-| RF04 | Consulta carrega dados corretamente; planos vinculados aos IDs de compra (RF11). |
-| RF05 | Cronograma exibe apenas aulas da aluna autenticada, passadas e futuras. |
-| RF06 | FAQ navegável, exibe todas perguntas/respostas e otimizada para celular. |
-| RF07 | Links funcionam e visíveis no header/footer. |
-| RF08 | Páginas acessíveis sem login; Menu de Navegação (RNF11) inclui links. |
-| RF09 | Usuário criado com sucesso; senha armazenada com criptografia forte (RNF01). |
-| RF10 | Login bem-sucedido gera sessão segura; falha retorna mensagem genérica. |
-| RF11 | Compras levam corretamente ao Mercado Pago (RF02). |
-| RF12 | Agendamento verifica saldo de aulas; só permite se saldo positivo e RF01 cumprido. |
-| RF13 | Aluna consegue alterar status dentro do prazo; bloqueio após 12h. |
-| RF14 | Professora gera link no painel; link funciona fora do painel admin. |
-| RF15 | Professora altera status; mudança refletida no histórico da aluna. |
-| RF16 | Professora marca presença/ausência em massa; histórico atualizado. |
-| RF17 | Token de sessão invalidado após clique; impede reautenticação sem login. |
-| RF18 | Administrador cria/edita/exclui pacotes; alterações refletidas no RF04. |
-| RF19 | Administrador manipula calendário; mudanças refletem no RF04 e RF17. |
+| Requisito | Foi totalmente implementado e atende aos critérios de aceitação definidos? | Foi testado e validado? | A documentação e as evidências de entrega foram atualizadas e revisadas pela equipe? |
+|------------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------|
+| RF01 - Acessar conteúdo público |  |  |  |
+| RF02 - Acessar links para redes sociais da escola |  |  |  |
+| RF03 - Consultar horários e planos disponíveis |  |  |  |
+| RF04 - Disponibilizar espaço para tirar dúvidas sobre a modalidade |  |  |  |
+| RF05 - Cadastrar novo usuário |  |  |  |
+| RF06 - Realizar login |  |  |  |
+| RF07 - Realizar logout |  |  |  |
+| RF08 - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago |  |  |  |
+| RF09 - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago |  |  |  |
+| RF10 - Agendar aulas |  |  |  |
+| RF11 - Exibir pacotes de aulas disponíveis conforme plano definido |  |  |  |
+| RF12 - Consultar cronograma de aulas agendadas |  |  |  |
+| RF13 - Confirmar ausência da aula antecipadamente (Aluna) |  |  |  |
+| RF14 - Gerar link de confirmação de ausência |  |  |  |
+| RF15 - Acessar painel administrativo |  |  |  |
+| RF16 - Editar status de presença (Professora) |  |  |  |
+| RF17 - Registrar presença após aula |  |  |  |
+| RF18 - Gerenciar pacotes de aulas |  |  |  |
+| RF19 - Gerenciar calendário de aulas |  |  |  |
+| RF20 - Agendar aula experimental |  |  |  |
+| RF21 - Registrar resultado da avaliação |  |  |  |
+| RF22 - Definir plano da aluna |  |  |  |
+
