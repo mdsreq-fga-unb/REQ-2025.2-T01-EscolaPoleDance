@@ -48,8 +48,6 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
-    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep_purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -123,7 +121,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep_purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
@@ -133,7 +131,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="deep_purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
@@ -681,7 +679,6 @@
 <h1 id="backlog-de-produto">Backlog de Produto<a class="headerlink" href="#backlog-de-produto" title="Permanent link">&para;</a></h1>
 <p>As Histórias de Usuário apresentadas abaixo foram diretamente derivadas da lista de Requisitos Funcionais definidos anteriormente neste documento. Esta lista serve como o ponto de partida para o desenvolvimento. É importante notar que o backlog é dinâmico e adaptável: essas histórias são preliminares e passarão por refinamentos e ajustes conforme o projeto avança e o feedback é incorporado.</p>
 <h2 id="backlog-geral">Backlog Geral<a class="headerlink" href="#backlog-geral" title="Permanent link">&para;</a></h2>
-<h1 id="historias-de-usuario">Histórias de Usuário<a class="headerlink" href="#historias-de-usuario" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
@@ -1150,6 +1147,45 @@
 <p>O MVP da Lady 's Escola de Pole Dance será a primeira versão do sistema digital lançada para um grupo limitado de alunas e para a Professora/Administradora. O foco é resolver a dor mais urgente do negócio: eliminar a gestão manual de agendamentos e pagamentos, e estabelecer uma presença online profissional e funcional.
 Dentro do escopo do Produto Mínimo Viável, encontram-se as funcionalidades listadas, juntamente com seus respectivos requisitos e objetivos específicos.</p>
 <hr />
+<h2 id="funcionalidades-x-requisitos-x-objetivo-especifico">Funcionalidades x Requisitos x Objetivo Específico<a class="headerlink" href="#funcionalidades-x-requisitos-x-objetivo-especifico" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Funcionalidade</th>
+<th>Requisitos que cumprem a funcionalidade</th>
+<th>Objetivo específico relacionado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Um site público, funcional, responsivo e atrativo, que aumente a visibilidade do negócio e permita que os clientes conheçam o serviço com mais detalhes.</td>
+<td>- RNF12 - Exibir landing page<br>- RNF06 - Garantir interface intuitiva e fácil de navegar<br>- RF01 - Acessar conteúdo público</td>
+<td>OE1 - Permitir que clientes conheçam os serviços do estúdio por meio de um site institucional responsivo e atrativo.</td>
+</tr>
+<tr>
+<td>Uma área de inscrição online para matrículas e agendamento de aulas; condicionada a usuários logados.</td>
+<td>- RF10 - Agendar aulas<br>- RF03 - Consultar horários e planos disponíveis<br>- RF05 - Cadastrar novo usuário<br>- RF06 - Realizar login<br>- RF20 - Agendar aula experimental</td>
+<td>OE2 - Disponibilizar uma área de inscrição online para matrículas e agendamento em aulas de forma autônoma e prática.</td>
+</tr>
+<tr>
+<td>Uma sessão para realizar o pagamento de determinado serviço, seja este uma aula experimental ou um pacote de aulas.</td>
+<td>- RF09 - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago<br>- RF08 - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago</td>
+<td>OE3 - Integrar métodos de pagamento online seguros, reduzindo barreiras e inadimplências.</td>
+</tr>
+<tr>
+<td>Uma página privada para o personal trainer com um painel administrativo gerenciável, centralizando informações de alunas, turmas e pagamentos.</td>
+<td>- RF15 - Acessar painel administrativo<br>- RF18 - Gerenciar pacotes de aulas<br>- RF19 - Gerenciar calendário de aulas<br>- RF17 - Registrar presença em aula<br>- RF16 - Editar status de presença (Professora)<br>- RF21 - Registrar resultado da avaliação<br>- RF22 - Definir plano da aluna</td>
+<td>OE4 - Oferecer um painel administrativo para o personal trainer, centralizando informações de alunas, turmas e pagamentos.</td>
+</tr>
+<tr>
+<td>Um espaço no site destinado a informações sobre a prática desportiva, e que fortaleça a credibilidade e engaje o público.</td>
+<td>- RNF12 - Exibir landing page<br>- RF01 - Acessar conteúdo público</td>
+<td>OE5 - Disponibilizar um espaço informativo sobre pole dance, fortalecendo a credibilidade e engajamento do público.</td>
+</tr>
+</tbody>
+</table>
+<p>Para avaliar as funcionalidades essenciais para testar a hipótese acima, utilizamos o método MoSCoW e um quadro de Valor de Negócio x Avaliação Técnica.</p>
+<hr />
 <h1 id="testes-e-validacao-do-sistema">Testes e Validação do Sistema<a class="headerlink" href="#testes-e-validacao-do-sistema" title="Permanent link">&para;</a></h1>
 <h2 id="testes-de-aceitacao-do-cliente">Testes de Aceitação do Cliente<a class="headerlink" href="#testes-de-aceitacao-do-cliente" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1230,7 +1266,7 @@ Dentro do escopo do Produto Mínimo Viável, encontram-se as funcionalidades lis
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
