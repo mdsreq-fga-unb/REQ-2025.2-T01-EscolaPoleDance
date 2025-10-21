@@ -821,9 +821,10 @@
 <table>
 <thead>
 <tr>
-<th>ID</th>
-<th>Nome do Requisito</th>
-<th>Descrição do requisito</th>
+<th><strong>ID</strong></th>
+<th><strong>Nome do Requisito</strong></th>
+<th><strong>Descrição do requisito</strong></th>
+<th><strong>Tipo de Requisito</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -831,61 +832,73 @@
 <td>RNF01</td>
 <td>Implementar criptografia para a privacidade dos dados do usuário</td>
 <td>Implementar criptografia de transporte (comunicação cliente-servidor) TLS 1.2 (ou superior) e, para as senhas de usuários, utilizar o algoritmo de hashing bcrypt com um fator de custo mínimo de 12.</td>
+<td>Security</td>
 </tr>
 <tr>
 <td>RNF02</td>
 <td>Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD)</td>
 <td>O sistema deve garantir a conformidade com as exigências da LGPD, especialmente nos seguintes pontos: Consentimento (Art. 7º, I) no cadastro; Finalidade (Art. 6º, I); Segurança dos Dados (Art. 46); e Direito de Acesso e Exclusão (Art. 18, II e IV).</td>
+<td>Externo: legal</td>
 </tr>
 <tr>
 <td>RNF03</td>
 <td>Assegurar responsividade do site em diferentes dispositivos</td>
-<td>O design e a interface do usuário devem assegurar a responsividade para dispositivos móveis (com largura de 360px a 767px, como smartphones de 5 a 6.7 polegadas) e desktop (larguras a partir de 1024px).</td>
+<td>O design e a interface do usuário devem assegurar a responsividade para dispositivos móveis (360px a 767px, smartphones de 5 a 6.7 polegadas) e desktop (larguras a partir de 1024px).</td>
+<td>Usability</td>
 </tr>
 <tr>
 <td>RNF04</td>
 <td>Manter o sistema disponível 24/7 (com exceção de manutenções programadas)</td>
-<td>Disponibilidade Mínima: 99,8% do tempo. Manutenção Programada: Período de manutenção semestral de até 4 horas, preferencialmente fora do horário comercial (ex: madrugada de domingo), para atualizações críticas de infraestrutura e informações ou estáticas da escola/planos.</td>
+<td>Disponibilidade mínima: 99,8% do tempo. Manutenção programada: período semestral de até 4 horas, preferencialmente fora do horário comercial (madrugada de domingo), para atualizações críticas de infraestrutura e informações ou estáticas da escola/planos.</td>
+<td>Reliability</td>
 </tr>
 <tr>
 <td>RNF05</td>
-<td>Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari)</td>
-<td>O site deve funcionar plenamente nas duas versões mais recentes dos principais navegadores modernos (Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari).</td>
+<td>Garantir compatibilidade com os principais navegadores modernos</td>
+<td>O site deve funcionar plenamente nas duas versões mais recentes dos principais navegadores modernos (Chrome, Firefox, Edge e Safari).</td>
+<td>Reliability</td>
 </tr>
 <tr>
 <td>RNF06</td>
 <td>Garantir interface intuitiva e fácil de navegar</td>
-<td>O sistema deve garantir uma interface intuitiva e fácil de navegar, utilizando como cor primária o roxo (#9333ea) e seguindo a paleta de cores “purple” do site shadcn, baseando-se na identidade visual da escola. A fonte padrão adotada é a montserrat com tamanho mínimo 14.</td>
+<td>O sistema deve garantir uma interface intuitiva e fácil de navegar, utilizando como cor primária o roxo (#BC3FDE) e seguindo a paleta de cores “purple” do site shadcn, baseando-se na identidade visual da escola. Fonte padrão: Montserrat, tamanho mínimo 14.</td>
+<td>Usability</td>
 </tr>
 <tr>
 <td>RNF07</td>
 <td>Garantir carregamento rápido e navegação fluida do frontend</td>
-<td>Garantir um tempo de carregamento inicial inferior a 3 segundos em conexões 3G e um tempo de resposta do servidor (TTFB - Time to First Byte) inferior a 400ms para 90% das requisições.</td>
+<td>Garantir tempo de carregamento inicial &lt; 3 segundos em conexões 3G e tempo de resposta do servidor (TTFB) &lt; 400ms para 90% das requisições.</td>
+<td>Performance</td>
 </tr>
 <tr>
 <td>RNF08</td>
 <td>Documentar padrões de desenvolvimento internos</td>
 <td>A equipe deve documentar e seguir um padrão interno para as práticas de desenvolvimento (código, testes, infraestrutura).</td>
+<td>Organizacional: Desenvolvimento</td>
 </tr>
 <tr>
 <td>RNF09</td>
-<td>Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page</td>
-<td>O sistema deve ser otimizado para motores de busca SEO, implementando SEO On-Page utilizando meta tags, cabeçalhos e atributos alt em imagens, com foco em palavras-chave relacionadas à escola e modalidade. Implementar também o SEO Off-Page através da criação e otimização de um Google Business Profile.</td>
+<td>Otimizar Motores de Busca (SEO)</td>
+<td>O sistema deve ser otimizado para motores de busca SEO, implementando SEO On-Page (meta tags, cabeçalhos, atributos alt em imagens) e SEO Off-Page (Google Business Profile), com foco em palavras-chave relacionadas à escola e modalidade.</td>
+<td>Performance</td>
 </tr>
 <tr>
 <td>RNF10</td>
-<td>Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling</td>
-<td>O sistema deve implementar validação e sanitização de todas as entradas de usuário no backend usando parametrização de consultas para prevenir SQL Injection e configurar o sistema para mitigar DNS Tunneling através da criptografia de requisições DNS fornecida pelo TLS, além de aplicar políticas de segurança como CORS (Cross-Origin Resource Sharing) para filtrar os domínios externos dos quais o sistema receberá requisições.</td>
+<td>Implementar medidas de segurança contra vulnerabilidades</td>
+<td>Implementar validação e sanitização de todas as entradas no backend usando parametrização de consultas (prevenir SQL Injection) e configurar mitigação de DNS Tunneling via TLS; aplicar políticas de segurança como CORS para filtrar domínios externos.</td>
+<td>Security</td>
 </tr>
 <tr>
 <td>RNF11</td>
 <td>Exibir menu de navegação</td>
-<td>O sistema deve fornecer um menu de navegação principal que inclua links para todas as páginas: Landing Page (inicial), Sobre, Pole Dance, Turmas e Horários, Valores, Regulamento, FAQ, além de Login/Cadastro.</td>
+<td>Fornecer menu de navegação principal com links para todas as páginas: Landing Page, Sobre, Pole Dance, Turmas e Horários, Valores, Regulamento, FAQ, Login/Cadastro.</td>
+<td>Usability</td>
 </tr>
 <tr>
 <td>RNF12</td>
 <td>Exibir landing page</td>
-<td>O sistema deve exibir uma landing page inicial que apresente informações sobre a escola de pole dance, incluindo descrição dos serviços, depoimentos de alunos e chamadas para ação (CTAs) para cadastro ou login.</td>
+<td>Exibir landing page inicial com informações sobre a escola de pole dance, incluindo descrição dos serviços, depoimentos de alunos e chamadas para ação (CTAs) para cadastro ou login.</td>
+<td>Usability</td>
 </tr>
 </tbody>
 </table>
