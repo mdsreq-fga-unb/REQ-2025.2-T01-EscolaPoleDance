@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +11,6 @@ interface FAQItem {
 }
 
 const FAQSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(2); // Terceiro item aberto por padrão
 
   const faqItems: FAQItem[] = [
     {

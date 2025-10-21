@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const CTASection: React.FC = () => {
   // Configurações do WhatsApp
   const whatsappConfig = {
-    number: "5561999999999", // Substitua pelo número real
+    number: "61993242268",
     message: "Olá! Gostaria de saber mais sobre as aulas de pole dance da Lady's Escola."
   };
 

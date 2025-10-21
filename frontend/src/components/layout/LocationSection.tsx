@@ -51,17 +51,15 @@ const LocationSection: React.FC = () => {
             Quadra 45 lote 08 loja B, St. Leste - Gama, Brasília - DF, 72440-450
           </InfoCard>
 
-          <InfoCard title="Horário">
-            Segunda a Sexta: 9h - 21h<br />
-            Sábado: 9h - 18h<br />
-            Domingo: Fechado
+          <InfoCard title="Horário de contato">
+            Segunda a Sexta: 8h - 18h<br />
+            Sábado e Domingo: Fechado
           </InfoCard>
 
           <InfoCard title="Contato">
             <div className="space-y-1">
-              <p>Tel: <span className="underline text-fuchsia-pink-500">(61) 99999-9999</span></p>
-              <p>Email: <span className="underline text-fuchsia-pink-500">contato@escolapoledance.com</span></p>
-              <p>Instagram: <span className="underline text-fuchsia-pink-500">@escolapoledance</span></p>
+              <p>Tel: <span className="underline text-fuchsia-pink-500">(61) 99324-2268</span></p>
+              <p>Instagram: <span className="underline text-fuchsia-pink-500">@ladysescolapoledance</span></p>
             </div>
           </InfoCard>
         </div>

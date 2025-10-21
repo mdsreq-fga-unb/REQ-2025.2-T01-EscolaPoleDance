@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 text-center">
         <div className="space-y-2">
           <p className="text-white text-sm font-semibold font-['Montserrat'] leading-7">
-            © Lady's Escola de Pole Dance – CNPJ: 12.345.678/0001-90.
+            © Lady's Escola de Pole Dance – CNPJ: 28.876.997/0001-67.
           </p>
           <p className="text-white text-sm font-medium font-['Montserrat'] leading-7">
             <a

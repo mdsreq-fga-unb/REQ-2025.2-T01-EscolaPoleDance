@@ -8,7 +8,7 @@ type BotaoWhatsAppProps = {
 };
 
 export default function BotaoWhatsApp({
-  numero = '5511999999999',
+  numero = '61993242268',
   mensagem = 'Olá! Gostaria de mais informações.',
   className = ''
 }: BotaoWhatsAppProps) {
