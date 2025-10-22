@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 const userController = require('../controllers/user_controllers');
 const db = require('../models');
 const { isLoggedIn, isAdmin } = require('../middleware/auth_middleware');
@@ -11,7 +12,7 @@ router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        if (!user || !password) {
+        if (!email || !password) {
             res.status(401).json({ error: "Preencha todos os campos." });
         }
 
