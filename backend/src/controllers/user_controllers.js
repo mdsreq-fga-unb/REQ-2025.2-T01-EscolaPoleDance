@@ -22,7 +22,7 @@ exports.createUser = async (req, res) => {
         }
         
         // Generate salt and hashed password
-        const saltRounds = process.env.SALT_ROUNDS;  // Level of security for data criptography with bcrypt (each level doubles the time it takes to calculate hash)
+        const saltRounds = parseInt(process.env.SALT_ROUNDS) || 10;  // Level of security for data criptography with bcrypt (each level doubles the time it takes to calculate hash)
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         // Insert new user in database 
