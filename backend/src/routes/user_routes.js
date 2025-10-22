@@ -7,7 +7,7 @@ const db = require('../models');
 const { isLoggedIn, isAdmin } = require('../middleware/auth_middleware');
 
 // GET /api/users/login - User login
-router.get('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
