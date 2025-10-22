@@ -97,7 +97,19 @@ exports.getUserById = async (req, res) => {
     try {
 
         const { id } = req.params;
-        const selectedUser = await db.User.findByPk(id); 
+        const queryOptions = {
+            attributes: { exclude: ['password'] }
+        }
+
+        // Validade if user is admin to show complete user information
+        if (req.user && req.user.role === 'admin') {
+            console.log("[GETUserById]Requisição de admin: enviando dados completos.");
+        } else {
+            console.log("[GETUserById]Requisição normal: enviando dados limitados.");
+            queryOptions.attributes = ['id', 'firstName', 'lastName'];
+        }
+
+        const selectedUser = await db.User.findByPk(id, queryOptions); 
 
         if (!selectedUser) {
             res.status(404).json({ error: `Não foi possível encontrar o usuário com id: '${id}'` });
