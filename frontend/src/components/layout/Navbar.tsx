@@ -1,54 +1,62 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
-import logo from "../../assets/img/icons/logo.svg";
+import logo from "../../assets/img/icons/lady-logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogoClick = () => {
+    if (pathname == "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full h-20 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[90px] py-2.5 bg-fuchsia-pink-950 border-b border-fuchsia-pink-800 font-[Montserrat] text-white flex justify-between items-center overflow-hidden z-50">
+    <nav className="fixed top-0 w-full h-20 px-8 sm:px-8 md:px-12 lg:px-16 xl:px-[90px] bg-fuchsia-pink-950 border-b border-fuchsia-pink-900 text-fuchsia-pink-50 flex justify-start lg:justify-between items-center z-50">
       {/* Mobile Menu Button - Lado Esquerdo */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1" aria-label="Toggle menu">
-        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-        <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 m-4" aria-label="Toggle menu">
+        <span className={`block w-6 h-0.5 bg-fuchsia-pink-50 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+        <span className={`block w-6 h-0.5 bg-fuchsia-pink-50 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+        <span className={`block w-6 h-0.5 bg-fuchsia-pink-50 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
       </button>
 
-      <div className="flex items-center gap-0">
-        <img 
-          src={logo} alt="Logo Escola de Pole Dance" className="w-20 h-12 md:h-12"
+      {/* Logo Button */}
+      <Link to="/" onClick={handleLogoClick} className="flex items-center">
+        <img
+          src={logo} alt="Logo Escola de Pole Dance" className="w-17 h-17 p-2"
         />
         <div className="flex flex-col">
-          <span className="text-sm md:text-lg lg:text-xl font-light text-white leading-tight">ESCOLA DE</span>
-          <span className="text-sm md:text-lg lg:text-xl font-semibold text-fuchsia-pink-500 leading-tight">POLE DANCE</span>
+          <span className="text-lg md:text-lg lg:text-xl font-light text-fuchsia-pink-50 leading-none">ESCOLA DE</span>
+          <span className="text-lg md:text-lg lg:text-xl font-semibold text-fuchsia-pink-500 leading-none">POLE DANCE</span>
         </div>
-      </div>
+      </Link>
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-2 xl:gap-4">
-        <a href="#about" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <a href="#about" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Sobre
         </a>
-        <a href="#benefits" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <a href="#benefits" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Pole Dance
         </a>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <Link to="/404" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Turmas e Horários
         </Link>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <Link to="/404" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Valores
         </Link>
-        <Link to="/404" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <Link to="/404" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           Regulamentos
         </Link>
-        <a href="#faq" className="text-white text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
+        <a href="#faq" className="text-fuchsia-pink-50 text-xs xl:text-sm font-medium hover:text-fuchsia-pink-500 transition-colors">
           FAQ
         </a>
 
@@ -57,15 +65,15 @@ const Navbar = () => {
           <Link to="/404">
             <Button
               variant="outline"
-              size="sm"
-              className="border-fuchsia-pink-50 text-fuchsia-pink-50 bg-transparent hover:bg-fuchsia-pink-800 text-xs xl:text-sm">
+              size="default"
+              className="border-fuchsia-pink-50 text-fuchsia-pink-50 bg-transparent hover:bg-fuchsia-pink-100 text-xs xl:text-sm cursor-pointer">
               Entrar
             </Button>
           </Link>
           <Link to="/404">
             <Button
-              size="sm"
-              className="bg-fuchsia-pink-50 text-fuchsia-pink-950 hover:bg-fuchsia-pink-600 hover:text-white text-xs xl:text-sm">
+              size="default"
+              className="bg-fuchsia-pink-50 text-fuchsia-pink-950 hover:bg-fuchsia-pink-100 text-xs xl:text-sm cursor-pointer">
               Cadastrar
             </Button>
           </Link>
