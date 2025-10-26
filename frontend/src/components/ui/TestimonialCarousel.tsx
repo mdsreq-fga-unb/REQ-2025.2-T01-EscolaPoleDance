@@ -1,4 +1,4 @@
-import { GenericCarousel } from "../ui/GenericCarousel";
+import { GenericCarousel } from "./GenericCarousel";
 import TestimonialCard from "./TestimonialCard";
 import { testimonialsData } from "../../data/testimonialsData";
 

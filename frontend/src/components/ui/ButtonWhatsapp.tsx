@@ -1,17 +1,17 @@
 import { Button } from './button';
 import { FaWhatsapp } from 'react-icons/fa';
 
-type BotaoWhatsAppProps = {
+type ButtonWhatsAppProps = {
   numero?: string;
   mensagem?: string;
   className?: string;
 };
 
-export default function BotaoWhatsApp({
+export default function ButtonWhatsapp({
   numero = '61993242268',
   mensagem = 'Olá! Gostaria de mais informações.',
   className = ''
-}: BotaoWhatsAppProps) {
+}: ButtonWhatsAppProps) {
   const encodedMessage = encodeURIComponent(mensagem);
   const href = `https://wa.me/${numero}?text=${encodedMessage}`;
 

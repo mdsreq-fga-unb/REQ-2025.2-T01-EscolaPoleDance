@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Footer: React.FC = () => {
+export default function Footer() {
   return (
     <footer className="bg-fuchsia-pink-950 py-6">
       <div className="max-w-7xl mx-auto px-6 text-center">
@@ -15,7 +13,8 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="underline cursor-pointer hover:text-pink-200 transition-colors"
             >
-              Desenvolvido por estudantes da Universidade de Brasília (UnB) - Campus Gama
+              Desenvolvido por estudantes da Universidade de Brasília (UnB) -
+              Campus Gama
             </a>
             <span> | </span>
             <a
@@ -36,6 +35,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;
