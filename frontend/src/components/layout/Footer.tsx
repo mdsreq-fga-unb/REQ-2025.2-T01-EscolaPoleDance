@@ -1,39 +1,36 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
-    <footer className="bg-fuchsia-pink-950 py-6">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <div className="space-y-2">
-          <p className="text-white text-sm font-semibold font-['Montserrat'] leading-7">
-            © Lady's Escola de Pole Dance – CNPJ: 28.876.997/0001-67.
-          </p>
-          <p className="text-white text-sm font-medium font-['Montserrat'] leading-7">
-            <a
-              href="https://github.com/mdsreq-fga-unb/REQ-2025.2-T01-EscolaPoleDance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline cursor-pointer hover:text-pink-200 transition-colors"
-            >
-              Desenvolvido por estudantes da Universidade de Brasília (UnB) -
-              Campus Gama
-            </a>
-            <span> | </span>
-            <a
-              href="/politica-de-privacidade"
-              className="underline cursor-pointer hover:text-pink-200 transition-colors"
-            >
-              Política de Privacidade
-            </a>
-            <span> | </span>
-            <a
-              href="/termos-de-uso"
-              className="underline cursor-pointer hover:text-pink-200 transition-colors"
-            >
-              Termos de Uso
-            </a>
-          </p>
-        </div>
+    <footer className="w-full bg-fuchsia-pink-950 py-6 mx-auto px-6 text-center space-y-2">
+      <p className="text-fuchsia-pink-50 text-sm font-semibold">
+        © Lady's Escola de Pole Dance – CNPJ: 28.876.997/0001-67.
+      </p>
+      <div className="text-fuchsia-pink-50 text-sm font-medium">
+        <a
+          className="underline cursor-pointer hover:text-fuchsia-pink-200 transition-colors"
+          href="https://github.com/mdsreq-fga-unb/REQ-2025.2-T01-EscolaPoleDance"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Desenvolvido por estudantes da Universidade de Brasília (UnB) - Campus
+          Gama
+        </a>
+        <span> | </span>
+        <Link
+          className="underline cursor-pointer hover:text-fuchsia-pink-200 transition-colors"
+          to="/privacy-policy"
+        >
+          Política de Privacidade
+        </Link>
+        <span> | </span>
+        <Link
+          className="underline cursor-pointer hover:text-fuchsia-pink-200 transition-colors"
+          to="/terms-of-use"
+        >
+          Termos de Uso
+        </Link>
       </div>
     </footer>
   );
 }
-
