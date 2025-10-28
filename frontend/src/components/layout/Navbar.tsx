@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
 import logo from "../../assets/img/icons/lady-logo.png";
+import { Button } from "../ui/button";
 
 // Types
 type NavItem = {
@@ -46,7 +46,7 @@ const HamburgerButton = ({
 
 const LogoButton = ({ onClick }: { onClick: () => void }) => (
   <Link to="/" onClick={onClick} className="flex items-center">
-    <img src={logo} alt="Logo Escola de Pole Dance" className="w-17 h-17 p-2" />
+    <img src={logo} alt="Logo Escola de Pole Dance" className="w-16 h-16 p-2" />
     <div className="flex flex-col">
       <span className="text-lg md:text-lg lg:text-xl font-light text-fuchsia-pink-50 leading-none">
         ESCOLA DE
@@ -128,7 +128,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full h-20 px-8 sm:px-8 md:px-12 lg:px-16 xl:px-[90px] bg-fuchsia-pink-950 border-b border-fuchsia-pink-900 flex justify-start lg:justify-between items-center z-50">
+    // px-8 sm:px-8 md:px-12 lg:px-16 xl:px-[90px]
+    // px-2 sm:px-8 lg:px-20 2xl:px-50
+    <nav className="fixed top-0 w-full h-20 px-2 sm:px-8 lg:px-20 2xl:px-50 bg-fuchsia-pink-950 border-b border-fuchsia-pink-900 flex justify-start xl:justify-between items-center z-50">
       <HamburgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
       <LogoButton onClick={handleLogoClick} />
 

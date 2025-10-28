@@ -24,7 +24,7 @@ export default function ButtonWhatsapp({
       className={`fixed bottom-4 right-4 z-50 ${className}`}
     >
       <Button
-        className="bg-[#25D366] hover:bg-[#1DA851] text-white shadow-lg rounded-full p-0 w-14 h-14 flex items-center justify-center"
+        className="bg-[#25D366] hover:bg-[#1DA851] text-white shadow-lg rounded-full p-0 w-14 h-14 flex items-center justify-center cursor-pointer"
         size="lg"
       >
         <FaWhatsapp className="h-14 w-14" aria-hidden />
