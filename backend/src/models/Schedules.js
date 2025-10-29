@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
                 foreignKey: 'scheduleId',
                 as: 'bookings'
             });
-            this.hasMany(models.Class, {
+            this.belongsTo(models.Class, {
                 foreignKey: 'classId',
                 as: 'class'
             })
