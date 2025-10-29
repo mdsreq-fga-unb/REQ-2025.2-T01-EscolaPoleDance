@@ -3,11 +3,11 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class User extends Model {
         static associate(models) {
-            // Users <-> Classes
+            /* Users <-> Classes
             this.hasMany(models.Class, {
                 foreignKey: 'classId',
                 as: 'class'
-            });
+            });*/
             // Users <-> Bookings
             this.hasMany(models.Booking, {
                 foreignKey: 'userId',
@@ -33,7 +33,6 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
             validate: {
                 isEmail: true,  // Catch 'SequelizeValidationError' to handle invalid emails
             }
@@ -63,7 +62,13 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         sequelize,
         modelName: 'User',
-        tableName: 'Users'
+        tableName: 'Users',
+        indexes: [
+            {
+                unique: true,
+                fields: ['email']
+            }
+        ]
     });
     return User;
 }
