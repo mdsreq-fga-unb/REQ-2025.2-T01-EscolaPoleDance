@@ -119,7 +119,7 @@ router.post('/register', async (req, res) => {
             }
         })
 
-        // TODO: Frontend has to redirect user to user main page ('/')
+        // TODO: Frontend has to redirect user to user main page ('/') carrying new headers
         // Cannot redirect at backend side because a response has already been sent
 
     // Error treatment
