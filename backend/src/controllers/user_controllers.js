@@ -73,7 +73,7 @@ exports.getAllUsers = async (req, res) => {
 
         // Validade if user is admin to show complete user information     // TODO: add similar validation to other routes that may return sensitive information
         if (req.user && req.user.role === 'admin') {
-            console.log("Requisição de admin: retornando dados completos de usuário");
+            console.log('\x1b[33m\x1b[1m%s\x1b[0m', "[GetAllUsers]Requisição de admin: retornando dados completos de usuário");
         } else {
             console.log("Requisição comum: retornando dados limitados");
             queryOptions.attributes = ['id', 'firstName', 'lastName'];
@@ -103,7 +103,7 @@ exports.getUserById = async (req, res) => {
 
         // Validade if user is admin to show complete user information
         if (req.user && req.user.role === 'admin') {
-            console.log("[GETUserById]Requisição de admin: enviando dados completos.");
+            console.log('\x1b[33m\x1b[1m%s\x1b[0m', "[GETUserById]Requisição de admin: enviando dados completos.");
         } else {
             console.log("[GETUserById]Requisição normal: enviando dados limitados.");
             queryOptions.attributes = ['id', 'firstName', 'lastName'];
