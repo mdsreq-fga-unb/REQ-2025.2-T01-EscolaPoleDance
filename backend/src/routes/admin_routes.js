@@ -11,9 +11,17 @@ router.use(isLoggedIn, isAdmin);
 
 // CONTROLLERS ---------------------------
 
+// USERS ---
 // GET /api/admin/users - list every user 
 router.get('/users', userController.getAllUsers);
 
+// POST /api/admin/createUser - creates a new user
+router.get('/createUser', userController.createUser);
+
+// DELETE /api/admin/users/:id/delete - delete a specific user
+router.delete('/users/:id/delete', userController.deleteUser);
+
+// CLASSES ---
 // GET /api/admin/classes - list every class
 router.get('/classes', classController.getAllClasses);
 

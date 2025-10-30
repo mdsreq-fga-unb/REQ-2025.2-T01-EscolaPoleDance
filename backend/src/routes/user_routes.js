@@ -138,21 +138,12 @@ router.post('/register', async (req, res) => {
 });
 
 // USER CONTROLLERS -------------------------------
- 
-// POST /api/users/createUser - Create new user 
-router.post('/createUser', userController.createUser);
-
-// GET /api/users/ - List every user in database
-router.get('/', isLoggedIn, userController.getAllUsers);
 
 // GET /api/users/:id - Get a specific user by id
 router.get('/:id', isLoggedIn, userController.getUserById);
 
 // PUT /api/users/:id/update - Update existing user
 router.put('/updateUser/:id', isLoggedIn, userController.updateUser);
-
-// DELETE /api/users/:id/delete - Delete a user from database
-router.delete('/:id/delete', isLoggedIn, isAdmin, userController.deleteUser);
 
 // --------------------------------------------------
 
