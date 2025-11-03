@@ -5,6 +5,7 @@ const user_routes = require('./routes/user_routes');
 const schedule_routes = require('./routes/schedule_routes');
 const booking_routes = require('./routes/booking_routes');
 const class_routes = require('./routes/class_routes');
+const payment_routes = require('./routes/payment_routes');
 const db = require('./models');
 const { sequelize } = require('../config/database');
 
@@ -24,6 +25,7 @@ app.use('/api/users', user_routes); // Initialize user routes group with /api/us
 app.use('/api/schedules', schedule_routes); // Initialize schedules routes group with /api/schedules or /api/schedules/:id
 app.use('/api/bookings', booking_routes);// Initialize bookings routes group with /api/bookings or /api/bookings/:id
 app.use('/api/classes', class_routes);// Initialize class routes group with /api/class or /api/class/:id
+app.use('/api/payments', payment_routes);
 
 const startServer = async() => {
     // Test if conection to database is successfull
