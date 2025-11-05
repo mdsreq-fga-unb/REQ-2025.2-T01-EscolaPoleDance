@@ -3,11 +3,11 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class User extends Model {
         static associate(models) {
-            /* Users <-> Classes
-            this.hasMany(models.Class, {
-                foreignKey: 'classId',
-                as: 'class'
-            });*/
+            // Users <-> Packages
+            this.hasMany(models.Package, {
+                foreignKey: 'userId',
+                as: 'packages'
+            });
             // Users <-> Bookings
             this.hasMany(models.Booking, {
                 foreignKey: 'userId',
@@ -55,9 +55,22 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: 'pending'
         },
+        packageId: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'Packages',
+                key: 'id'
+            }
+        },
         expires: {
             type: DataTypes.DATE,
             allowNull: true
+        },
+        remainingCredits: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
         }
     }, {
         sequelize,
