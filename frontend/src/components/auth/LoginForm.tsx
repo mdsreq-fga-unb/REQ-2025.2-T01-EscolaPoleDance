@@ -1,6 +1,82 @@
-export default function SignupForm() {
+import { LoginSchema } from "@/schemas/LoginSchema";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
+import { Controller, useForm } from "react-hook-form";
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+    Field,
+    FieldError,
+    FieldLabel,
+} from "@/components/ui/field";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+
+export default function LoginForm() {
+
+    const form = useForm<z.infer<typeof LoginSchema>>({
+        resolver: zodResolver(LoginSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+
+    function onSubmit(data: z.infer<typeof LoginSchema>) {
+        console.log(data)
+    }
+
     return (
-        <>
-        </>
+        <Card className="w-90 sm:w-100 h-min border-fuchsia-pink-200 shadow-none">
+            <CardHeader>
+                <CardTitle className="text-3xl font-extrabold text-fuchsia-pink-900 tracking-wide">Entre na conta</CardTitle>
+                <CardDescription className="">Acesse seu painel e continue de onde parou</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <form id="login-form" onSubmit={form.handleSubmit(onSubmit)}>
+                    <Controller
+                        name="email"
+                        control={form.control}
+                        render={({ field, fieldState }) => (
+                            <Field data-invalid={fieldState.invalid}>
+                                <FieldLabel htmlFor="login-email">Email</FieldLabel>
+                                <Input
+                                    {...field}
+                                    id="login-email"
+                                    type="email"
+                                    aria-invalid={fieldState.invalid}
+                                    placeholder="Digite seu email"
+                                    autoComplete="email"
+                                />
+                                {fieldState.invalid && (
+                                    <FieldError errors={[fieldState.error]} />
+                                )}
+                            </Field>
+                        )}
+                    />
+
+                    <Controller
+                        name="password"
+                        control={form.control}
+                        render={({ field, fieldState }) => (
+                            <Field data-invalid={fieldState.invalid} className="mt-3">
+                                <FieldLabel htmlFor="login-password">Senha</FieldLabel>
+                                <Input
+                                    {...field}
+                                    id="login-password"
+                                    type="password"
+                                    aria-invalid={fieldState.invalid}
+                                    placeholder="Digite sua senha"
+                                    autoComplete="current-password"
+                                />
+                                {fieldState.invalid && (
+                                    <FieldError errors={[fieldState.error]} />
+                                )}
+                            </Field>
+                        )}
+                    />
+                </form>
+                <Button className="mt-8 w-full bg-fuchsia-pink-700 hover:bg-fuchsia-pink-600 cursor-pointer" type="submit" form="login-form">Entrar</Button>
+            </CardContent>
+        </Card>
     )
 }
