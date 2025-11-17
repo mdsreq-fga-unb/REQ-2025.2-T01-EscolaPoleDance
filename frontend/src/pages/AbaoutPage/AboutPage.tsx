@@ -1,6 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AboutSection from './section/AboutSection';
+import DifferencesSection from "./section/DifferencesSection";
+import GaleriaSection from "./section/GaleriaSection";
 
 
 export default function AboutPage() {
@@ -8,6 +10,8 @@ export default function AboutPage() {
         <>
             <Navbar />
             <AboutSection />
+            <DifferencesSection />
+            <GaleriaSection />
             <Footer />
         </>
     );
