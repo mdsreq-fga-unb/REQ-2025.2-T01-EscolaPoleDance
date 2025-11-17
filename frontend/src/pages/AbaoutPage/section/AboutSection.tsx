@@ -1,54 +1,63 @@
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
 export default function AboutSection() {
-
-
-    // build an array of [category, items] so we can split into two balanced columns
-    // const categories: [string, FAQItem[]][] = Object.entries(faqsByCategory);
-    //  const half = Math.ceil(categories.length / 2);
-    //  const leftCategories: [string, FAQItem[]][] = categories.slice(0, half);
-    //  const rightCategories: [string, FAQItem[]][] = categories.slice(half);
-
     return (
         <section
             id="about"
-            className="bg-fuchsia-pink-100 px-6 md:px-8 lg:px-[80px] pt-24 md:pt-[180px] pb-24 md:pb-[65px]"
+            className="bg-gradient-to-b from-fuchsia-pink-50 via-fuchsia-pink-100 via-fuchsia-pink-150 to-fuchsia-pink-200 flex flex-col lg:flex-row px-6 md:px-8 lg:px-[80px] pt-24 md:pt-[150px] pb-24 md:pb-[65px]"
         >
             <div className="mx-auto w-full max-w-[1200px] bg-fuchsia-pink-50 rounded-2xl shadow-sm">
-                <div className="px-6 md:px-10 py-8 md:py-12">
-
-                    <div className="mb-12 text-center">
-                        <h2 className="text-fuchsia-pink-900 text-4xl sm:text-5xl font-semibold font-['Montserrat'] leading-tight">
-                            Sobre
-                        </h2>
-                        <p>What is Lorem Ipsum?
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                            Where does it come from?
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                <div className="px-6 md:px-10 py-8 md:py-10">
+                    <div className="px-6 md:px-10 py-8 md:py-10 flex flex-col lg:flex-row">
+                        <img
+                            src="https://placehold.co/500x500/400a48/d883ef"
+                            alt="Joelma Abdon"
+                        /*className="w-[280px] h-[364px] sm:w-[320px] sm:h-[416px] md:w-[400px] md:h-[520px] lg:w-[450px] lg:h-[585px] xl:w-[500px] xl:h-[650px] rounded-3xl border border-fuchsia-pink-100 mx-auto lg:mx-0"8*/
+                        />
+                        <div className="lg:ml-8 mt-6 lg:mt-0 max-w-2xl">
+                            <div className="hidden lg:block">
+                                <h2 className="text-fuchsia-pink-900 text-[2.75rem] font-medium font-['Montserrat'] leading-[50px]">
+                                    Nossa Historia
+                                </h2>
+                            </div>
+                            <div className="mt-6 space-y-10">
+                                <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin leo quam, interdum ut lectus ac, maximus pharetra eros. Phasellus vehicula eu tellus ac consectetur. Morbi sed efficitur ipsum. Proin dignissim neque neque, eget elementum ipsum tristique et. Ut elementum diam nec dapibus maximus. Proin eleifend eu sapien vel tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas arcu libero, mollis sed imperdiet vel, dictum consequat dolor. Vestibulum augue leo, pulvinar nec vestibulum ut, porta et sem
+                                    <ul>
+                                        <li>primeiro item</li>
+                                        <li>segundo item</li>
+                                        <li>terceiro item</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    {/* duas colunas de categorias. Em mobile é uma coluna só */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* coluna esquerda */}
-                        <div className="space-y-6">
-
+                    <div className="px-6 md:px-10 py-8 md:py-10 flex flex-col lg:flex-row">
+                        <div className="lg:ml-8 mt-6 lg:mt-0 max-w-2xl">
+                            <div className="hidden lg:block">
+                                <h2 className="text-fuchsia-pink-900 text-[2.75rem] font-medium font-['Montserrat'] leading-[50px]">
+                                    Nossa Missao                                
+                                </h2>
+                            </div>
+                            <div className="mt-6 space-y-10">
+                                <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Proin leo quam, interdum ut lectus ac, maximus pharetra eros. 
+                                    Phasellus vehicula eu tellus ac consectetur. Morbi sed efficitur ipsum. 
+                                    Proin dignissim neque neque, eget elementum ipsum tristique et. 
+                                    Ut elementum diam nec dapibus maximus. Proin eleifend eu sapien vel tincidunt. 
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                    Maecenas arcu libero, mollis sed imperdiet vel, dictum consequat dolor. 
+                                    <ul>
+                                        <li>primeiro item</li>
+                                        <li>segundo item</li>
+                                        <li>terceiro item</li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
-
-                        {/* coluna direita */}
-                        <div className="space-y-6">
-
-
-                        </div>
+                        <img
+                            src="https://placehold.co/500x500/400a48/d883ef"
+                            alt="Joelma Abdon"
+                        />
                     </div>
                 </div>
             </div>
