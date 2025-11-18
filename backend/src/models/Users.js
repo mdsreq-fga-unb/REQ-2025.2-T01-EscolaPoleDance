@@ -45,6 +45,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true
         },
+        cpf: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         role: {
             type: DataTypes.ENUM('user', 'admin'),
             allowNull: false,

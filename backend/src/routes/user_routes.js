@@ -71,10 +71,10 @@ router.post('/register', async (req, res) => {
         console.log('Body recebido:', req.body);
         console.log('Content-Type:', req.get('content-type'));
 
-        const { firstName, lastName, email, password, phoneNumber } = req.body
+        const { firstName, lastName, email, password, phoneNumber, cpf } = req.body
 
         // Validade received data
-        if (!firstName || !lastName || !email || !password) {
+        if (!firstName || !lastName || !email || !password || !cpf) {
             return res.status(400).json({
                 error: "Por favor, preencha todos os campos obrigatórios."
             });
@@ -90,7 +90,8 @@ router.post('/register', async (req, res) => {
             lastName: lastName,
             email: email,
             password: hashedPassword,  // Stores only the hashed password
-            phoneNumber: phoneNumber
+            phoneNumber: phoneNumber,
+            cpf: cpf
         });     
         
         // Login user into new account
