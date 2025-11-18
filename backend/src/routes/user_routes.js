@@ -126,7 +126,7 @@ router.post('/register', async (req, res) => {
     // Error treatment
     } catch (error) {
         if (error.name === 'SequelizeUniqueConstraintError') {
-            return res.status(409).json({ error: "Este email já está cadastrado." });
+            return res.status(409).json({ error: "Este email ou CPF já está cadastrado." });
         }
         else if (error.name === 'SequelizeValidationError') {
             return res.status(400).json({ error: "Email inválido." });

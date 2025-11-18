@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         },
         cpf: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         role: {
@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
         indexes: [
             {
                 unique: true,
-                fields: ['email']
+                fields: ['email', 'cpf']
             }
         ]
     });
