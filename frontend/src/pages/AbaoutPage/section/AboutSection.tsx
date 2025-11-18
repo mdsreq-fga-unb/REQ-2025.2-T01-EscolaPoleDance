@@ -9,7 +9,7 @@ export default function AboutSection() {
                     <div className="px-6 md:px-10 py-8 md:py-10 flex flex-col lg:flex-row">
                         <img
                             src="https://placehold.co/500x500/400a48/d883ef"
-                            alt="Joelma Abdon"
+                            alt=" "
                         /*className="w-[280px] h-[364px] sm:w-[320px] sm:h-[416px] md:w-[400px] md:h-[520px] lg:w-[450px] lg:h-[585px] xl:w-[500px] xl:h-[650px] rounded-3xl border border-fuchsia-pink-100 mx-auto lg:mx-0"8*/
                         />
                         <div className="lg:ml-8 mt-6 lg:mt-0 max-w-2xl">
@@ -56,7 +56,7 @@ export default function AboutSection() {
                         </div>
                         <img
                             src="https://placehold.co/500x500/400a48/d883ef"
-                            alt="Joelma Abdon"
+                            alt=" "
                         />
                     </div>
                 </div>
