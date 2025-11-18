@@ -16,6 +16,8 @@ export default function SignupForm() {
         defaultValues: {
             name: "",
             surname: "",
+            cpf: "",
+            phoneNumber: "",
             email: "",
             password: "",
             confirmPassword: "",
@@ -75,6 +77,42 @@ export default function SignupForm() {
                             )}
                         />
                     </div>
+                    <Controller
+                        name="cpf"
+                        control={form.control}
+                        render={({ field, fieldState }) => (
+                            <Field data-invalid={fieldState.invalid} className="mt-5">
+                                <FieldLabel htmlFor="signup-cpf">CPF</FieldLabel>
+                                <Input
+                                    {...field}
+                                    id="signup-cpf"
+                                    aria-invalid={fieldState.invalid}
+                                    placeholder="Digite seu CPF"
+                                />
+                                {fieldState.invalid && (
+                                    <FieldError errors={[fieldState.error]} />
+                                )}
+                            </Field>
+                        )}
+                    />
+                    <Controller
+                        name="phoneNumber"
+                        control={form.control}
+                        render={({ field, fieldState }) => (
+                            <Field data-invalid={fieldState.invalid} className="mt-5">
+                                <FieldLabel htmlFor="signup-phone-number">Telefone (opcional)</FieldLabel>
+                                <Input
+                                    {...field}
+                                    id="signup-phone-number"
+                                    aria-invalid={fieldState.invalid}
+                                    placeholder="Digite seu número"
+                                />
+                                {fieldState.invalid && (
+                                    <FieldError errors={[fieldState.error]} />
+                                )}
+                            </Field>
+                        )}
+                    />
                     <Controller
                         name="email"
                         control={form.control}
