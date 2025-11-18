@@ -1,7 +1,6 @@
 import { Controller, useForm } from "react-hook-form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
-import * as z from "zod";
-import { SignupSchema } from "@/schemas/SignupSchema";
+import { SignupSchema, type SignupFormValues } from "@/schemas/SignupSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Field, FieldError, FieldLabel } from "../ui/field";
 import { Input } from "../ui/input";
@@ -12,7 +11,7 @@ import { Label } from "../ui/label";
 
 export default function SignupForm() {
 
-    const form = useForm<z.infer<typeof SignupSchema>>({
+    const form = useForm<SignupFormValues>({
         resolver: zodResolver(SignupSchema),
         defaultValues: {
             name: "",
@@ -24,7 +23,7 @@ export default function SignupForm() {
         }
     });
 
-    function onSubmit(data: z.infer<typeof SignupSchema>) {
+    function onSubmit(data: SignupFormValues) {
         console.log(data)
     }
 

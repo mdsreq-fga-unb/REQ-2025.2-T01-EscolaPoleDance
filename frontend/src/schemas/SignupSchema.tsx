@@ -38,3 +38,5 @@ export const SignupSchema = z
     message: "As senhas devem ser iguais",
     path: ["confirmPassword"],
   });
+
+  export type SignupFormValues = z.infer<typeof SignupSchema>;

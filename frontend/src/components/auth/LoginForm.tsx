@@ -1,7 +1,6 @@
-import { LoginSchema } from "@/schemas/LoginSchema";
+import { LoginSchema, type LoginFormValues } from "@/schemas/LoginSchema";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { Controller, useForm } from "react-hook-form";
-import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
     Field,
@@ -13,7 +12,7 @@ import { Button } from "../ui/button";
 
 export default function LoginForm() {
 
-    const form = useForm<z.infer<typeof LoginSchema>>({
+    const form = useForm<LoginFormValues>({
         resolver: zodResolver(LoginSchema),
         defaultValues: {
             email: "",
@@ -21,7 +20,7 @@ export default function LoginForm() {
         },
     });
 
-    function onSubmit(data: z.infer<typeof LoginSchema>) {
+    function onSubmit(data: LoginFormValues) {
         console.log(data)
     }
 
