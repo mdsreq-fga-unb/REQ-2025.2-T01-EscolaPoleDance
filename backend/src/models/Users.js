@@ -45,6 +45,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true
         },
+        cpf: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         role: {
             type: DataTypes.ENUM('user', 'admin'),
             allowNull: false,
@@ -66,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
         indexes: [
             {
                 unique: true,
-                fields: ['email']
+                fields: ['email', 'cpf']
             }
         ]
     });
