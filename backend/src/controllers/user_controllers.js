@@ -22,7 +22,7 @@ exports.createUser = async (req, res) => {
         }
         
         // Generate salt and hashed password
-        const saltRounds = process.env.SALT_ROUNDS;  // Level of security for data criptography with bcrypt (each level doubles the time it takes to calculate hash)
+        const saltRounds = parseInt(process.env.SALT_ROUNDS) || 10;  // Level of security for data criptography with bcrypt (each level doubles the time it takes to calculate hash)
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         // Insert new user in database 
@@ -66,10 +66,20 @@ exports.createUser = async (req, res) => {
 exports.getAllUsers = async (req, res) => {
     try {
 
-        const allUsers = await db.User.findAll({
+        const queryOptions = {
             order: ['firstName'],
             attributes: { exclude: ['password'] }
-        });
+        }
+
+        // Validade if user is admin to show complete user information     // TODO: add similar validation to other routes that may return sensitive information
+        if (req.user && req.user.role === 'admin') {
+            console.log('\x1b[33m\x1b[1m%s\x1b[0m', "[GetAllUsers]Requisição de admin: retornando dados completos de usuário");
+        } else {
+            console.log("Requisição comum: retornando dados limitados");
+            queryOptions.attributes = ['id', 'firstName', 'lastName'];
+        }
+
+        const allUsers = await db.User.findAll(queryOptions);
 
         res.status(200).json(allUsers);
         
@@ -87,7 +97,19 @@ exports.getUserById = async (req, res) => {
     try {
 
         const { id } = req.params;
-        const selectedUser = await db.User.findByPk(id); 
+        const queryOptions = {
+            attributes: { exclude: ['password'] }
+        }
+
+        // Validade if user is admin to show complete user information
+        if (req.user && req.user.role === 'admin') {
+            console.log('\x1b[33m\x1b[1m%s\x1b[0m', "[GETUserById]Requisição de admin: enviando dados completos.");
+        } else {
+            console.log("[GETUserById]Requisição normal: enviando dados limitados.");
+            queryOptions.attributes = ['id', 'firstName', 'lastName'];
+        }
+
+        const selectedUser = await db.User.findByPk(id, queryOptions); 
 
         if (!selectedUser) {
             res.status(404).json({ error: `Não foi possível encontrar o usuário com id: '${id}'` });

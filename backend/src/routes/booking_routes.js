@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const bookingController = require('../controllers/booking_controllers');
+const { isLoggedIn } = require('../middleware/auth_middleware');
+
+router.use(isLoggedIn); // Requires user to be logged in for every booking route
+
 
 // BOOKING CONTROLLERS -----------------------------
 
