@@ -30,7 +30,7 @@ export default function SignupForm() {
     }
 
     return (
-        <Card className="w-120 h-min border-fuchsia-pink-200 shadow-none">
+        <Card className="w-120 h-min border-fuchsia-pink-200 shadow-none m-5">
             <CardHeader>
                 <CardTitle className="text-2xl md:text-3xl font-extrabold text-fuchsia-pink-900 tracking-wide">Crie sua conta</CardTitle>
                 <CardDescription className="">Cadastre-se para acessar todos os recursos</CardDescription>
