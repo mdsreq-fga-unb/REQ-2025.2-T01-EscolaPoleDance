@@ -15,10 +15,9 @@ import { authService } from "@/services/authService";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { Loader2 } from "lucide-react";
 
 export default function LoginForm() {
-	const navigate = useNavigate();
-
 	const form = useForm<LoginFormValues>({
 		resolver: zodResolver(LoginSchema),
 		defaultValues: {
@@ -26,6 +25,9 @@ export default function LoginForm() {
 			password: "",
 		},
 	});
+
+	const navigate = useNavigate();
+	const { isSubmitting } = form.formState;
 
 	async function onSubmit(data: LoginFormValues) {
 		const payload = {
@@ -120,8 +122,16 @@ export default function LoginForm() {
 						className="mt-8 w-full bg-fuchsia-pink-700 hover:bg-fuchsia-pink-600 cursor-pointer"
 						type="submit"
 						form="login-form"
+						disabled={isSubmitting}
 					>
-						Entrar
+						{isSubmitting ? (
+							<>
+								<Loader2 className="size-4 animate-spin" />
+								Entrando...
+							</>
+						) : (
+							"Entrar"
+						)}
 					</Button>
 				</CardContent>
 			</Card>
