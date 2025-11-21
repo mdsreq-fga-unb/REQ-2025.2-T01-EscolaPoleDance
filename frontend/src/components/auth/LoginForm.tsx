@@ -9,8 +9,12 @@ import {
 } from "@/components/ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { authService } from "@/services/authService";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
+
+    const navigate = useNavigate();
 
     const form = useForm<LoginFormValues>({
         resolver: zodResolver(LoginSchema),
@@ -20,8 +24,26 @@ export default function LoginForm() {
         },
     });
 
-    function onSubmit(data: LoginFormValues) {
-        console.log(data)
+    async function onSubmit(data: LoginFormValues) {
+        
+        const payload = {
+            email: data.email,
+            password: data.password,
+        }
+
+        try {
+            
+            const loginResult = await authService.login(payload);
+            if (loginResult?.token) {
+                localStorage.setItem("token", loginResult.token);
+            } else {
+                console.error("No token provided");
+                return;
+            }
+            navigate("/dashboard");
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     return (

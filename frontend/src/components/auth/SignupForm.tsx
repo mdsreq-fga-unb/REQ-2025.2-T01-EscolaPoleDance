@@ -8,6 +8,22 @@ import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import { Link } from "react-router-dom";
 import { Label } from "../ui/label";
+import { authService } from "@/services/authService";
+import { useNavigate } from "react-router-dom";
+import React from "react";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+import { Loader2 } from "lucide-react";
+
 
 export default function SignupForm() {
 
@@ -25,8 +41,28 @@ export default function SignupForm() {
         }
     });
 
-    function onSubmit(data: SignupFormValues) {
-        console.log(data)
+    const navigate = useNavigate();
+    const { isSubmitting } = form.formState;
+    const [confirmOpen, setConfirmOpen] = React.useState(false);
+
+    async function onSubmit(data: SignupFormValues) {
+
+        const payload = {
+            firstName: data.name,
+            lastName: data.surname,
+            email: data.email,
+            password: data.password,
+            phoneNumber: data.phoneNumber || undefined,
+            cpf: data.cpf,
+        }
+
+        try {
+            const registerResult = await authService.register(payload)
+
+            if (registerResult?.token) setConfirmOpen(true);
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     return (
@@ -172,47 +208,84 @@ export default function SignupForm() {
                             </Field>
                         )}
                     />
-                </form>
-                <Controller
-                    name="terms"
-                    control={form.control}
-                    render={({ field, fieldState }) => (
-                        <Field
-                            data-invalid={fieldState.invalid}
-                            className="mt-5"
-                        >
-                            <div className="flex items-start gap-3">
-                                <Checkbox
-                                    id="checkbox-terms"
-                                    checked={field.value}
-                                    onCheckedChange={(checked) =>
-                                        field.onChange(!!checked)
-                                    }
-                                    aria-invalid={fieldState.invalid}
-                                />
-                                <div className="flex flex-col">
-                                    <div className="flex items-center">
-                                        <Label htmlFor="checkbox-terms">
-                                            <span>
-                                                Eu concordo com os{" "}
-                                                <Link
-                                                    className="underline cursor-pointer hover:text-fuchsia-pink-500 transition-colors"
-                                                    to="/terms-of-use"
-                                                >
-                                                    termos de uso
-                                                </Link>
-                                            </span>
-                                        </Label>
+                    <Controller
+                        name="terms"
+                        control={form.control}
+                        render={({ field, fieldState }) => (
+                            <Field
+                                data-invalid={fieldState.invalid}
+                                className="mt-5"
+                            >
+                                <div className="flex items-start gap-3">
+                                    <Checkbox
+                                        id="checkbox-terms"
+                                        checked={field.value}
+                                        onCheckedChange={(checked) =>
+                                            field.onChange(!!checked)
+                                        }
+                                        aria-invalid={fieldState.invalid}
+                                    />
+                                    <div className="flex flex-col">
+                                        <div className="flex items-center">
+                                            <Label htmlFor="checkbox-terms">
+                                                <span>
+                                                    Eu concordo com os{" "}
+                                                    <Link
+                                                        className="underline cursor-pointer hover:text-fuchsia-pink-500 transition-colors"
+                                                        to="/terms-of-use"
+                                                    >
+                                                        termos de uso
+                                                    </Link>
+                                                </span>
+                                            </Label>
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError className="mt-2" errors={[fieldState.error]} />
+                                        )}
                                     </div>
-                                    {fieldState.invalid && (
-                                        <FieldError className="mt-2" errors={[fieldState.error]} />
-                                    )}
                                 </div>
-                            </div>
-                        </Field>
-                    )}
-                />
-                <Button className="mt-8 w-full bg-fuchsia-pink-700 hover:bg-fuchsia-pink-600 cursor-pointer" type="submit" form="signup-form">Criar uma conta</Button>
+                            </Field>
+                        )}
+                    />
+                    <Button
+                        className="mt-8 w-full bg-fuchsia-pink-700 hover:bg-fuchsia-pink-600 cursor-pointer"
+                        type="submit"
+                        form="signup-form"
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? (
+                            <>
+                                <Loader2 className="size-4 animate-spin" />
+                                Criando...
+                            </>
+                        ) : (
+                            "Criar uma conta"
+                        )}
+                    </Button>
+                </form>
+
+                <AlertDialog open={confirmOpen} onOpenChange={setConfirmOpen}>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>Conta criada com sucesso 🎉</AlertDialogTitle>
+                            <AlertDialogDescription>
+                                Sua conta foi registrada. Clique abaixo para acessar a página de login.
+                            </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                            <AlertDialogCancel>Fechar</AlertDialogCancel>
+                            <AlertDialogAction asChild>
+                                <Button
+                                    onClick={() => navigate("/login")}
+                                    className="bg-fuchsia-pink-700 hover:bg-fuchsia-pink-600 cursor-pointer"
+                                >
+                                    Ir para login
+                                </Button>
+                            </AlertDialogAction>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
+
             </CardContent>
         </Card>
     )

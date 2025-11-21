@@ -28,7 +28,9 @@ export const SignupSchema = z
       .nonempty("Email é obrigatório"),
 
     phoneNumber: z
-      .string(),
+      .string()
+      .regex(/^(\d{11}|)$/, "Telefone deve conter 11 dígitos")
+      .or(z.literal("")),
 
     password: z
       .string()
