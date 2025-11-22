@@ -1,21 +1,20 @@
 import { LoginSchema, type LoginFormValues } from "@/schemas/LoginSchema";
 import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-	CardDescription,
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+    CardDescription,
 } from "../ui/card";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Field, FieldError, FieldLabel } from "@/components/ui/field";
-import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { authService } from "@/services/authService";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Loader2 } from "lucide-react";
+import { FormInput } from "../ui/FormInput";
 
 export default function LoginForm() {
 	const form = useForm<LoginFormValues>({
@@ -45,7 +44,7 @@ export default function LoginForm() {
 			}
 			navigate("/dashboard");
 		} catch (e) {
-			toast.error(e.message);
+			toast.error((e as Error).message);
 		}
 	}
 
@@ -65,57 +64,23 @@ export default function LoginForm() {
 						id="login-form"
 						onSubmit={form.handleSubmit(onSubmit)}
 					>
-						<Controller
-							name="email"
+						<FormInput
 							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field data-invalid={fieldState.invalid}>
-									<FieldLabel htmlFor="login-email">
-										Email
-									</FieldLabel>
-									<Input
-										{...field}
-										id="login-email"
-										type="email"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite seu email"
-										autoComplete="email"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							name="email"
+							type="email"
+							label="Email"
+							placeholder="Digite seu email"
+							autoComplete="email"
 						/>
 
-						<Controller
-							name="password"
+						<FormInput
 							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-3"
-								>
-									<FieldLabel htmlFor="login-password">
-										Senha
-									</FieldLabel>
-									<Input
-										{...field}
-										id="login-password"
-										type="password"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite sua senha"
-										autoComplete="current-password"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							name="password"
+							type="password"
+							label="Senha"
+							placeholder="Digite sua senha"
+							autoComplete="current-password"
+							className="mt-3"
 						/>
 					</form>
 					<Button

@@ -30,6 +30,7 @@ import {
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { FormInput } from "../ui/FormInput";
 
 export default function SignupForm() {
 	const form = useForm<SignupFormValues>({
@@ -51,7 +52,6 @@ export default function SignupForm() {
 	const [confirmOpen, setConfirmOpen] = React.useState(false);
 
 	async function onSubmit(data: SignupFormValues) {
-
 		const payload = {
 			firstName: data.name,
 			lastName: data.surname,
@@ -66,7 +66,7 @@ export default function SignupForm() {
 
 			if (registerResult?.token) setConfirmOpen(true);
 		} catch (e) {
-			toast.error(e.message);
+			toast.error((e as Error).message);
 		}
 	}
 
@@ -87,186 +87,68 @@ export default function SignupForm() {
 						onSubmit={form.handleSubmit(onSubmit)}
 					>
 						<div className=" md:flex md:gap-5">
-							<Controller
+							<FormInput
+								control={form.control}
 								name="name"
-								control={form.control}
-								render={({ field, fieldState }) => (
-									<Field data-invalid={fieldState.invalid}>
-										<FieldLabel htmlFor="signup-name">
-											Nome
-										</FieldLabel>
-										<Input
-											{...field}
-											id="signup-name"
-											aria-invalid={fieldState.invalid}
-											placeholder="Digite seu nome"
-											autoComplete="given-name"
-										/>
-										{fieldState.invalid && (
-											<FieldError
-												errors={[fieldState.error]}
-											/>
-										)}
-									</Field>
-								)}
+								label="Nome"
+								placeholder="Digite seu nome"
+								autoComplete="given-name"
 							/>
-							<Controller
-								name="surname"
+
+							<FormInput
 								control={form.control}
-								render={({ field, fieldState }) => (
-									<Field
-										data-invalid={fieldState.invalid}
-										className="mt-5 md:mt-0"
-									>
-										<FieldLabel htmlFor="signup-surname">
-											Sobrenome
-										</FieldLabel>
-										<Input
-											{...field}
-											id="signup-surname"
-											aria-invalid={fieldState.invalid}
-											placeholder="Digite seu sobrenome"
-											autoComplete="family-name"
-										/>
-										{fieldState.invalid && (
-											<FieldError
-												errors={[fieldState.error]}
-											/>
-										)}
-									</Field>
-								)}
+								name="surname"
+								label="Sobrenome"
+								placeholder="Digite seu sobrenome"
+								autoComplete="family-name"
+								className="mt-5 md:mt-0"
 							/>
 						</div>
-						<Controller
+						<FormInput
+							control={form.control}
 							name="cpf"
-							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-5"
-								>
-									<FieldLabel htmlFor="signup-cpf">
-										CPF
-									</FieldLabel>
-									<Input
-										{...field}
-										id="signup-cpf"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite seu CPF"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							label="CPF"
+							placeholder="Digite seu CPF"
+							className="mt-5"
 						/>
-						<Controller
+
+						<FormInput
+							control={form.control}
 							name="phoneNumber"
-							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-5"
-								>
-									<FieldLabel htmlFor="signup-phone-number">
-										Telefone (opcional)
-									</FieldLabel>
-									<Input
-										{...field}
-										id="signup-phone-number"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite seu número"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							label="Telefone (opcional)"
+							placeholder="Digite seu número"
+							className="mt-5"
 						/>
-						<Controller
+
+						<FormInput
+							control={form.control}
 							name="email"
-							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-5"
-								>
-									<FieldLabel htmlFor="signup-email">
-										Email
-									</FieldLabel>
-									<Input
-										{...field}
-										id="signup-email"
-										type="email"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite seu email"
-										autoComplete="email"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							type="email"
+							label="Email"
+							placeholder="Digite seu email"
+							autoComplete="email"
+							className="mt-5"
 						/>
-						<Controller
+
+						<FormInput
+							control={form.control}
 							name="password"
-							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-5"
-								>
-									<FieldLabel htmlFor="signup-password">
-										Senha
-									</FieldLabel>
-									<Input
-										{...field}
-										id="signup-password"
-										type="password"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite uma senha"
-										autoComplete="new-password"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							type="password"
+							label="Senha"
+							placeholder="Digite uma senha"
+							autoComplete="new-password"
+							className="mt-5"
 						/>
-						<Controller
+
+						<FormInput
+							control={form.control}
 							name="confirmPassword"
-							control={form.control}
-							render={({ field, fieldState }) => (
-								<Field
-									data-invalid={fieldState.invalid}
-									className="mt-5"
-								>
-									<FieldLabel htmlFor="signup-confirm-password">
-										Confirmar senha
-									</FieldLabel>
-									<Input
-										{...field}
-										id="signup-confirm-password"
-										type="password"
-										aria-invalid={fieldState.invalid}
-										placeholder="Digite novamente a senha"
-									/>
-									{fieldState.invalid && (
-										<FieldError
-											errors={[fieldState.error]}
-										/>
-									)}
-								</Field>
-							)}
+							type="password"
+							label="Confirmar senha"
+							placeholder="Digite novamente a senha"
+							className="mt-5"
 						/>
+
 						<Controller
 							name="terms"
 							control={form.control}
@@ -285,19 +167,17 @@ export default function SignupForm() {
 											aria-invalid={fieldState.invalid}
 										/>
 										<div className="flex flex-col">
-											<div className="flex items-center">
-												<Label htmlFor="checkbox-terms">
-													<span>
-														Eu concordo com os{" "}
-														<Link
-															className="underline cursor-pointer hover:text-fuchsia-pink-500 transition-colors"
-															to="/terms-of-use"
-														>
-															termos de uso
-														</Link>
-													</span>
-												</Label>
-											</div>
+											<Label htmlFor="checkbox-terms">
+												<span>
+													Eu concordo com os{" "}
+													<Link
+														className="underline cursor-pointer hover:text-fuchsia-pink-500 transition-colors"
+														to="/terms-of-use"
+													>
+														termos de uso
+													</Link>
+												</span>
+											</Label>
 											{fieldState.invalid && (
 												<FieldError
 													className="mt-2"
