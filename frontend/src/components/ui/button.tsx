@@ -25,4 +25,5 @@ function Button({
   );
 }
 
-export { Button };
+// Re-export buttonVariants to keep previous import compatibility
+export { Button, buttonVariants };
