@@ -8,8 +8,7 @@ import {
 } from "../ui/card";
 import { SignupSchema, type SignupFormValues } from "@/schemas/SignupSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Field, FieldError, FieldLabel } from "../ui/field";
-import { Input } from "../ui/input";
+import { Field, FieldError,} from "../ui/field";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import { Link } from "react-router-dom";
