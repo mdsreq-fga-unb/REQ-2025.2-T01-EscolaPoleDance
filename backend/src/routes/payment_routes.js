@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { initiatePayment } = require('../controllers/payment_controller');
+const paymentController = require('../controllers/payment_controllers');
 
-// Rota para iniciar um novo pagamento
-router.post('/payments/initiate', initiatePayment);
+router.post('/create-preference', paymentController.createPaymentPreference);
+
+router.post('/webhook', paymentController.paymentWebhook);
+
+router.get('/info/:payment_id', paymentController.getPaymentInfo);
 
 module.exports = router;
