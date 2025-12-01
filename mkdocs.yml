@@ -28,8 +28,19 @@ theme:
     - content.code.copy
 
 nav:
-  - Início: index.md
-  - Cenário Atual: cenario-atual.md
+  - Cenário Atual: index.md
+  - Solução Proposta: solucao-proposta.md
+  - Estratégias de ES: estrategias.md
+  - Engenharia de Requisitos: er.md
+  - Cronogramas e Entregas: cronograma.md
+  - Interação Equipe - Cliente: interacao.md
+  - Requisitos: requisitos.md
+  - DOR e DOD: dor-dod.md
+  - Backlog do Produto: backlog.md
+  - Lições Aprendidas: licoes-aprendidas.md
+  - Referências Bibliográficas: referencias.md
+  - Gravações: gravacoes.md
+  - Estudos de Caso: estudos-de-caso.md
   - Documentação do Projeto:
       - Solução Proposta: solucao-proposta.md
       - Backlog: backlog.md
