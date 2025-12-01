@@ -30,20 +30,59 @@
 
 ## Engenharia de Requisitos e o RAD
 
-| Fases do Processo | Atividades ER | Prática | Técnica | Resultado Esperado |
+### Fase 1: Planejamento de Requisitos (Requirements Planning)
+
+| Ciclos | Atividades ER | Prática | Técnica | Resultados Esperados |
 |------------------|---------------|---------|--------|------------------|
-| Fase 1 – Elicitação e Descoberta | Manter uma comunicação aberta e colaborativa, trabalhando junto aos stakeholders para explorar ideias e compreender profundamente suas necessidades sem ideias preconcebidas. | Entrevista com stakeholders | Entrevista | Lista de Necessidades dos usuários e uma primeira versão da Visão do Produto |
-| Fase 1 – Elicitação e Descoberta | Manter uma comunicação aberta e colaborativa, trabalhando junto aos stakeholders para explorar ideias e compreender profundamente suas necessidades sem ideias preconcebidas. | Protótipos | Protótipo de baixa/alta fidelidade | Protótipos que validam o fluxo de interação e o layout das páginas |
-| Fase 1 – Elicitação e Descoberta | Manter uma comunicação aberta e colaborativa, trabalhando junto aos stakeholders para explorar ideias e compreender profundamente suas necessidades sem ideias preconcebidas. | Prompt IA | Geração de perguntas e ideias | Geração de perguntas para entrevistas e brainstorming, auxiliando na criação de Personas e na definição da Lista de Necessidades |
-| Fase 1 – Análise e Consenso | Examinar os requisitos levantados para resolver conflitos entre os interesses dos stakeholders, buscando um acordo comum e garantindo que as funcionalidades estejam alinhadas aos objetivos do negócio. | Negociação | Discussões estruturadas com stakeholders | Lista de RFs e RNFs priorizada e acordada, com resolução de conflitos sobre o escopo |
-| Fase 1 – Declaração | Escrever os requisitos em um formato simples e focado no usuário, definindo claramente as condições de satisfação para cada funcionalidade. | História de Usuário | Formato de Histórias de Usuário com Critérios de Aceitação | Histórias de Usuário documentadas com Critérios de Aceitação, formando o Product Backlog |
-| Fase 2 – Verificação e Validação | Revisão colaborativa entre os membros da equipe para detectar falhas de clareza, inconsistências e omissões. | Revisão por pares | Revisão por pares | Requisitos revisados e refinados, garantindo consistência, clareza e alinhamento com stakeholders |
-| Fase 2 – Verificação e Validação | Aplicar uma lista de verificação para avaliar critérios de qualidade, completude, rastreabilidade e formatação. | Checklist de Verificação | Checklist de Verificação | Conjunto de requisitos verificados quanto à completude, padronização e rastreabilidade |
-| Fase 2 – Verificação e Validação | Aplicar checklist para validar se os requisitos refletem corretamente as necessidades e metas do cliente | Checklist de Validação | Checklist de Validação | Requisitos validados quanto à adequação às necessidades do cliente e objetivos do projeto |
-| Fase 2 – Verificação e Validação | Realizar entrevistas e reuniões com o cliente para confirmar o entendimento e ajustar requisitos conforme necessário. | Entrevistas e reuniões com o cliente | Entrevistas e reuniões | Requisitos confirmados e ajustados com base no retorno direto do cliente, garantindo aderência às suas expectativas |
-| Fase 2 – Verificação e Validação | Apresentar e discutir os requisitos com o cliente, passo a passo, para detectar falhas e ambiguidades. | Walkthrough | Walkthrough | Requisitos validados coletivamente, com ajustes realizados antes da implementação |
-| Fase 2 – Verificação e Validação | Coletar feedback frequente dos stakeholders para garantir que os requisitos permaneçam alinhados às expectativas e necessidades. | Feedback | Feedback contínuo | Requisitos continuamente aprimorados e validados, refletindo mudanças e aprendizados do processo |
-| Fase 3 – Representação | Transformar os requisitos em artefatos visuais de forma flexível e fácil de modificar, focando na comunicação e no alinhamento com os stakeholders sobre a interface do sistema. | Representação Informal | Mockups e Protótipos | Mockups e Protótipos de alta e média fidelidade ilustrando layout e estrutura das páginas do site |
-| Fase 4 – Organização e Atualização | Manter uma lista de requisitos viva e dinâmica, que é refinada progressivamente. Priorizar continuamente os itens com base no valor e no risco, detalhando apenas o necessário para o trabalho imediato. | Backlog | Product Backlog | Product Backlog que funciona como a única fonte de requisitos para o projeto |
+| 1 | Elicitação e Descoberta | Alinhamento e detalhamento dos requisitos com a cliente, definição do perfil das alunas. | Entrevista com stakeholders; Prompt IA; Brainstorming|Requisitos detalhados e perfil das alunas definidas. |
+| 1 | Análise e Consenso| Revisão e refinamento inicial | Negociação | Requisitos definidos com clareza, claros e compreendidos pelas partes envolvidas |
+| 1 | Declaração | Rascunho da documentação preliminar do escopo. | Especificação de Requisitos | Lista de requisitos estruturados para leitura do cliente. |
+| 1 | Verificação e Validação | Validação inicial com cliente | Entrevistas e reuniões com o cliente | Confirmação de que os requisitos estão alinhados com a realidade |
+| 2 | Declaração  | Desenvolvimento da documentação preliminar | História de Usuário, Documento de Visão de Produto | Especificação dos Requisitos e Backlog do Produto inicial |
+| 2 | Representação  | Criação de Protótipos | Prototipagem de Alta Fidelidade | Protótipo das interfaces |
+| 2 | Verificação e Validação | Demonstração ao Cliente | Walkthrough, Revisão Técnica | Validação do entendimento visual e identificação de inconsistências. |
+| 2 | Elicitação e Descoberta | Levantamento de ajustes finos e novos detalhes percebidos através da interação com o protótipo. | Observação / Coleta de Feedback | Lista de melhorias de usabilidade, design e correções de fluxo identificadas. |
+| 2 | Análise e Consenso | Discussão com a equipe após coleta de feedback do Cliente  | Análise de Domínio de Requisitos, Análise de Risco | Foram discutidas questões em relação à requisitos como “facilidade de uso e design bonito” além dos requisitos que cumprem o objetivo do projeto (captar alunas). |
+| 2 | Organização e Atualização | Refinamento da documentação “Visão do Produto e Projeto” |  Feedback, Priorização | Documento revisado + Desenvolvimento do Backlog. |
+
+
+### Fase 2: Design do Usuário (User Design)
+
+| Ciclos | Atividades ER | Prática | Técnica | Resultados Esperados |
+|------------------|---------------|---------|--------|------------------|
+| 1 | xxxxxx | xxxxxx | xxxxxx|xxxxxx |
+| 1 | xxxxxx| xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+
+### Fase 3: Construção (Construction)
+
+| Ciclos | Atividades ER | Prática | Técnica | Resultados Esperados |
+|------------------|---------------|---------|--------|------------------|
+| 1 | xxxxxx | xxxxxx | xxxxxx|xxxxxx |
+| 1 | xxxxxx| xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 3 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 3 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 3 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+
+### Fase 4: Transição (Cutover)
+
+| Ciclos | Atividades ER | Prática | Técnica | Resultados Esperados |
+|------------------|---------------|---------|--------|------------------|
+| 1 | xxxxxx | xxxxxx | xxxxxx|xxxxxx |
+| 1 | xxxxxx| xxxxxx | xxxxxx | xxxxxx |
+| 1 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
+| 2 | xxxxxx  | xxxxxx | xxxxxx | xxxxxx |
 
 
