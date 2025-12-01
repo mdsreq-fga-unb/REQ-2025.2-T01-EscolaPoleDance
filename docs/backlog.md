@@ -4,40 +4,39 @@ As Histórias de Usuário apresentadas abaixo foram diretamente derivadas da lis
 
 ## Backlog Geral 
 
-# Histórias de Usuário
+### Histórias de Usuário
 
-| História | Descrição | Objetivos Específicos | Requisito |
-|-----------|------------|------------------------|------------|
-| **US01** | Como um visitante, eu quero acessar o conteúdo público do site (sobre a escola, metodologia, informações do pole dance, galeria de fotos), para que eu possa conhecer a escola e o pole dance antes de me matricular. | OE1 / OE5 | RF01 – Acessar conteúdo público |
-| **US02** | Como um visitante, eu quero encontrar e clicar nos links para as redes sociais da escola, para que eu possa seguir o conteúdo e ver mais sobre o dia a dia da escola e notícias recentes. | OE1 | RF02 – Acessar links para redes sociais da escola |
-| **US03** | Como um visitante ou aluna, eu quero consultar os horários de aulas e os planos de pacotes disponíveis, para que eu possa escolher a opção que melhor se adequa ao meu horário e orçamento. | OE2 | RF03 – Consultar horários e planos disponíveis |
-| **US04** | Como um visitante, eu quero ter um espaço de contato (como um formulário ou FAQ), para que eu possa tirar minhas dúvidas sobre a modalidade ou a escola e decidir se quero começar. | OE1 / OE5 | RF04 – Disponibilizar espaço para tirar dúvidas sobre a modalidade |
-| **US05** | Como um visitante, eu quero me cadastrar no website fornecendo minhas informações, para que eu possa realizar compras/agendamentos e acessar a área de aluna. | OE2 | RF05 – Cadastrar novo usuário |
-| **US06** | Como uma aluna, eu quero inserir minhas informações credenciais para fazer login, para que eu possa acessar meu painel e funcionalidades restritas. | OE2 | RF06 – Realizar login |
-| **US07** | Como uma aluna, eu quero sair da minha conta após usar o website, para que eu possa proteger minhas informações e garantir a segurança do meu acesso. | OE2 | RF07 – Realizar logout |
-| **US08** | Como uma aluna, eu quero selecionar um pacote de aulas e pagar online usando o Mercado Pago, para que eu possa garantir minha vaga nas aulas e ter o pacote creditado na minha conta. | OE3 | RF08 – Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago |
-| **US09** | Como um visitante, eu quero pagar pela minha aula experimental usando o Mercado Pago, para que eu possa confirmar minha participação e experimentar a modalidade. | OE3 | RF09 – Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago |
-| **US10** | Como uma aluna, eu quero selecionar uma data e horário e agendar minhas aulas disponíveis, para que eu possa reservar minha vaga e planejar minha frequência. | OE2 | RF10 – Agendar aulas |
-| **US11** | Como uma aluna, eu quero visualizar um resumo dos pacotes de aulas que a escola oferece, para que eu possa entender minhas opções e escolher qual comprar ou renovar. | OE1 | RF11 – Exibir pacotes de aulas disponíveis conforme plano definido |
-| **US12** | Como uma aluna, eu quero acessar uma lista ou calendário com todas as minhas aulas agendadas, para que eu possa saber quais são meus próximos compromissos e me organizar. | OE2 | RF12 – Consultar cronograma de aulas agendadas |
-| **US13** | Como uma aluna, eu quero informar que não poderei comparecer a uma aula agendada antes do prazo de cancelamento, para que eu possa potencialmente ter meu crédito de volta ou evitar penalidades. | OE2 | RF13 – Confirmar ausência da aula antecipadamente (Aluna) |
-| **US14** | Como uma aluna, eu quero receber um link ou mensagem de confirmação ao informar minha ausência, para que eu possa garantir que o cancelamento foi processado corretamente. | OE2 | RF14 – Gerar link de confirmação de ausência |
-| **US15** | Como um administrador, eu quero fazer login e acessar o painel administrativo, para que eu possa gerenciar as operações e dados da escola. | OE4 | RF15 – Acessar painel administrativo |
-| **US16** | Como um administrador, eu quero poder editar o status de presença de uma aluna em uma aula (Presente/Ausente), para que eu possa corrigir erros ou atualizar registros de forma manual. | OE4 | RF16 – Editar status de presença (Professora) |
-| **US17** | Como um administrador, eu quero marcar a presença das alunas em uma aula finalizada, para que o histórico da aluna seja atualizado. | OE4 | RF17 – Registrar presença após aula |
-| **US18** | Como um administrador, eu quero criar, editar e desativar os pacotes de aulas oferecidos, para que eu possa manter o catálogo de produtos sempre atualizado. | OE4 | RF18 – Gerenciar pacotes de aulas |
-| **US19** | Como um administrador, eu quero adicionar, modificar ou cancelar aulas no calendário da escola, para que eu possa controlar a grade de horários disponíveis para agendamento. | OE4 | RF19 – Gerenciar calendário de aulas |
-| **US20** | Como um administrador, eu quero ter um módulo específico para agendar aulas experimentais de novos interessados, para que eu possa organizar essas aulas separadamente do cronograma regular. | OE4 | RF20 – Agendar aula experimental |
-| **US21** | Como um administrador, eu quero registrar o nível de habilidade de uma nova aluna após a avaliação e definir seu plano de aulas inicial, para que ela possa começar a agendar aulas no nível correto. | OE4 | RF21 – Registrar resultado da avaliação |
-| **US22** | Como um administrador, quero definir o plano (A ou B) da nova aluna com base no resultado da avaliação da aula experimental, para que o sistema registre corretamente o plano adequado ao nível da aluna. | OE4 | RF22 – Definir plano da aluna |
+| Histórias | Descrição | Objetivos Específicos | Requisito |
+|-----------|-----------|------------------------|-----------|
+| US01 | Como um novo usuário, eu quero me cadastrar no website fornecendo minhas informações, para que eu possa realizar compras/agendamentos e acessar a área de aluna. | OE2 | RF01-Cadastrar novo usuário |
+| US02 | Como uma aluna, eu quero realizar meu login, para que eu possa acessar meu painel e funcionalidades restritas. | OE2 | RF02-Realizar login |
+| US03 | Como uma aluna, eu quero realizar o logout da minha conta após usar o website, para que eu possa proteger minhas informações e garantir a segurança do meu acesso. | OE2 | RF03-Realizar logout |
+| US04 | Como uma aluna, eu quero comprar um pacote de aulas de maneira digital, para que eu possa garantir minha vaga nas aulas e ter o pacote creditado na minha conta. | OE3 | RF04-Comprar pacotes de aulas |
+| US05 | Como um visitante, eu quero pagar pela minha aula experimental, para que eu possa confirmar minha participação e experimentar a modalidade. | OE3 | RF05-Pagar aula experimental |
+| US06 | Como uma aluna, eu quero agendar minhas aulas selecionando uma data e horário e disponíveis, para que eu possa reservar minha vaga e planejar minha frequência. | OE2 | RF06-Agendar aulas |
+| US07 | Como uma aluna, eu quero visualizar os pacotes de aulas que a escola oferece, para que eu possa entender minhas opções e escolher qual comprar ou renovar. | OE1 | RF07-Visualizar pacotes de aulas disponíveis |
+| US08 | Como uma aluna, eu quero consultar uma lista ou calendário com todas as minhas aulas agendadas, para que eu possa saber quais são meus próximos compromissos e me organizar. | OE2 | RF08-Consultar cronograma de aulas agendadas |
+| US09 | Como uma aluna, eu quero confirmar que não poderei comparecer a uma aula agendada antes do prazo de cancelamento, para que eu possa potencialmente evitar penalidades. | OE2 | RF09-Confirmar ausência da aula antecipadamente (Aluna) |
+| US10 | Como um administrador, eu quero cadastrar um novo pacote de aulas no sistema, para que eu possa garantir que as alunas terão acesso ao pacote. | OE4 | RF10-Cadastrar novo pacote de aulas |
+| US11 | Como um administrador, eu quero editar um pacote existente de aulas no sistema, para que eu possa garantir que as informações do pacote estão atualizadas. | OE4 | RF11-Editar pacote de aulas |
+| US12 | Como um administrador, eu quero excluir um pacote existente de aulas no sistema, para que eu possa gerir pacotes novos apropriadamente. | OE4 | RF12-Excluir pacote de aulas |
+| US13 | Como um administrador, eu quero editar o status de presença das alunas a qualquer momento, para que o histórico de presença da aluna se mantenha atualizado. | OE4 | RF13-Editar status de presença (Professora) |
+| US14 | Como um administrador, eu quero registrar a presença das alunas em uma aula finalizada, para que o histórico de presença da aluna se mantenha atualizado. | OE4 | RF14-Registrar presença após aula |
+| US15 | Como um administrador, eu quero registrar aulas no calendário da escola, para que eu possa controlar a grade de horários disponíveis para agendamento. | OE4 | RF15-Registrar aulas no calendário |
+| US16 | Como um administrador, eu quero editar aulas no calendário da escola, para que eu possa controlar a grade de horários disponíveis para agendamento. | OE4 | RF16-Editar aulas no calendário |
+| US17 | Como um administrador, eu quero excluir aulas no calendário da escola, para que eu possa controlar a grade de horários disponíveis para agendamento. | OE4 | RF17-Excluir aulas no calendário |
+| US18 | Como aluna, eu quero agendar aulas experimentais, para que eu possa descobrir com a professora meu nível de habilidade e meu plano ideal. | OE2 | RF18-Agendar aula experimental |
+| US19 | Como um administrador, eu quero registrar o nível de habilidade de uma nova aluna após a avaliação, para que exista um registro do seu nível de habilidade. | OE4 | RF19-Registrar resultado da avaliação |
+| US20 | Como um administrador, quero definir o plano (A ou B) da nova aluna com base no resultado da avaliação da aula experimental, para que o sistema registre corretamente o plano adequado ao nível da aluna. | OE2 | RF20-Definir plano da aluna |
+
 
 ---
 
-## **Priorização do Backlog** 
+## Priorização do Backlog
 
-Para otimizar o fluxo de desenvolvimento e garantir que os recursos essenciais sejam entregues na primeira iteração, o Backlog do projeto foi submetido a um processo de priorização, onde dividimos as funcionalidades em categorias distintas a partir o método MoSCoW (MUST, SHOULD, COULD, WONT), permitindo uma gestão clara das expectativas e um foco direcionado aos requisitos que são indispensáveis para o sucesso do lançamento. A tabela está no tópico abaixo deste.
+Para otimizar o fluxo de desenvolvimento e garantir que os recursos essenciais sejam entregues na primeira iteração, o Backlog do projeto foi submetido a um processo de priorização, onde dividimos as funcionalidades em categorias distintas a partir o método MoSCoW (MUST, SHOULD, COULD, WONT), permitindo uma gestão clara das expectativas e um foco direcionado aos requisitos que são indispensáveis para o sucesso do lançamento. A tabela está no tópico 9.3 deste mesmo documento.
 
-## **MVP**
+## MVP
 
 O MVP da Lady 's Escola de Pole Dance será a primeira versão do sistema digital lançada para um grupo limitado de alunas e para a Professora/Administradora. O foco é resolver a dor mais urgente do negócio: eliminar a gestão manual de agendamentos e pagamentos, e estabelecer uma presença online profissional e funcional.
 Dentro do escopo do Produto Mínimo Viável, encontram-se as funcionalidades listadas, juntamente com seus respectivos requisitos e objetivos específicos.
@@ -47,23 +46,18 @@ Dentro do escopo do Produto Mínimo Viável, encontram-se as funcionalidades lis
 ## Funcionalidades x Requisitos x Objetivo Específico
 
 | Funcionalidade | Requisitos que cumprem a funcionalidade | Objetivo específico relacionado |
-|----------------|-----------------------------------------|---------------------------------|
-| Um site público, funcional, responsivo e atrativo, que aumente a visibilidade do negócio e permita que os clientes conheçam o serviço com mais detalhes. | - RNF12 - Exibir landing page<br>- RNF06 - Garantir interface intuitiva e fácil de navegar<br>- RF01 - Acessar conteúdo público | OE1 - Permitir que clientes conheçam os serviços do estúdio por meio de um site institucional responsivo e atrativo. |
-| Uma área de inscrição online para matrículas e agendamento de aulas; condicionada a usuários logados. | - RF10 - Agendar aulas<br>- RF03 - Consultar horários e planos disponíveis<br>- RF05 - Cadastrar novo usuário<br>- RF06 - Realizar login<br>- RF20 - Agendar aula experimental | OE2 - Disponibilizar uma área de inscrição online para matrículas e agendamento em aulas de forma autônoma e prática. |
-| Uma sessão para realizar o pagamento de determinado serviço, seja este uma aula experimental ou um pacote de aulas. | - RF09 - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago<br>- RF08 - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago | OE3 - Integrar métodos de pagamento online seguros, reduzindo barreiras e inadimplências. |
-| Uma página privada para o personal trainer com um painel administrativo gerenciável, centralizando informações de alunas, turmas e pagamentos. | - RF15 - Acessar painel administrativo<br>- RF18 - Gerenciar pacotes de aulas<br>- RF19 - Gerenciar calendário de aulas<br>- RF17 - Registrar presença em aula<br>- RF16 - Editar status de presença (Professora)<br>- RF21 - Registrar resultado da avaliação<br>- RF22 - Definir plano da aluna | OE4 - Oferecer um painel administrativo para o personal trainer, centralizando informações de alunas, turmas e pagamentos. |
-| Um espaço no site destinado a informações sobre a prática desportiva, e que fortaleça a credibilidade e engaje o público. | - RNF12 - Exibir landing page<br>- RF01 - Acessar conteúdo público | OE5 - Disponibilizar um espaço informativo sobre pole dance, fortalecendo a credibilidade e engajamento do público. |
-
+|----------------|------------------------------------------|---------------------------------|
+| Um site público, funcional, responsivo e atrativo, que aumente a visibilidade do negócio e permita que os clientes conheçam o serviço com mais detalhes. | RF07-Visualizar pacotes de aulas disponíveis<br>RNF04 - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari)<br>RNF05 - Garantir interface intuitiva e fácil de navegar | OE1 - Promover o estúdio |
+| Uma área de inscrição online para matrículas e agendamento de aulas. | RF01-Cadastrar novo usuário<br>RF02-Realizar login<br>RF03-Realizar logout<br>RF06-Agendar aulas<br>RF08-Consultar cronograma de aulas agendadas<br>RF18-Agendar aula experimental<br>RF20-Definir plano da aluna | OE2 - Automatizar o processo de matrícula |
+| Uma sessão para realizar o pagamento de determinado serviço, seja este uma aula experimental ou um pacote de aulas. | RF04-Comprar pacotes de aulas<br>RF05-Pagar aula experimental | OE3 - Digitalizar os métodos de pagamento |
+| Uma página privada para o personal trainer com um painel administrativo gerenciável, centralizando informações de alunas, turmas e pagamentos. | RF10-Cadastrar novo pacote de aulas<br>RF11-Editar pacote de aulas<br>RF12-Excluir pacote de aulas<br>RF14-Registrar presença após aula<br>RF15-Registrar aulas no calendário<br>RF16-Editar aulas no calendário<br>RF17-Excluir aulas no calendário | OE4 - Centralizar a gestão administrativa da escola |
 
 
 Para avaliar as funcionalidades essenciais para testar a hipótese acima, utilizamos o método MoSCoW e um quadro de Valor de Negócio x Avaliação Técnica.
 
----
+## Valor de Negócio x Avaliação Técnica
 
-# Valor de Negócio x Avaliação Técnica
-
-## Valor de Negócio
-Quão importante a funcionalidade é para a cliente e para o faturamento (com base no MoSCoW: Must/Should/Could).
+**Valor de Negócio(Valor):** Quão importante a funcionalidade é para a cliente e para o faturamento (com base no MoSCoW: Must/Should/Could).
 
 | Pontuação | Descrição do Valor para a Escola | Categoria MoSCoW |
 |-----------|---------------------------------|-----------------|
@@ -71,8 +65,7 @@ Quão importante a funcionalidade é para a cliente e para o faturamento (com ba
 | Médio (2) | Importante para a satisfação, mas o sistema funciona sem ele. | Should-Have |
 | Baixo (1) | Adicional, apenas melhora a experiência ou é um diferencial futuro. | Could-Have |
 
-## Avaliação Técnica (Esforço)
-Quanto tempo e a complexidade que o time de desenvolvimento estima para construir a funcionalidade.
+**Avaliação Técnica (Esforço):** Quanto tempo e a complexidade que o time de desenvolvimento estima para construir a funcionalidade.
 
 | Pontuação | Descrição do Esforço para o Desenvolvimento |
 |-----------|--------------------------------------------|
@@ -83,62 +76,57 @@ Quanto tempo e a complexidade que o time de desenvolvimento estima para construi
 ## Tabela: Valor de Negócio x Avaliação Técnica x MoSCoW
 
 | Requisito | Valor (1-3) | Esforço (1-3) | MoSCoW | Está no MVP? |
-|------------|--------------|----------------|---------|---------------|
-| RF01 - Acessar conteúdo público | 3 | 1 | MUST | ☑️ |
-| RF02 - Acessar links para redes sociais da escola | 3 | 1 | MUST | ⬜ |
-| RF03 - Consultar horários e planos disponíveis | 3 | 1 | MUST | ☑️ |
-| RF04 - Disponibilizar espaço para tirar dúvidas sobre a modalidade | 2 | 1 | SHOULD | ⬜ |
-| RF05 - Cadastrar novo usuário | 3 | 2 | MUST | ☑️ |
-| RF06 - Realizar login | 3 | 2 | MUST | ☑️ |
-| RF07 - Realizar logout | 3 | 2 | MUST | ⬜ |
-| RF08 - Comprar pacotes de aulas com pagamentos online por meio do Mercado Pago | 3 | 2 | MUST | ☑️ |
-| RF09 - Pagar por uma aula experimental com pagamentos online por meio do Mercado Pago | 3 | 2 | MUST | ☑️ |
-| RF10 - Agendar aulas | 3 | 3 | MUST | ☑️ |
-| RF11 - Agendar aulas específicas | 3 | 2 | MUST | ⬜ |
-| RF12 - Consultar cronograma de aulas agendadas | 3 | 2 | MUST | ⬜ |
-| RF13 - Confirmar ausência da aula antecipadamente (Aluna) | 1 | 3 | SHOULD | ⬜ |
-| RF14 - Gerar link de confirmação de ausência | 1 | 2 | COULD | ⬜ |
-| RF15 - Acessar painel administrativo | 3 | 2 | MUST | ☑️ |
-| RF16 - Editar status de presença (Professora) | 1 | 2 | MUST | ☑️ |
-| RF17 - Registrar presença das alunas pós aula | 3 | 2 | MUST | ☑️ |
-| RF18 - Gerenciar pacotes de aulas | 2 | 2 | MUST | ☑️ |
-| RF19 - Gerenciar calendário de aulas | 3 | 1 | MUST | ☑️ |
-| RF20 - Agendar aula experimental | 3 | 2 | MUST | ☑️ |
-| RF21 - Registrar resultado da avaliação | 2 | 2 | MUST | ☑️ |
-| RF22 - Definir plano da aluna | 2 | 2 | MUST | ☑️ |
-| RNF01 - Implementar criptografia para a privacidade dos dados do usuário | 3 | 2 | SHOULD | ⬜ |
-| RNF02 - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD) | 3 | 3 | MUST | ⬜ |
-| RNF03 - Assegurar responsividade do site em diferentes dispositivos | 3 | 2 | MUST | ⬜ |
-| RNF04 - Manter o sistema disponível 24/7 (com exceção de manutenções programadas) | 3 | 2 | MUST | ⬜ |
-| RNF05 - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari) | 2 | 1 | MUST | ⬜ |
-| RNF06 - Garantir interface intuitiva e fácil de navegar | 3 | 1 | MUST | ☑️ |
-| RNF07 - Garantir carregamento rápido e navegação fluida do frontend | 2 | 2 | MUST | ⬜ |
-| RNF08 - Documentar padrões de desenvolvimento internos | 1 | 1 | SHOULD | ⬜ |
-| RNF09 - Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page | 3 | 2 | MUST | ⬜ |
-| RNF10 - Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling | 3 | 2 | SHOULD | ⬜ |
-| RNF11 - Exibir menu de navegação | 3 | 1 | MUST | ⬜ |
-| RNF12 - Exibir landing page | 3 | 1 | MUST | ☑️ |
+|-----------|--------------|----------------|--------|--------------|
+| RF01-Cadastrar novo usuário | 3 | 2 | MUST | ✅ |
+| RF02-Realizar login | 3 | 2 | MUST | ✅ |
+| RF03-Realizar logout | 3 | 2 | MUST | ✅ |
+| RF04-Comprar pacetes de aulas | 3 | 2 | MUST | ✅ |
+| RF05-Pagar aula experimental | 3 | 2 | MUST | ✅ |
+| RF06-Agendar aulas | 3 | 3 | MUST | ✅ |
+| RF07-Visualizar pacotes de aulas disponíveis | 3 | 2 | MUST | ✅ |
+| RF08-Consultar cronograma de aulas agendadas | 3 | 2 | MUST | ✅ |
+| RF09-Confirmar ausência da aula antecipadamente (Aluna) | 1 | 3 | SHOULD |  |
+| RF10-Cadastrar novo pacote de aulas | 1 | 2 | MUST |✅  |
+| RF11-Editar pacote de aulas | 3 | 2 | MUST | ✅ |
+| RF12-Excluir pacote de aulas | 1 | 2 | MUST |✅  |
+| RF13-Editar status de presença (Professora) | 3 | 2 | SHOULD |  |
+| RF14-Registrar presença após aula | 2 | 2 | MUST | ✅ |
+| RF15-Registrar aulas no calendário | 3 | 1 | MUST | ✅ |
+| RF16-Editar aulas no calendário | 3 | 2 | MUST | ✅ |
+| RF17-Excluir aulas no calendário | 2 | 2 | MUST | ✅ |
+| RF18-Agendar aula experimental | 2 | 2 | MUST | ✅ |
+| RF19-Registrar resultado da avaliação | 1 | 1 | SHOULD |  |
+| RF20-Definir plano da aluna | 1 | 1 | MUST | ✅ |
+| RNF01 - Implementar criptografia para a privacidade dos dados do usuário | 3 | 2 | SHOULD |  |
+| RNF02 - Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD) | 3 | 3 | SHOULD | ✅ |
+| RNF03 - Assegurar responsividade do site em diferentes dispositivos | 3 | 2 | SHOULD |  |
+| RNF04 - Garantir compatibilidade com os principais navegadores modernos (Chrome, Firefox, Edge, Safari) | 3 | 2 | MUST | ✅ |
+| RNF05 - Garantir interface intuitiva e fácil de navegar | 2 | 1 | MUST | ✅ |
+| RNF06 -Garantir carregamento rápido e navegação fluida do frontend | 3 | 2 | SHOULD |  |
+| RNF07 - Documentar padrões de desenvolvimento internos | 2 | 1 | SHOULD |  |
+| RNF08 - Otimizar Motores de Busca (SEO) através de meta tags e palavras chaves (SEO On-Page) e SEO Off-Page | 3 | 1 | SHOULD |  |
+| RNF09 - Implementar medidas de segurança contra abuso de vulnerabilidades como SQL Injection ou DNS Tunneling | 3 | 2 | SHOULD |  |
+| RNF10 - Disponibilizar espaço para tirar dúvidas sobre a modalidade | 2 | 2 | SHOULD |  |
 
 
 O lançamento do MVP será seguido por uma fase de testes e coleta de dados, visando a validação da hipótese de valor.
 
----
 
-# Testes e Validação do Sistema
+## Testes e Validação do Sistema
 
-## Testes de Aceitação do Cliente 
+### Testes de Aceitação do Cliente 
 - **Foco:** Testar as jornadas críticas do usuário.
 - **Procedimento:** A Professora/Administradora realizará testes nos fluxos de agendamento, recebimento de pagamento e verificação de inscritos no Painel Admin.
 - **Métricas de Sucesso:** Confirmação de que o tempo gasto em tarefas administrativas críticas foi reduzido conforme a meta.
 
-## Testes de Usabilidade e Qualidade 
+### Testes de Usabilidade e Qualidade 
 - **Foco:** Validar a experiência do usuário e a robustez técnica.
 - **Procedimento:** Um grupo inicial de 5 a 10 alunas será convidado a utilizar o MVP para agendamentos e pagamentos, fornecendo feedback direto sobre:
   - Intuitividade
   - Responsividade
   - Performance
 
-## Testes de Segurança e Conformidade 
+### Testes de Segurança e Conformidade 
 - **Foco:** Garantir que o sistema atenda aos requisitos de segurança antes do lançamento em larga escala.
 - **Procedimento:** O time de desenvolvimento fará uma varredura final e auditará as rotas de coleta de dados para garantir que a criptografia esteja ativa e funcionando, protegendo a privacidade das alunas.
 
