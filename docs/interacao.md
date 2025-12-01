@@ -12,7 +12,54 @@ A equipe de desenvolvimento será composta por:
 | Analista de QA            | Garante a qualidade do produto, executando testes de funcionalidade, performance e usabilidade.           | Yasmin             | Luiz Claudio; Arthur Fernandes; Victor Leandro; Leonardo; Manuella |
 | Analista de Requisitos    | Define os requisitos funcionais e não funcionais do sistema e garante que eles sejam atendidos.            | Arthur Fernandes   | Manuella                                                 |
 
----
+## Equipe
+
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+
+  <div style="text-align: center;">
+    <a href="https://github.com/yaabdon">
+      <img src="https://github.com/yaabdon.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Yasmin Sousa</div>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="https://github.com/LuizFarias21">
+      <img src="https://github.com/LuizFarias21.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Luiz Claudio</div>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="https://github.com/hisarxt">
+      <img src="https://github.com/hisarxt.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Arthur Fernandes</div>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="https://github.com/Afrontoso">
+      <img src="https://github.com/Afrontoso.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Victor Leandro</div>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="https://github.com/leonardoabezerra">
+      <img src="https://github.com/leonardoabezerra.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Leonardo Alves</div>
+    </a>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="https://github.com/DBPerlin">
+      <img src="https://github.com/DBPerlin.png" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover;"/>
+      <div>Manuella Dal Bianco</div>
+    </a>
+  </div>
+
+</div>
+
 
 ## Comunicação
 
