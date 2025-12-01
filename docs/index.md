@@ -70,7 +70,7 @@ O público alvo são, principalmente, mulheres entre 17 e 60 anos, no Distrito F
 - [Lições Aprendidas](licoes-aprendidas.md) — Aprendizados do Projeto
 - [Gravações](gravacoes.md) — Registros de reuniões e apresentações
 -->
-
+<!--
 ## Equipe 👥
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -118,7 +118,7 @@ O público alvo são, principalmente, mulheres entre 17 e 60 anos, no Distrito F
   </div>
 
 </div>
-
+-->
 <div style="margin-top: 30px;"></div>
 
 > Projeto acadêmico — Universidade de Brasília
