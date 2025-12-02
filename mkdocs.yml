@@ -41,8 +41,8 @@ nav:
       - Lições Aprendidas: licoes-aprendidas.md
       - Referências Bibliográficas: referencias.md
       - Gravações: gravacoes.md
-      - Estudos de Caso: estudos-de-caso.md
       - FeedBack do protótipo: prototipo.md
+      - Estudos de Caso: estudos-de-caso.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

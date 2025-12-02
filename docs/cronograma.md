@@ -7,28 +7,25 @@ A partir da estratégia de desenvolvimento de software estabelecida, apresenta-s
 ## Fase 1: Planejamento de Requisitos (Requirements Planning)
 Nesta fase inicial, são levantados e detalhados os requisitos do sistema, incluindo o perfil das usuárias e as necessidades específicas da cliente. Também ocorreu a definição do documento de visão, protótipos iniciais e planejamento de tecnologias a serem empregadas.
 
-![Cronograma Fase 1](assets/cronogramaFase1.jpeg)
+![Cronograma Fase 1](assets/cronogramas/fase1.jpeg)
 
 ---
 
 ## Fase 2: Design do Usuário (User Design)
 Esta fase constitui o núcleo do processo RAD. Ocorre intensa colaboração entre cliente e equipe de desenvolvimento, com a criação de protótipos interativos, validações frequentes e ajustes rápidos. O objetivo é assegurar que o sistema atenda às expectativas antes da construção definitiva.
 
-![Cronograma Fase 2](assets/cronogramaFase2.jpeg)
+![Cronograma Fase 2](assets/cronogramas/fase2.jpeg)
 
 ---
 
 ## Fase 3: Construção (Construction)
 Com base nos protótipos validados, esta fase envolve o desenvolvimento completo do sistema. Inclui a implementação de funcionalidades críticas (como pagamentos), testes aprofundados e refinamento do produto até estar pronto para transição.
 
-![Cronograma Fase 3](assets/cronogramaFase3.jpeg)
+![Cronograma Fase 3](assets/cronogramas/fase3.jpeg)
 
 ---
 
 ## Fase 4: Transição (Cutover)
 Esta é a fase de transição, em que o sistema passa do ambiente de desenvolvimento para o uso real. Inclui a apresentação final ao cliente, treinamento, ajustes finais e a entrega oficial do projeto.
 
-![Cronograma Fase 4](assets/cronogramaFase4.jpeg)
-
-
-
+![Cronograma Fase 4](assets/cronogramas/fase4.jpeg)
