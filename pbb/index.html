@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../backlog/">
+      
+      
+        <link rel="next" href="../licoes-aprendidas/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Cenário Atual - Lady's</title>
+        <title>PBB - Lady's</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cenario-atual" class="md-skip">
+        <a href="#product-backlog-building" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cenário Atual
+              PBB
             
           </span>
         </div>
@@ -378,9 +382,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../pbb/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -695,10 +701,35 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pbb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PBB
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -714,6 +745,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-backlog-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Backlog Building
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-driven-development-bdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Driven Development (BDD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Stories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#story-map-healthconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Story Map (HealthConnect)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-caso-de-uso-hopebridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de Caso de Uso (HopeBridge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -934,48 +1038,19 @@
 
 
 
-<h1 id="cenario-atual">Cenário Atual<a class="headerlink" href="#cenario-atual" title="Permanent link">&para;</a></h1>
-<h2 id="introducao-ao-negocio-e-contexto">Introdução ao Negócio e Contexto<a class="headerlink" href="#introducao-ao-negocio-e-contexto" title="Permanent link">&para;</a></h2>
-<p>A <strong>Lady's Escola de Pole Dance</strong> é um estúdio especializado em aulas de Pole Dance, fundado e gerido por uma única professora que também atua como personal trainer. A empresa tem como público-alvo principalmente mulheres jovens e adultas interessadas em melhorar a saúde física, a autoconfiança e o bem-estar por meio do Pole Dance.</p>
-<p>Mesmo que esteja no grupo de esportes minoritários no quesito acesso e conhecimento ao público comum, a Lady's Escola de Pole Dance se destaca pela abordagem personalizada, pelo acompanhamento próximo da professora e pela criação de um ambiente acolhedor para as alunas.</p>
-<p>Atualmente, o estúdio funciona de forma presencial, com turmas separadas por níveis, mas ainda não possui um sistema digital para controle de capacidade das turmas, matrícula online, ou que sirva como um meio informativo sobre a prática do Pole Dance e trabalho da professora (cliente) em questão.</p>
-<p>O projeto surge como uma oportunidade para modernizar e apoiar a gestão do negócio, oferecendo um ambiente online que facilite a divulgação do trabalho da cliente, sirva como um meio de controle de capacidade das turmas e fortaleça a proposta de valor da Lady's Escola de Pole Dance no setor de atividades físicas e bem-estar.</p>
-<h2 id="identificacao-da-oportunidade-ou-problema">Identificação da Oportunidade ou Problema<a class="headerlink" href="#identificacao-da-oportunidade-ou-problema" title="Permanent link">&para;</a></h2>
-<p><img alt="Diagrama de Ishikawa das causas da dificuldade de expansão da Lady's Escola de Pole Dance" src="../assets/figura1.jpeg" /></p>
-<p><em>Figura 1 – Diagrama de Ishikawa das causas da dificuldade de expansão da Lady's Escola de Pole Dance.<br />
-Fonte: O autor (2025).</em></p>
-<p>A cliente encontra dificuldade em atrair alunas próximas que conheçam a modalidade além do estereótipo comum associado ao Pole Dance.  </p>
-<p>Como o estúdio é administrado somente por ela, todo o controle de contatos, agenda, remarcação de aulas e atualização de pacotes e planos, que passam por reajustes periódicos, depende exclusivamente de seu tempo.  </p>
-<p>Assim, percebe-se a oportunidade de otimizar o processo organizacional, aumentando a produtividade e facilitando a adaptação ao meio online, visto que parte de seu marketing e gestão como contato com as alunas matriculadas, além de clientes em potencial, já é feito por plataformas avulsas como: WhatsApp, Instagram e Facebook, que, apesar de auxiliarem, ainda se mostraram insuficientes.</p>
-<h2 id="desafios-do-projeto">Desafios do Projeto<a class="headerlink" href="#desafios-do-projeto" title="Permanent link">&para;</a></h2>
-<p>Na Lady's Escola de Pole Dance, a mudança de uma gestão mais artesanal para uma operação digital profissional envolve desafios que vão muito além da escolha de um software.</p>
-<p>Os principais desafios são:</p>
-<ul>
-<li>
-<p><strong>Organizacional e humano:</strong> Hoje, quase toda a rotina depende diretamente da proprietária, o que já gera sobrecarga. A implantação de um sistema novo exigirá dela tempo para aprender, configurar e adaptar processos, aumentando esse peso no curto prazo. O sucesso do projeto depende diretamente da usabilidade do produto e da capacidade da gestora de absorver essa nova demanda em meio às suas funções atuais.</p>
-</li>
-<li>
-<p><strong>Continuidade operacional e experiência do cliente:</strong> As alunas estão habituadas ao contato via WhatsApp, e a transição para um sistema automatizado deve ser conduzida com cuidado para evitar atritos ou a percepção de um serviço impessoal. É essencial implementar a plataforma sem perder dados e, simultaneamente, comunicar os benefícios da mudança para garantir a adesão das clientes.</p>
-</li>
-<li>
-<p><strong>Integridade dos dados:</strong> Atualmente, as informações estão espalhadas entre planilhas, conversas no WhatsApp e contatos pessoais. Consolidar e migrar essa base de dados informal para um sistema estruturado apresenta um risco considerável de erros na transcrição de planos, o que poderia gerar cobranças incorretas.</p>
-</li>
-<li>
-<p><strong>Estratégico:</strong> A nova plataforma será a vitrine digital da escola. Mais do que cumprir sua função prática, precisa transmitir uma imagem profissional e acolhedora, ajudando a quebrar estereótipos e a atrair o público certo.</p>
-</li>
-</ul>
-<p>Em conjunto, esses desafios mostram que o projeto não é uma mera implementação de software, mas uma transformação fundamental no modelo de negócio. Ele envolve processos, a capacitação da gestora, a usabilidade do software e a construção de uma base sólida para o crescimento escalável do negócio.</p>
-<h2 id="segmentacao-de-clientes">Segmentação de Clientes<a class="headerlink" href="#segmentacao-de-clientes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>Praticantes Experientes (17-60 anos):</strong><br />
-  Este segmento já possui experiência com pole dance, seja por estarem retornando à prática ou por buscarem uma escola que ofereça um nível técnico mais elevado. São clientes mais exigentes, que pesquisam a qualificação dos instrutores e a infraestrutura do estúdio, buscando aprimoramento técnico e aulas de nível avançado.</p>
-</li>
-<li>
-<p><strong>Praticantes Inexperientes (17-60 anos):</strong><br />
-  O público alvo são, principalmente, mulheres entre 17 e 60 anos, no Distrito Federal. Dentre os possíveis perfis de usuários, estão: novas entusiastas com o pole dance que desejam iniciar seu aprendizado; alunas experientes desejando retomar a prática; entusiastas fitness buscando um novo esporte ou modalidade de dança ginástica; alunas de outras escolas buscando um aprendizado mais completo ou avançado.</p>
-</li>
-</ul>
+  <h1>PBB</h1>
+
+<h2 id="product-backlog-building"><strong>Product Backlog Building</strong><a class="headerlink" href="#product-backlog-building" title="Permanent link">&para;</a></h2>
+<p><img alt="Descrição" src="../assets/pbb.jpg" /></p>
+<h2 id="behavior-driven-development-bdd"><strong>Behavior Driven Development (BDD)</strong><a class="headerlink" href="#behavior-driven-development-bdd" title="Permanent link">&para;</a></h2>
+<p><img alt="Descrição" src="../assets/hexbdd.jpg" /></p>
+<h2 id="user-stories"><strong>User Stories</strong><a class="headerlink" href="#user-stories" title="Permanent link">&para;</a></h2>
+<p><img alt="Descrição" src="../assets/hex.jpeg" /></p>
+<h2 id="story-map-healthconnect"><strong>Story Map (HealthConnect)</strong><a class="headerlink" href="#story-map-healthconnect" title="Permanent link">&para;</a></h2>
+<p><img alt="Descrição" src="../assets/hex2.jpeg" /></p>
+<h2 id="diagrama-de-caso-de-uso-hopebridge"><strong>Diagrama de Caso de Uso (HopeBridge)</strong><a class="headerlink" href="#diagrama-de-caso-de-uso-hopebridge" title="Permanent link">&para;</a></h2>
+<p><img alt="Descrição" src="../assets/hex3.jpeg" /></p>
+<p><a href="https://miro.com/app/board/uXjVJuoxH0U=/?share_link_id=305363787001">Clique aqui para acessar o Miro</a></p>
 
 
 
