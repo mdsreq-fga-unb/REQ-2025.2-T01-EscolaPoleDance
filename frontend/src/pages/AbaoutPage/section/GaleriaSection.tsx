@@ -4,7 +4,7 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 
-import { photoData } from "@/data/photoData";
+import { photoDataTop, photoDataBottom } from "@/data/photoData";
 import Autoplay from "embla-carousel-autoplay";
 import AutoScroll from 'embla-carousel-auto-scroll'
 
@@ -30,7 +30,7 @@ export function CarouselGaleria() {
             className="w-full"
         >
             <CarouselContent>
-                {photoData.map((item) => (
+                {photoDataTop.map((item) => (
                     <CarouselItem key={item.id} className="basis-1/2 sm:basis-1/3 md:basis-1/4">
                         <PhotoCard img={item.img} alt={item.alt} />
                     </CarouselItem>
@@ -57,7 +57,7 @@ export function CarouselGaleriaReverse() {
             className="w-full"
         >
             <CarouselContent>
-                {photoData.map((item) => (
+                {photoDataBottom.map((item) => (
                     <CarouselItem key={item.id} className="basis-1/2 sm:basis-1/3 md:basis-1/4">
                         <PhotoCard img={item.img} alt={item.alt} />
                     </CarouselItem>
