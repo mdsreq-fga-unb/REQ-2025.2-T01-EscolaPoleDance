@@ -37,11 +37,13 @@ nav:
   - Requisitos: requisitos.md
   - DOR e DOD: dor-dod.md
   - Backlog: backlog.md
+  - PBB: pbb.md
   - Outros:
       - Lições Aprendidas: licoes-aprendidas.md
       - Referências Bibliográficas: referencias.md
       - Gravações: gravacoes.md
       - Estudos de Caso: estudos-de-caso.md
+      - FeedBack do protótipo: prototipo.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

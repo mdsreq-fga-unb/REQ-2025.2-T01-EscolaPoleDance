@@ -5,7 +5,7 @@
 ### Elicitação e Descoberta
 - **Entrevista com stakeholders:** Alinhamento de expectativas e requisitos essenciais diretamente com a proprietária.
 - **Protótipos:** Validação visual e interativa do design junto aos stakeholders.
-- **Prompt IA:** Uso de IA para acelerar a geração de ideias e roteiros de entrevista.
+- **Prompt IA:** Uso de IA para acelerar a geração de ideias e roteiros de entrevista. 
 - **Brainstorming:** Dinâmicas em grupo para criar diferenciais e soluções de engajamento.
 - **Observação e Feedback:** Testes de uso com o protótipo para ajustes de usabilidade e fluxo.
 - **Análise de Interface:** Mapeamento dos dados necessários com base nos elementos visuais das telas.
@@ -98,5 +98,3 @@
 | 2 | Organização e Atualização | Gerenciamento de Ajustes Pós-Implantação | Feedback, MOSCOW | Backlog de Requisitos contendo uma lista priorizada de itens para manutenção. |
 | 2 | Análise e Consenso  | Reunião de Lições Aprendidas. | Revisão em Pares | Relatório de encerramento com pontos positivos e melhorias para projetos futuros. |
 | 2 | Verificação e Validação | Validação da Entrega e Encerramento do Projeto | Entrevista, Revisão em Pares | Resultados da Revisão com o termo de aceite final do sistema e o encerramento formal do projeto. |
-
-
