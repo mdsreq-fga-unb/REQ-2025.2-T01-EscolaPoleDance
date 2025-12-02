@@ -97,8 +97,8 @@
 
 | Requisito | Foi totalmente implementado e atende aos critérios de aceitação definidos? | Foi testado e validado? | A documentação e as evidências de entrega foram atualizadas e revisadas pela equipe? |
 |------------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| RF01-Cadastrar novo usuário |  |  |  |
-| RF02-Realizar login |  |  |  |
+| RF01-Cadastrar novo usuário | ✅ | ✅ |  |
+| RF02-Realizar login | ✅ | ✅ |  |
 | RF03-Realizar logout |  |  |  |
 | RF04-Comprar pacotes de aulas |  |  |  |
 | RF05-Pagar aula experimental |  |  |  |
