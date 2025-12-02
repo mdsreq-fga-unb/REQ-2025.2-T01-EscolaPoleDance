@@ -1,5 +1,10 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import gif from "@/assets/img/pole-dancing.gif";
+import mulher_praticando from "@/assets/img/mulher_praticando.jpeg";
+import comparacao from "@/assets/img/comparacao.svg";
+import beneficios from "@/assets/img/beneficios.svg";
+import corpos from "@/assets/img/corpos.svg";
 
 
 export default function PoleDancePage() {
@@ -8,15 +13,16 @@ export default function PoleDancePage() {
             <Navbar />
             <section
                 id="about"
-                className="bg-gradient-to-b from-fuchsia-pink-50 via-fuchsia-pink-100 via-fuchsia-pink-150 to-fuchsia-pink-200 flex flex-col lg:flex-row px-6 md:px-8 lg:px-[80px] pt-24 md:pt-[150px] pb-24 md:pb-[65px]"
-            >
+                className="bg-gradient-to-b from-fuchsia-pink-50 via-fuchsia-pink-100 via-fuchsia-pink-150 to-fuchsia-pink-200 flex flex-col lg:flex-row px-6 md:px-8 lg:px-[80px] pt-24 md:pt-[80px] pb-24 md:pb-[65px]">
                 <div className="mx-auto w-full max-w-[1200px] bg-fuchsia-pink-50 rounded-2xl shadow-sm">
-                    <div className="px-6 md:px-10 py-8 md:py-10">
-                        <img
-                            src="https://placehold.co/1000x1000/png"
-                            alt=" "
-                            className="rounded-3xl mx-auto lg:mx-0"
-                        />
+                    <div className="px-6 md:px-10 py-8 md:py-7">
+                        <div className="flex justify-center">
+                            <img
+                                src={gif}
+                                alt="Mulher praticando pole dance em movimento (GIF) demonstrando força e flexibilidade"
+                                className="rounded-3xl mx-auto w-full max-w-3xl"
+                            />
+                        </div>
                         <div className="px-6 md:px-10 py-8 md:py-10">
                             <div className="lg:ml-8 lg:mt-0">
                                 <div>
@@ -45,13 +51,13 @@ export default function PoleDancePage() {
                                     <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
                                         Ele é uma fusão complexa que integra elementos da ginástica, acrobacias circenses e transições de dança contemporânea. O mais fascinante é que ele pode ser praticado com diferentes focos, seja para compor coreografias artísticas ou puramente para o condicionamento físico, visando resistência e força.
                                     </p>
-                                    <img
-
-
-                                        src="https://placehold.co/1000x500/png"
-                                        alt="Mulher praticando pole dance fitness realizando acrobacia de força na barra vertical."
-                                        className="rounded-3xl mx-auto lg:mx-0"
-                                    />
+                                    <div className="flex justify-center">
+                                        <img
+                                            src={mulher_praticando}
+                                            alt="Mulher praticando pole dance fitness realizando acrobacia de força na barra vertical."
+                                            className="rounded-3xl mx-auto mx-auto w-full max-w-xl"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="mt-6 space-y-6">
                                     <h3 className="text-fuchsia-pink-900 text-[2.25rem] font-medium font-['Montserrat'] leading-[50px]">
@@ -68,11 +74,13 @@ export default function PoleDancePage() {
                                     <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
                                         A vertente sensual, que popularizou o Pole no ocidente, surgiu muito depois, influenciada pelo estilo burlesco dos anos 20 e, posteriormente, pelas performances em bares e casas noturnas. Hoje, o Pole resgata suas origens atléticas, sendo reconhecido como esporte em diversos países.
                                     </p>
-                                    <img
-                                        src="https://placehold.co/1000x500/png"
-                                        alt="Comparação histórica entre a prática antiga do Mallakhamb na Índia e o Pole Sport moderno."
-                                        className="rounded-3xl mx-auto lg:mx-0"
-                                    />
+                                    <div className="flex justify-center" >
+                                        <img
+                                            src={comparacao}
+                                            alt="Comparação histórica entre a prática antiga do Mallakhamb na Índia e o Pole Sport moderno."
+                                            className="rounded-3xl mx-auto mx-auto w-full max-w-2xl"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="mt-6 space-y-6">
@@ -84,7 +92,7 @@ export default function PoleDancePage() {
                                     <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
                                         O Pole Dance se ramificou e hoje oferece opções para todos os gostos. Entenda as principais diferenças:
                                     </p>
-                                    
+
                                     <div className="space-y-8">
                                         <div className="bg-fuchsia-pink-100 p-6 rounded-xl">
                                             <h4 className="text-fuchsia-pink-900 text-[1.5rem] font-semibold font-['Montserrat'] mb-4">
@@ -124,7 +132,7 @@ export default function PoleDancePage() {
                                     <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
                                         Se o seu objetivo é físico, o Pole Dance é uma ferramenta poderosa. Estudos científicos mostram que uma aula de 60 minutos pode promover um gasto energético médio de 281,6 kcal, gerando um desequilíbrio homeostático significativo, similar a treinos intervalados.
                                     </p>
-                                    
+
                                     <div className="bg-fuchsia-pink-150 p-6 rounded-xl">
                                         <h4 className="text-fuchsia-pink-900 text-[1.75rem] font-semibold font-['Montserrat'] mb-4">
                                             Força vs. Academia Tradicional
@@ -132,7 +140,7 @@ export default function PoleDancePage() {
                                         <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8 mb-4">
                                             Uma pesquisa comparou mulheres que praticavam musculação com praticantes de Pole Dance. O resultado foi surpreendente:
                                         </p>
-                                        
+
                                         <ul className="space-y-4">
                                             <li className="flex items-start">
                                                 <span className="text-fuchsia-pink-900 font-bold mr-2">•</span>
@@ -157,12 +165,13 @@ export default function PoleDancePage() {
                                             </li>
                                         </ul>
                                     </div>
-
-                                    <img
-                                        src="https://placehold.co/1000x500/png"
-                                        alt="Benefícios do pole dance para definição muscular de braços e abdômen."
-                                        className="rounded-3xl mx-auto lg:mx-0"
-                                    />
+                                    <div className="flex justify-center" >
+                                        <img
+                                            src={beneficios}
+                                            alt="Benefícios do pole dance para definição muscular de braços e abdômen."
+                                            className="rounded-3xl mx-auto mx-auto w-full max-w-xl"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="mt-12 space-y-6">
@@ -180,12 +189,13 @@ export default function PoleDancePage() {
                                     <p className="text-fuchsia-pink-950 text-[1.125rem] font-medium font-['Montserrat'] leading-8">
                                         O ambiente das aulas – geralmente repleto de espelhos e com alunas de diversos biotipos – cria um senso de comunidade e apoio incondicional. As alunas torcem umas pelas outras, criando um espaço livre de julgamentos onde a vergonha dá lugar à autoconfiança e à redescoberta da própria sensualidade.
                                     </p>
-
-                                    <img
-                                        src="https://placehold.co/1000x500/png"
-                                        alt="Comunidade de mulheres praticantes de pole dance celebrando a diversidade de corpos."
-                                        className="rounded-3xl mx-auto lg:mx-0"
-                                    />
+                                    <div className="flex justify-center" >
+                                        <img
+                                            src={corpos}
+                                            alt="Comunidade de mulheres praticantes de pole dance celebrando a diversidade de corpos."
+                                            className="rounded-3xl mx-auto lg:mx-0"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="mt-12 space-y-6">
